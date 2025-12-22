@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "title": "Ergonomic Office Chairs Built for Business",
+    "subtitle": "Manufacturer and supplier of premium ergonomic seating for enterprises",
+    "cta": "Discover Our Range"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "chairs": "Chairs",
+    "contact": "Contact",
+    "cta": "Free Quote",
+    "viewProduct": "View Product"
+  },
+  "intro": {
+    "label": "Our Company",
+    "title1": "OFFICE",
+    "title2": "FURNITURE",
+    "title3": "WorldWide",
+    "description": "KWESK designs and manufactures chairs for intensive use in the office or at home.",
+    "quote": "Beyond the unanimous robustness of all KWESK products, our engineers focus their efforts on innovation, always with the aim of offering furniture that exceeds the expectations of companies. For example, we cite reinforced structures with a steel-based alloy, our anti-allergic air-mesh coating, our high-density foam and our antistatic and dust-proof plastic.",
+    "authorName": "Tarik Benjelloun",
+    "authorRole": "Founder, CEO of KWESK",
+    "imageAlt": "Office chair"
+  },
+  "metrics": {
+    "title": "About KWESK",
+    "subtitle": "A commitment to quality, innovation and customer satisfaction",
+    "chairs": "chairs delivered per year",
+    "ranges": "ranges",
+    "employees": "employees",
+    "countries": "countries"
+  },
+  "categories": {
+  "title": "OUR CHAIRS",
+  "discover": "Discover"
+},
+"showcase": {
+  "label": "Ergonomic Design",
+  "title": "Engineered for Comfort",
+  "description": "Our chairs are designed with precision engineering and premium materials to provide unmatched comfort during long work hours.",
+  "feature1": "High-density foam cushioning",
+  "feature2": "Adjustable lumbar support",
+  "feature3": "Breathable mesh back"
+},
+"showcase2": {
+  "label": "Premium Collection",
+  "title": "Executive Seating",
+  "description": "Designed for leaders who demand excellence. Our executive chairs combine sophisticated aesthetics with superior ergonomic support.",
+  "feature1": "Premium leather upholstery",
+  "feature2": "Polished aluminum base",
+  "feature3": "Multi-tilt mechanism"
+},
+"chairs": {
+  "sectionTitle1": "OUR CHAIRS IN",
+  "sectionTitle2": "",
+  "version": "Version",
+  "learnMore": "Learn more",
+  "challenger": {
+    "description": "The Challenger 175 remains one of the best options for companies looking for a corporate-look chair with an excellent level of comfort, optimized cost and a 5-year lifespan in intensive use like all KWESK chairs. Its wide and deep seat and its many possible adjustments offer an exceptional feeling of comfort even over long periods of use.",
+    "type": "Manager Chair"
+  },
+  "gamma": {
+    "description": "The brand new Gamma 150 is the ultimate balance between comfort, price and robustness offered by Kwesk. This chair is the perfect choice for intensive use in the office or at home.",
+    "type": "Operator Chair"
+  },
+  "winner": {
+    "description": "The WINNER 125 chair is perfectly designed for an operator's desk, a sales consultant, an agency or a point of sale... With its operator chair equipped with optimal comfort and ergonomics, you can accomplish your missions with peace of mind!",
+    "type1": "Operator Chair",
+    "type2": "Visitor Chair"
+  },
+  "corpo": {
+    "description": "The CORPO 100 offers the ultimate balance between comfort and style, designed to keep you productive all day long. Its sleek design and superior ergonomics make it a must-have for any modern workspace.",
+    "type": "Operator Chair"
+  }
+}
+}

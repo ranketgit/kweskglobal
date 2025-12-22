@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "title": "Chaises de Bureau Ergonomiques Conçues pour les Entreprises",
+    "subtitle": "Fabricant et fournisseur de fauteuils ergonomiques pour les grandes entreprises",
+    "cta": "Découvrir Notre Gamme"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "Entreprise",
+    "chairs": "Chaises",
+    "contact": "Contact",
+    "cta": "Devis Gratuit",
+    "viewProduct": "Voir le Produit"
+  },
+  "intro": {
+    "label": "Notre Entreprise",
+    "title1": "MOBILIER DE",
+    "title2": "BUREAU",
+    "title3": "",
+    "description": "KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison.",
+    "quote": "Au-delà de la robustesse unanime de tous les produits KWESK, nos ingénieurs concentrent leurs efforts sur l'innovation toujours dans le but d'offrir des mobiliers qui dépassent les attentes des entreprises. Par exemple, nous citons les structures renforcées avec un alliage à base d'acier, notre revêtement air-mesh anti-allergique, notre mousse haute densité et notre plastique antistatique et anti-poussière.",
+    "authorName": "Tarik Benjelloun",
+    "authorRole": "Fondateur, PDG de KWESK",
+    "imageAlt": "Chaise de bureau"
+  },
+  "metrics": {
+    "title": "À propos de KWESK",
+    "subtitle": "Un engagement envers la qualité, l'innovation et la satisfaction client",
+    "chairs": "chaises livrées par an",
+    "ranges": "gammes",
+    "employees": "employés",
+    "countries": "pays"
+  },
+  "categories": {
+  "title": "NOS CHAISES",
+  "discover": "Découvrir"
+},
+"showcase": {
+  "label": "Design Ergonomique",
+  "title": "Conçu pour le Confort",
+  "description": "Nos chaises sont conçues avec une ingénierie de précision et des matériaux premium pour offrir un confort inégalé pendant les longues heures de travail.",
+  "feature1": "Coussin en mousse haute densité",
+  "feature2": "Support lombaire ajustable",
+  "feature3": "Dossier en mesh respirant"
+},
+"showcase2": {
+  "label": "Collection Premium",
+  "title": "Sièges de Direction",
+  "description": "Conçu pour les dirigeants qui exigent l'excellence. Nos fauteuils de direction combinent une esthétique sophistiquée avec un support ergonomique supérieur.",
+  "feature1": "Revêtement en cuir premium",
+  "feature2": "Base en aluminium poli",
+  "feature3": "Mécanisme multi-inclinaison"
+},
+"chairs": {
+  "sectionTitle1": "NOS CHAISES",
+  "sectionTitle2": "",
+  "version": "Version",
+  "learnMore": "En savoir plus",
+  "challenger": {
+    "description": "Le Challenger 175 reste l'une des meilleures options pour les entreprises recherchant une chaise au look corporate avec un excellent niveau de confort, un coût optimisé et une durée de vie de 5 ans en utilisation intensive comme pour toutes les chaises KWESK. Son assise large et profonde et ses nombreux réglages possibles offrent une sensation de confort exceptionnelle même sur de longues périodes d'utilisation.",
+    "type": "Chaise Manager"
+  },
+  "gamma": {
+    "description": "La toute nouvelle Gamma 150 est l'équilibre ultime entre confort, prix et robustesse offert par Kwesk. Cette chaise est le choix parfait pour une utilisation intensive au bureau ou à la maison.",
+    "type": "Chaise Opérateur"
+  },
+  "winner": {
+    "description": "La chaise WINNER 125 est parfaitement conçue pour un bureau d'opérateur, un consultant commercial, une agence ou un point de vente... Avec sa chaise opérateur équipée d'un confort et d'une ergonomie optimaux, vous pourrez accomplir vos missions en toute sérénité !",
+    "type1": "Chaise Opérateur",
+    "type2": "Chaise Visiteur"
+  },
+  "corpo": {
+    "description": "Le CORPO 100 offre l'équilibre ultime entre confort et style, conçu pour vous garder productif toute la journée. Son design élégant et son ergonomie supérieure en font un incontournable pour tout espace de travail moderne.",
+    "type": "Chaise Opérateur"
+  }
+}
+}
