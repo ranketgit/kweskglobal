@@ -1,4 +1,4 @@
-import ChairProduct from '../components/ChairProduct/ChairProduct'
+import ChairProduct from '../../components/ChairProduct'
 import { getTranslations } from 'next-intl/server'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
