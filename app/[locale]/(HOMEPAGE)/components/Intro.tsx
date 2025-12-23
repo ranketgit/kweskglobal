@@ -54,7 +54,7 @@ export default function Intro() {
             <div className="mt-8 flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-stone-100 overflow-hidden">
                 <Image 
-                  src="/images/founder.jpg" 
+                  src="/tariq-kwesk.jpg" 
                   alt={t('authorName')}
                   width={48}
                   height={48}

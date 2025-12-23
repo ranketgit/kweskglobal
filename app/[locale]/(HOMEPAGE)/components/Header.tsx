@@ -104,7 +104,7 @@ export default function Header() {
         
         {/* Logo */}
         <Link href="/" className="relative h-10 w-32">
-          <Image src="/images/kwesk-logo.png" alt="KWESK" fill className="object-contain" />
+          <Image src="/kwesk-logo.png" alt="KWESK" fill className="object-contain" />
         </Link>
 
         {/* Desktop Nav */}

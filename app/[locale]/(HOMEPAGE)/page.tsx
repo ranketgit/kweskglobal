@@ -5,6 +5,7 @@ import Categories from './components/Categories'
 import ChairShowcase from './components/ChairShowcase'
 import ChairShowcase2 from './components/ChairShowcase2'
 import ChairsSection from './components/ChairSection/ChairSection'
+import Customers from '@/app/shared/Customers'
 
 
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <ChairShowcase />
       <ChairShowcase2 />
       <ChairsSection />
+      <Customers />
     </main>
   )
 }

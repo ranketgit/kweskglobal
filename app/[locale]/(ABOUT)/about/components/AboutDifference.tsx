@@ -38,7 +38,7 @@ export default function AboutDifference() {
           </div>
           <div className="relative h-[500px]">
             <Image 
-              src="/about-difference.jpg" 
+              src="/exclusive/1.jpg" 
               alt="KWESK Difference"
               fill
               className="object-cover rounded-lg"

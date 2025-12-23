@@ -5,7 +5,7 @@ import AboutStats from './components/AboutStats'
 import AboutDifference from './components/AboutDifference'
 import Features from './components/Features'
 import AboutNormes from './components/AboutNormes'
-import Customers from './components/Customers'
+import Customers from '@/app/shared/Customers'
 import AboutCta from './components/AboutCta'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {

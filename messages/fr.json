@@ -945,6 +945,25 @@
       },
       "submit": "Envoyer le message"
     }
-  }
+  },
+
+    "footer": {
+      "description": "KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison. Leader des chaises corporate depuis 2008.",
+      "titles": {
+        "chairs": "Nos Chaises",
+        "company": "Entreprise",
+        "contact": "Contact"
+      },
+      "company": {
+        "home": "Accueil",
+        "about": "À Propos",
+        "contact": "Contact"
+      },
+      "rights": "Tous droits réservés."
+    },
+
+    "customers": {
+      "title": "NOS CLIENTS SATISFAITS"
+    }
 
 }

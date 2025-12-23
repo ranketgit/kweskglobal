@@ -13,7 +13,7 @@ export default function ChairsSection() {
       image: '/chairs/challenger-chair.png',
       versions: [{ name: 'CHALLENGER 175', type: t('challenger.type') }],
       imagePosition: 'right' as const,
-      href: '/challenger'
+      href: '/chairs/challenger'
     },
     {
       title: 'GAMMA',
@@ -21,7 +21,7 @@ export default function ChairsSection() {
       image: '/chairs/gamma-chair.jpg',
       versions: [{ name: 'GAMMA 150', type: t('gamma.type') }],
       imagePosition: 'left' as const,
-      href: '/gamma'
+      href: '/chairs/gamma'
     },
     {
       title: 'WINNER',
@@ -32,7 +32,7 @@ export default function ChairsSection() {
         { name: 'WINNER C', type: t('winner.type2') }
       ],
       imagePosition: 'right' as const,
-      href: '/winner-125'
+      href: '/chairs/winner-125'
     },
     {
       title: 'CORPO 100',
@@ -40,7 +40,7 @@ export default function ChairsSection() {
       image: '/chairs/corpo-chair.jpg',
       versions: [{ name: 'CORPO 100', type: t('corpo.type') }],
       imagePosition: 'left' as const,
-      href: '/corpo-100'
+      href: '/chairs/corpo-100'
     }
   ]
 

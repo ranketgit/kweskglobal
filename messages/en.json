@@ -943,5 +943,24 @@
       },
       "submit": "Send Message"
     }
+  },
+
+  "footer": {
+    "description": "KWESK designs and manufactures chairs for intensive use at the office or at home. Corporate chair leader since 2008.",
+    "titles": {
+      "chairs": "Our Chairs",
+      "company": "Company",
+      "contact": "Contact"
+    },
+    "company": {
+      "home": "Home",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "rights": "All rights reserved."
+  },
+
+  "customers": {
+    "title": "OUR SATISFIED CUSTOMERS"
   }
 }
