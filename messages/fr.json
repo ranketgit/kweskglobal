@@ -73,5 +73,843 @@
     "description": "Le CORPO 100 offre l'équilibre ultime entre confort et style, conçu pour vous garder productif toute la journée. Son design élégant et son ergonomie supérieure en font un incontournable pour tout espace de travail moderne.",
     "type": "Chaise Opérateur"
   }
+},
+
+"chairProduct": {
+  "version": "Version",
+  "buy": "ACHETER",
+  "standardFeatures": "CARACTÉRISTIQUES STANDARD",
+  "options": "OPTIONS",
+  "frame": "CADRE",
+  "ergonomy": "ERGONOMIE",
+  "mechanisms": "MÉCANISMES",
+  "gasLift": "VÉRIN À GAZ",
+  "gasLiftSystem": "Système de vérin à gaz",
+  "default": "défaut",
+  "doubleCylinder": "Nouveau système breveté à double cylindre",
+  "availableColors": "Couleurs disponibles"
+},
+
+"by100": {
+  "meta": {
+    "title": "By 100 | Chaise Bureau Grande Entreprise - Kwesk Maroc",
+    "description": "Le fauteuil By 100 par Kwesk, fabricant de fauteuil de bureau au Maroc. Chaise bureau personnalisée et ergonomique pour entreprise professionnelle."
+  },
+  "description": "Avec son dossier haut asynchrone et son design innovant, le BY 100 équipera facilement vos bureaux exécutifs ou administratifs pour un coût réduit, un confort optimisé et une longue durée de vie.",
+  "versionType": "Chaise Président",
+  "features": {
+    "f1": "Dossier haut",
+    "f2": "Mécanisme asynchrone A202 (Italie)",
+    "f3": "Accoudoirs fixes",
+    "f4": "Mousse injectée haute densité assise et dossier 50 mm (Maroc)",
+    "f5": "Assise et dossier tapissés en tissu 3D (Danemark)",
+    "f6": "Vérin à gaz double cylindre (Allemagne)"
+  },
+  "options": {
+    "o1": "Mécanisme asynchrone Ak300 (Italie)",
+    "o2": "Assise et dossier tapissés en cuir PU",
+    "o3": "Base en aluminium",
+    "o4": "Roulettes premium"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "gasLift": {
+    "description": "Le BY 100 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur.",
+    "madeIn": "FABRIQUÉ EN ALLEMAGNE"
+  },
+  "doubleCylinder": {
+    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  "materials": {
+    "madeInMorocco": "FABRIQUÉ AU MAROC",
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "sectionTitle": "ASSISE ET DOSSIER TAPISSÉS EN TISSU 3D",
+      "f1": "Extensible multi-directionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    },
+    "puLeather": {
+      "name": "Cuir PU",
+      "sectionTitle": "ASSISE ET DOSSIER TAPISSÉS EN CUIR PU"
+    },
+    "aniline": {
+      "name": "Cuir Aniline pleine fleur naturel",
+      "sectionTitle": "ASSISE ET DOSSIER TAPISSÉS EN CUIR"
+    }
+  }
+},
+
+"byG": {
+  "meta": {
+    "title": "By G | Fauteuil Bureau Professionnel Ergonomique au Maroc",
+    "description": "Découvrez le By G, chaise de bureau entreprise par Kwesk, fournisseur chaise de bureau au Maroc. Fauteuil ergonomique fabriqué pour grandes entreprises."
+  },
+  "description": "Avec son dossier bas asynchrone, le BY G vient compléter notre fauteuil By 100 pour accueillir vos visiteurs dans votre bureau. Doté des mêmes fonctionnalités, il peut aussi équiper vos salles de réunion à moindre coût tout en offrant un confort appréciable sur quelques heures d'utilisation.",
+  "versionType": "Fauteuil Opérateur",
+  "features": {
+    "f1": "Dossier bas",
+    "f2": "Mécanisme asynchrone A200 (Italie)",
+    "f3": "Repose-bras fixes",
+    "f4": "Assise et dossier en mousse injectée haute densité 50 mm (Maroc)",
+    "f5": "Assise et dossier tapissés en tissu 3D (Danemark)",
+    "f6": "Vérin à double cylindre (Allemagne)"
+  },
+  "options": {
+    "o1": "Mécanisme asynchrone AX300 (Italie)",
+    "o2": "Assise et dossier tapissés en simili cuir",
+    "o3": "Base en aluminium",
+    "o4": "Roulettes Premium"
+  },
+  "tags": {
+    "default": "par défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "italy": "FABRIQUÉ EN ITALIE",
+    "germany": "FABRIQUÉ EN ALLEMAGNE",
+    "morocco": "FABRIQUÉ AU MAROC"
+  },
+  "mechanisms": {
+    "a200": {
+      "f1": "Inclinaison dossier asynchrone 17°",
+      "f2": "1 position de blocage vertical",
+      "f3": "Ajustement manuel de la tension du dossier"
+    },
+    "ax300": {
+      "f1": "Inclinaison dossier asynchrone 15°",
+      "f2": "4 positions de blocage",
+      "f3": "Ajustement manuel de la tension du dossier"
+    }
+  },
+  "gasLift": {
+    "description": "Le BY G est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur."
+  },
+  "doubleCylinder": {
+    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  "materials": {
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "sectionTitle": "REVÊTEMENT DOSSIER ET ASSISE EN TISSU 3D",
+      "f1": "Étirement multidirectionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale : 65 000 (EN ISO 12947-2)",
+      "f4": "Résistance au boulochage échelle 1-5, max. 5 : 5 (EN ISO 12945-2)",
+      "f5": "Résistance à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Résistance au frottement échelle 1-5, max. 5 - humidité/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    },
+    "similiLeather": {
+      "name": "Simili cuir",
+      "sectionTitle": "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN SIMILI CUIR"
+    },
+    "aniline": {
+      "name": "Cuir pleine fleur aniline 100% naturel",
+      "sectionTitle": "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN CUIR"
+    }
+  }
+},
+"caddy": {
+  "meta": {
+    "title": "Caddy | Chaise pour Salle de Formation Professionnelle - Kwesk",
+    "description": "La série Caddy par Kwesk, fabricant de sièges de bureau au Maroc. Chaise pour salle de formation et espaces professionnels, ergonomique et adaptée aux entreprises."
+  },
+  "description": "Les chaises CADDY offrent une ergonomie optimisée pour les sessions de formation. La tablette réglable et les espaces de rangement donnent aux utilisateurs la mobilité de modifier l'agencement de votre espace selon vos besoins. Vous formerez vos équipes avec facilité !",
+  "version": "Version",
+  "versionType": "Chaise Formation",
+  "buy": "ACHETER",
+  "standardFeatures": "CARACTÉRISTIQUES STANDARD",
+  "features": {
+    "f1": "Tablette rotative",
+    "f2": "Espace de rangement",
+    "f3": "Base structure 5 branches à 6 roulettes",
+    "f4": "Porte-stylo"
+  },
+  "customColors": "COULEURS PERSONNALISÉES"
+},
+
+"challenger": {
+  "meta": {
+    "title": "Challenger | Fauteuil de Bureau Ergonomique avec Têtière",
+    "description": "Le Challenger par Kwesk, marque chaise de bureau et fabricant au Maroc. Fauteuil bureau grande entreprise avec têtière, ergonomique pour usage professionnel."
+  },
+  "description": "Le Challenger 175 reste l'une des meilleures options pour les entreprises recherchant une chaise au look corporate avec un excellent niveau de confort, un coût optimisé et une durée de vie de 5 ans en utilisation intensive comme pour toutes les chaises KWESK. Son assise large et profonde et ses nombreux réglages possibles offrent une sensation de confort exceptionnelle même sur de longues périodes d'utilisation.",
+  "versionType": "Chaise Opérateur avec appui-tête réglable",
+  "features": {
+    "f1": "Mécanisme synchronisé plat N1800 (Italie)",
+    "f2": "Réglage de la profondeur d'assise",
+    "f3": "Mousse d'assise injectée haute densité 65 mm",
+    "f4": "Rembourré en tissu 3D",
+    "f5": "Dossier Anti-allergénique Aero 3D Mesh (Danemark)",
+    "f6": "Vérin à gaz double cylindre (Allemagne)",
+    "f7": "Support lombaire réglable",
+    "f8": "Accoudoirs réglables 4D"
+  },
+  "options": {
+    "o1": "Accoudoirs réglables 3D (hauteur et profondeur)",
+    "o2": "Base en aluminium",
+    "o3": "Roulettes premium"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "italy": "FABRIQUÉ EN ITALIE",
+    "germany": "FABRIQUÉ EN ALLEMAGNE",
+    "morocco": "FABRIQUÉ AU MAROC",
+    "denmark": "FABRIQUÉ AU DANEMARK"
+  },
+  "mechanisms": {
+    "n1800": {
+      "f1": "Inclinaison du dossier 22° synchronisée avec l'inclinaison de l'assise 14°",
+      "f2": "5 positions de blocage",
+      "f3": "Réglage manuel de la tension du dossier",
+      "f4": "Option Flex : inclinaison de l'assise 5°"
+    },
+    "r2100": {
+      "f1": "Inclinaison du dossier 20° synchronisée avec l'inclinaison de l'assise 6.5°",
+      "f2": "4 positions de blocage",
+      "f3": "Réglage automatique de la tension du dossier",
+      "f4": "Option Flex : inclinaison de l'assise 5°"
+    }
+  },
+  "gasLift": {
+    "description": "Le CHALLENGER 175 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur."
+  },
+  "doubleCylinder": {
+    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  "materials": {
+    "aeroMesh": {
+      "name": "Anti-allergénique Aero Mesh",
+      "f1": "100% polyester, 330 g/m",
+      "f2": "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+      "f3": "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
+      "f4": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f5": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f6": "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
+    },
+    "aeroMesh3d": {
+      "name": "Anti-allergénique Aero Mesh 3D",
+      "f1": "Sensation de confort similaire à un dossier en mousse rembourrée",
+      "f2": "100% polyester, 510 g/m",
+      "f3": "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
+    },
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "f1": "Extensible multi-directionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    }
+  }
+},
+
+"corpo100": {
+  "meta": {
+    "title": "Corpo 100 | Chaise Bureau Grande Entreprise - Kwesk Maroc",
+    "description": "Le Corpo 100 par Kwesk, usine de fauteuil de bureau au Maroc. Chaise de bureau entreprise ergonomique, conçue pour environnements corporate et usage intensif."
+  },
+  "description": "Le CORPO 100 offre l'équilibre ultime entre confort et style, conçu pour vous garder productif toute la journée. Son design élégant et son ergonomie supérieure en font un incontournable pour tout espace de travail moderne.",
+  "versionType": "Chaise Opérateur",
+  "features": {
+    "f1": "Mécanisme synchronisé plat L1520 (Italie)",
+    "f2": "Réglage de la profondeur d'assise",
+    "f3": "Mousse d'assise injectée haute densité 50 mm",
+    "f4": "Dossier Anti-allergénique Aero 3D Mesh (Danemark)",
+    "f5": "Vérin à gaz double cylindre (Allemagne)",
+    "f6": "Support lombaire ergonomique réglable",
+    "f7": "Accoudoirs réglables 3D"
+  },
+  "options": {
+    "o1": "Appui-tête réglable 3D",
+    "o2": "Assise rembourrée en tissu 3D",
+    "o3": "Dossier 3D Mesh",
+    "o4": "Base en aluminium",
+    "o5": "Roulettes premium"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "italy": "FABRIQUÉ EN ITALIE",
+    "germany": "FABRIQUÉ EN ALLEMAGNE",
+    "morocco": "FABRIQUÉ AU MAROC",
+    "denmark": "FABRIQUÉ AU DANEMARK"
+  },
+  "mechanisms": {
+    "l1520": {
+      "f1": "Design plat",
+      "f2": "Inclinaison du dossier 22° synchronisée avec l'assise",
+      "f3": "3 positions de blocage",
+      "f4": "Bouton de réglage de tension sur le côté"
+    },
+    "p2000": {
+      "f1": "Leviers intégrés",
+      "f2": "Inclinaison du dossier 19.5° synchronisée avec l'inclinaison de l'assise 7.5°",
+      "f3": "5 positions de blocage",
+      "f4": "Mécanisme auto-pondéré : ajuste automatiquement la tension du dossier selon le poids de l'utilisateur",
+      "f5": "Réglage de la profondeur d'assise"
+    }
+  },
+  "gasLift": {
+    "description": "Le CORPO 100 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur."
+  },
+  "doubleCylinder": {
+    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  "materials": {
+    "aeroMesh": {
+      "name": "Anti-allergénique Aero Mesh",
+      "f1": "100% polyester, 330 g/m",
+      "f2": "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+      "f3": "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
+      "f4": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f5": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f6": "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
+    },
+    "aeroMesh3d": {
+      "name": "Anti-allergénique Aero Mesh 3D",
+      "f1": "Sensation de confort similaire à un dossier en mousse rembourrée",
+      "f2": "100% polyester, 510 g/m",
+      "f3": "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
+    },
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "f1": "Extensible multi-directionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    }
+  }
+},
+
+"exclusiveG": {
+  "meta": {
+    "title": "Exclusive G | Fauteuil Professionnel de Bureau - Kwesk Maroc",
+    "description": "Le fauteuil Exclusive G par Kwesk, fournisseur fauteuil de bureau haut de gamme au Maroc. Chaise de bureau entreprise en cuir pour usage professionnel."
+  },
+  "description": "Le fauteuil EXCLUSIVE G offre les mêmes fonctionnalités que le siège président EXCLUSIVE 500. Son repose-bras pivotant pour accueillir vos visiteurs VIP dans votre bureau et vos salles de réunion.",
+  "versionType": "Fauteuil Opérateur",
+  "features": {
+    "f1": "Mécanisme synchrone encastré à câbles (Italie)",
+    "f2": "Tensionneur auto-gravité",
+    "f3": "Repose-bras articulés",
+    "f4": "Assise et dossier en mousse injectée haute densité",
+    "f5": "Assise et dossier tapissés en tissu 3D (Danemark)",
+    "f6": "Structure confort extrême",
+    "f7": "Repose-tête souple"
+  },
+  "options": {
+    "o1": "Revêtement en simili cuir",
+    "o2": "Cuir pleine fleur aniline 100% naturel",
+    "o3": "Repose-bras en aluminium noir ou poli",
+    "o4": "Base en aluminium noir ou poli",
+    "o5": "Repose-bras en cuir",
+    "o6": "Base en aluminium noir ou poli",
+    "o7": "Roulettes Premium"
+  },
+  "tags": {
+    "default": "par défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "italy": "FABRIQUÉ EN ITALIE",
+    "germany": "FABRIQUÉ EN ALLEMAGNE",
+    "morocco": "FABRIQUÉ AU MAROC"
+  },
+  "frame": {
+    "description": "Structure articulée légère, fine et robuste permettant d'augmenter les volumes de mousses injectée, de rajouter de larges points d'ancrage et de réguler avec la pression sur le dos."
+  },
+  "ergonomy": {
+    "f1": "Inclinaison synchronisée du dossier 18° et de l'assise 11°",
+    "f2": "3 positions de blocage",
+    "f3": "Soutien optimal de l'épine dorsale",
+    "f4": "Soulage les maux de dos",
+    "f5": "Ajustement automatique de la tension du dossier",
+    "f6": "Repose-bras articulés et synchronisés"
+  },
+  "mechanisms": {
+    "sync": {
+      "name": "Mécanisme synchrone encastré",
+      "f1": "Manettes de commande à câbles encastrées dans l'assise"
+    }
+  },
+  "gasLift": {
+    "description": "Le fauteuil EXCLUSIVE est équipé d'un vérin fabriqué en Allemagne par le leader mondial des amortisseurs. Il dispose d'un réglage en hauteur variable et absorbe en douceur le poids de l'occupant."
+  },
+  "doubleCylinder": {
+    "description": "Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre des mouvements de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  "materials": {
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "sectionTitle": "REVÊTEMENT DOSSIER ET ASSISE EN TISSU 3D",
+      "f1": "Étirement multidirectionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale : 65 000 (EN ISO 12947-2)",
+      "f4": "Résistance au boulochage échelle 1-5, max. 5 : 5 (EN ISO 12945-2)",
+      "f5": "Résistance à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Résistance au frottement échelle 1-5, max. 5 - humidité/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    },
+    "similiLeather": {
+      "name": "Simili cuir",
+      "sectionTitle": "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN SIMILI CUIR"
+    },
+    "aniline": {
+      "name": "Cuir pleine fleur aniline 100% naturel",
+      "sectionTitle": "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN CUIR"
+    }
+  }
+},
+
+"exclusive": {
+  "meta": {
+    "title": "Exclusive 500 | Fauteuil Ergonomique de Bureau - Kwesk Maroc",
+    "description": "L'Exclusive 500 par Kwesk, fabricant de fauteuil de bureau au Maroc. Chaise bureau personnalisée en cuir avec accoudoirs aluminium pour grande entreprise."
+  },
+  "description": "L'EXCLUSIVE 500 est la chaise exécutive ultime. Elle intègre de nombreuses innovations KWESK telles que le dossier et l'assise interconnectés et les multiples réglages combinés par des commandes ergonomiques et faciles d'accès.",
+  "versionType": "Chaise Président",
+  "features": {
+    "f1": "Mécanisme synchrone à câble intégré (Italie)",
+    "f2": "Réglage de tension auto-pondéré",
+    "f3": "Accoudoirs pivotants",
+    "f4": "Mousse injectée haute densité assise et dossier",
+    "f5": "Assise et dossier rembourrés en tissu 3D (Danemark)",
+    "f6": "Cadre haut confort",
+    "f7": "Appui-tête souple"
+  },
+  "options": {
+    "o1": "Rembourrage PU",
+    "o2": "Rembourrage cuir Aniline pleine fleur naturel",
+    "o3": "Accoudoirs aluminium noir ou poli",
+    "o4": "Base aluminium noir ou poli",
+    "o5": "Accoudoirs cuir",
+    "o6": "Roulettes premium"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "italy": "FABRIQUÉ EN ITALIE",
+    "germany": "FABRIQUÉ EN ALLEMAGNE",
+    "morocco": "FABRIQUÉ AU MAROC"
+  },
+  "frame": {
+    "description": "Cadre pivotant léger, fin et robuste permettant d'augmenter l'épaisseur de la mousse injectée, d'ajouter de larges points d'ancrage et de réguler la pression sur le dos."
+  },
+  "ergonomy": {
+    "f1": "Inclinaison synchronisée du dossier 18° et de l'assise 11°",
+    "f2": "3 positions de blocage",
+    "f3": "Support optimal de la colonne vertébrale",
+    "f4": "Soulage les douleurs dorsales",
+    "f5": "Mécanisme auto-pondéré : ajuste automatiquement la tension du dossier selon le poids de l'utilisateur",
+    "f6": "Accoudoirs pivotants synchronisés"
+  },
+  "mechanisms": {
+    "sync": {
+      "name": "Mécanisme synchrone intégré",
+      "f1": "Leviers de commande du mécanisme synchrone à câble intégrés dans l'assise"
+    }
+  },
+  "gasLift": {
+    "description": "L'EXCLUSIVE 500 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur."
+  },
+  "doubleCylinder": {
+    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  "materials": {
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "f1": "Extensible multi-directionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    },
+    "puLeather": {
+      "name": "Cuir PU"
+    },
+    "aniline": {
+      "name": "Cuir Aniline pleine fleur naturel"
+    }
+  }
+},
+
+"gammaC": {
+  "meta": {
+    "title": "Gamma C | Fauteuil Bureau Entreprise Ergonomique - Kwesk",
+    "description": "Le Gamma C par Kwesk, vendeur de chaises de bureau et fabricant au Maroc. Chaise de bureau entreprise ergonomique pour professionnels et grandes entreprises."
+  },
+  "description": "Une assise large et profonde, un cadre métallique ergonomique et un design innovant font de la GAMMA C la chaise idéale pour recevoir vos visiteurs. Dans un hall, une salle d'attente ou dans votre bureau, la GAMMA C est un concept idéal pour accueillir vos visiteurs.",
+  "versionType": "Chaise Visiteur",
+  "features": {
+    "f1": "Structure en acier inoxydable ou acier galvanisé noir mat",
+    "f2": "Accoudoirs fixes avec pads souples",
+    "f3": "Dossier rembourré en Aero Mesh anti-allergénique",
+    "f4": "Assise en mousse injectée haute densité 45 mm",
+    "f5": "Housse d'assise en tissu 3D"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "morocco": "FABRIQUÉ AU MAROC",
+    "denmark": "FABRIQUÉ AU DANEMARK"
+  },
+  "materials": {
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "f1": "Extensible multi-directionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    },
+    "aeroMesh": {
+      "name": "Anti-allergénique Aero Mesh",
+      "f1": "100% polyester, 330 g/m",
+      "f2": "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+      "f3": "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
+      "f4": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f5": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f6": "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
+    },
+    "aeroMesh3d": {
+      "name": "Anti-allergénique Aero Mesh 3D",
+      "f1": "Sensation de confort similaire à un dossier en mousse rembourrée",
+      "f2": "100% polyester, 510 g/m",
+      "f3": "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
+    }
+  }
+},
+
+"gamma": {
+  "meta": {
+    "title": "Gamma | Chaise de Bureau Ergonomique Professionnelle - Kwesk",
+    "description": "La série Gamma par Kwesk, magasin de sièges de bureau au Maroc. Fauteuil bureau grande entreprise ergonomique, conçu pour environnements professionnels intensifs."
+  },
+  "description": "La toute nouvelle Gamma 150 est l'équilibre ultime entre confort, prix et robustesse offert par Kwesk. Cette chaise est le choix parfait pour une utilisation intensive au bureau ou à la maison.",
+  "versionType": "Chaise Opérateur",
+  "features": {
+    "f1": "Mécanisme synchronisé plat L1530 (Italie)",
+    "f2": "Réglage de la profondeur d'assise",
+    "f3": "Mousse d'assise injectée haute densité 50 mm",
+    "f4": "Dossier Anti-allergénique Aero 3D Mesh (Danemark)",
+    "f5": "Vérin à gaz double cylindre (Allemagne)",
+    "f6": "Support lombaire réglable",
+    "f7": "Accoudoirs réglables 3D"
+  },
+  "options": {
+    "o1": "Appui-tête réglable 3D",
+    "o2": "Assise rembourrée en tissu 3D",
+    "o3": "Dossier 3D Mesh",
+    "o4": "Base en aluminium",
+    "o5": "Roulettes premium"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "italy": "FABRIQUÉ EN ITALIE",
+    "germany": "FABRIQUÉ EN ALLEMAGNE",
+    "morocco": "FABRIQUÉ AU MAROC",
+    "denmark": "FABRIQUÉ AU DANEMARK"
+  },
+  "mechanisms": {
+    "l1520": {
+      "f1": "Design plat",
+      "f2": "Inclinaison du dossier 14.5° synchronisée avec l'assise",
+      "f3": "5 positions de blocage",
+      "f4": "Bouton de réglage de tension sur le côté"
+    },
+    "p2000": {
+      "f1": "Leviers intégrés",
+      "f2": "Inclinaison du dossier 19.5° synchronisée avec l'inclinaison de l'assise 7.5°",
+      "f3": "5 positions de blocage",
+      "f4": "Mécanisme auto-pondéré : ajuste automatiquement la tension du dossier selon le poids de l'utilisateur",
+      "f5": "Réglage de la profondeur d'assise"
+    }
+  },
+  "gasLift": {
+    "description": "La GAMMA 150 est équipée d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur."
+  },
+  "doubleCylinder": {
+    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+  },
+  "materials": {
+    "aeroMesh": {
+      "name": "Anti-allergénique Aero Mesh",
+      "f1": "100% polyester, 330 g/m",
+      "f2": "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+      "f3": "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
+      "f4": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f5": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f6": "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
+    },
+    "aeroMesh3d": {
+      "name": "Anti-allergénique Aero Mesh 3D",
+      "f1": "Sensation de confort similaire à un dossier en mousse rembourrée",
+      "f2": "100% polyester, 510 g/m",
+      "f3": "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
+    },
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "f1": "Extensible multi-directionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
+    }
+  }
+},
+
+
+"winner125": {
+  "meta": {
+    "title": "Winner 125 | Chaise Bureau Mesh Accoudoirs - Kwesk Maroc",
+    "description": "Le Winner 125 par Kwesk, usine chaise de bureau au Maroc. Fauteuil de bureau entreprise mesh avec accoudoirs fixes et base bois pour les professionnels."
+  },
+  "description": "La chaise WINNER 125 est parfaitement conçue pour un bureau d'opérateur, un consultant commercial, une agence ou un point de vente... Avec sa chaise opérateur équipée d'un confort et d'une ergonomie optimaux, vous pourrez accomplir vos missions en toute sérénité !",
+  "versionType": "Chaise Opérateur",
+  "features": {
+    "f1": "Mécanisme synchronisé B800 (Italie)",
+    "f2": "Accoudoirs fixes",
+    "f3": "Vérin à gaz double cylindre (Allemagne)",
+    "f4": "Dossier Anti-allergénique Aero Mesh (Danemark)"
+  },
+  "options": {
+    "o1": "Mécanisme synchronisé plat L1520 (Italie)",
+    "o2": "Mécanisme synchronisé M1700 avec Translation (Italie)",
+    "o3": "Réglage de la profondeur d'assise",
+    "o4": "Appui-tête réglable (3D)",
+    "o5": "Mousse d'assise injectée haute densité 45 mm",
+    "o6": "Assise rembourrée en tissu 3D",
+    "o7": "Dossier rembourré réglable en hauteur",
+    "o8": "Dossier 3D Mesh",
+    "o9": "Support lombaire réglable",
+    "o10": "Accoudoirs réglables 3D",
+    "o11": "Base en aluminium",
+    "o12": "Roulettes premium"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "italy": "FABRIQUÉ EN ITALIE",
+    "germany": "FABRIQUÉ EN ALLEMAGNE",
+    "morocco": "FABRIQUÉ AU MAROC",
+    "denmark": "FABRIQUÉ AU DANEMARK"
+  },
+  "mechanisms": {
+    "b800": {
+      "f1": "Inclinaison du dossier 15° synchronisée avec l'assise",
+      "f2": "Une seule position de blocage",
+      "f3": "Bouton de réglage de tension inférieur"
+    },
+    "l1520": {
+      "f1": "Design plat",
+      "f2": "Inclinaison du dossier 14.5° synchronisée avec l'assise",
+      "f3": "5 positions de blocage",
+      "f4": "Bouton de réglage de tension sur le côté"
+    },
+    "m1700": {
+      "f1": "Inclinaison du dossier 25° synchronisée avec l'assise",
+      "f2": "5 positions de blocage",
+      "f3": "Bouton de réglage de tension sur le côté",
+      "f4": "Réglage de la profondeur d'assise 5 cm"
+    }
+  },
+  "gasLift": {
+    "description": "Le WINNER 125 est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur."
+  },
+  "materials": {
+    "aeroMesh": {
+      "name": "Anti-allergénique Aero Mesh",
+      "f1": "100% polyester, 330 g/m",
+      "f2": "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+      "f3": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f4": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)"
+    },
+    "fabric3d": {
+      "name": "Tissu 3D",
+      "f1": "Extensible multi-directionnel",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Résistance à l'abrasion Martindale 65 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 4-5 (EN ISO 12945-2)"
+    }
+  }
+},
+
+"winnerC": {
+  "meta": {
+    "title": "Winner C | Chaise de Bureau Entreprise Ergonomique - Kwesk",
+    "description": "Découvrez la Winner C par Kwesk, fabricant de sièges de bureau ergonomiques. Fauteuil professionnel idéal pour grande entreprise, conçu au Maroc pour un usage intensif."
+  },
+  "description": "La chaise visiteur WINNER C est parfaitement conçue pour accueillir votre équipe/visiteurs avec un confort exceptionnel et une ergonomie optimale. Dans un hall, une salle d'attente ou devant votre bureau, la WINNER C est la référence des chaises visiteur !",
+  "versionType": "Chaise Visiteur",
+  "features": {
+    "f1": "Structure en acier inoxydable ou acier galvanisé noir mat",
+    "f2": "Accoudoirs fixes",
+    "f3": "Dossier Anti-allergénique Aero Mesh (Danemark)"
+  },
+  "options": {
+    "o1": "Appui-tête réglable (3D)",
+    "o2": "Mousse d'assise injectée haute densité 45 mm",
+    "o3": "Dossier rembourré réglable en hauteur",
+    "o4": "Dossier 3D Mesh",
+    "o5": "Support lombaire réglable",
+    "o6": "Accoudoirs réglables 3D"
+  },
+  "tags": {
+    "default": "défaut",
+    "optional": "optionnel"
+  },
+  "madeIn": {
+    "denmark": "FABRIQUÉ AU DANEMARK"
+  },
+  "materials": {
+    "aeroMesh": {
+      "name": "Anti-allergénique Aero Mesh",
+      "f1": "100% polyester, 330 g/m",
+      "f2": "Résistance à l'abrasion Martindale 70 000 (EN ISO 12947-2)",
+      "f3": "Résistance au boulochage : 4-5 pour 5 000 frottements (EN ISO 12945-2)",
+      "f4": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f5": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f6": "Inflammabilité - BS EN 1021 1&2 Cigarette et Allumette - CA TB 117-2013"
+    },
+    "aeroMesh3d": {
+      "name": "Anti-allergénique Aero Mesh 3D",
+      "f1": "Sensation de confort similaire à un dossier en mousse rembourrée",
+      "f2": "100% polyester, 510 g/m",
+      "f3": "Résistance à l'abrasion Martindale : 70 000 (EN ISO 12947-2)",
+      "f4": "Échelle de boulochage 1-5, max. 5 : 5 (EN ISO 12945-2)",
+      "f5": "Solidité à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Solidité au frottement échelle 1-5, max. 5 - humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité - CA TB 117-2013 BS EN 1021-1 / Cigarette BS EN 1021 1&2 / Cigarette et Allumette - Classe Uno UNI 9175 Classe 1 CNBF"
+    }
+  }
+},
+
+"about": {
+  "meta": {
+    "title": "Kwesk | Usine de Fauteuil de Bureau au Maroc",
+    "description": "Kwesk, entreprise professionnelle qui fait des bureaux et chaises. Découvrez notre usine de mobilier de bureau au Maroc, fabricant de fauteuils ergonomiques pour entreprises."
+  },
+  "hero": {
+    "label": "À Propos",
+    "title": "Nous concevons et fabriquons des chaises de bureau premium conçues pour une utilisation professionnelle intensive."
+  },
+  "company": {
+    "label": "Notre Entreprise",
+    "title": "KWESK est le premier fabricant de mobilier de bureau à concevoir des chaises destinées à une utilisation intensive dans les centres d'appels et particulièrement dans toute entreprise.",
+    "p1": "À ce jour, plusieurs centaines de milliers d'entreprises font confiance à la marque KWESK principalement en raison de sa robustesse et du design raffiné de ses chaises et bureaux.",
+    "p2": "Les produits KWESK sont reconnus aujourd'hui comme des mobiliers indispensables pour les entreprises recherchant confort, style et surtout durabilité."
+  },
+  "history": {
+    "label": "Notre Histoire",
+    "title": "L'histoire de KWESK a commencé en 2008 lorsque son fondateur Tarik Benjelloun a décidé de mettre à profit son expérience dans les centres d'appels.",
+    "p1": "Il a rassemblé des compétences chevronnées dans la conception de bureaux et de chaises afin de développer des produits innovants résistants à l'utilisation la plus intensive.",
+    "p2": "Après quelques années, l'équipe KWESK était fière d'annoncer que ses chaises et bureaux équipent des millions de postes de travail dans le monde."
+  },
+  "stats": {
+    "chairs": "Chaises livrées par an",
+    "ranges": "Gammes",
+    "employees": "Employés",
+    "countries": "Pays"
+  },
+  "difference": {
+    "label": "La Différence",
+    "title": "Ce Qui Rend KWESK Unique",
+    "point1": {
+      "title": "Composants Premium",
+      "desc": "Mécanismes italiens, vérins allemands, tissus danois"
+    },
+    "point2": {
+      "title": "Conception Usage Intensif",
+      "desc": "Conçu pour les environnements de centres d'appels 24/7"
+    },
+    "point3": {
+      "title": "Garantie 5 Ans",
+      "desc": "Durabilité garantie pour usage professionnel"
+    },
+    "point4": {
+      "title": "Fabrication Locale",
+      "desc": "Fabriqué au Maroc aux standards de qualité européens"
+    }
+  },
+  "features": {
+    "quality": {
+      "title": "Qualité",
+      "desc": "Les chaises KWESK sont conformes BIFMA et EN1335-1-2-3."
+    },
+    "shipping": {
+      "title": "Livraison",
+      "desc": "Livraison mondiale via notre réseau d'affiliés."
+    },
+    "warranty": {
+      "title": "Garantie",
+      "desc": "Garantie minimum de 5 ans."
+    },
+    "service": {
+      "title": "SAV",
+      "desc": "Réparation et maintenance via notre réseau."
+    }
+  },
+  "normes": {
+    "label": "Certifications",
+    "title": "Normes Internationales"
+  },
+  "customers": {
+    "title": "NOS CLIENTS SATISFAITS"
+  },
+  "cta": {
+    "title": "Prêt à Améliorer Votre Espace de Travail ?",
+    "description": "Contactez-nous aujourd'hui pour discuter de vos besoins en mobilier de bureau et obtenir un devis personnalisé pour votre entreprise.",
+    "button": "Contactez-Nous"
+  }
 }
+
 }

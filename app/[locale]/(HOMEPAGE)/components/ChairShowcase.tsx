@@ -1,38 +1,33 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, Environment, ContactShadows } from '@react-three/drei'
 import { useTranslations } from 'next-intl'
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion'
 import * as THREE from 'three'
 
-function ChairModel({ scrollProgress }: { scrollProgress: MotionValue<number> }) {
+function ChairModel({ scrollProgress, isVisible }: { scrollProgress: MotionValue<number>, isVisible: boolean }) {
   const { scene } = useGLTF('/chair2.glb')
   const meshRef = useRef<THREE.Group>(null)
 
   useEffect(() => {
     scene.traverse((child) => {
       if (child instanceof THREE.Mesh) {
-        child.material = new THREE.MeshPhysicalMaterial({
-          color: '#1c1917', // Leather brown
+        child.material = new THREE.MeshStandardMaterial({
+          color: '#1c1917',
           roughness: 0.6,
           metalness: 0.1,
-          clearcoat: 0.3,
-          clearcoatRoughness: 0.4,
-          sheen: 0.5,
-          sheenRoughness: 0.5,
-          sheenColor: new THREE.Color('#1c1917')
         })
       }
     })
   }, [scene])
 
   useFrame(() => {
-    if (meshRef.current) {
+    if (meshRef.current && isVisible) {
       const progress = scrollProgress.get()
       meshRef.current.rotation.y = Math.PI + progress * Math.PI * 2
-      meshRef.current.position.y = Math.sin(progress * Math.PI) * 0.2
+      meshRef.current.position.y = -1 + Math.sin(progress * Math.PI) * 0.2
     }
   })
 
@@ -40,7 +35,7 @@ function ChairModel({ scrollProgress }: { scrollProgress: MotionValue<number> })
     <primitive 
       ref={meshRef} 
       object={scene} 
-      scale={1.5} 
+      scale={1.8} 
       position={[0, -1, 0]} 
       rotation={[0, Math.PI, 0]}
     />
@@ -50,6 +45,20 @@ function ChairModel({ scrollProgress }: { scrollProgress: MotionValue<number> })
 export default function ChairShowcase() {
   const t = useTranslations('showcase')
   const containerRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0 }
+    )
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -62,15 +71,14 @@ export default function ChairShowcase() {
   return (
     <section ref={containerRef} className="h-[200vh] relative bg-white">
       <div className="sticky top-0 h-screen flex items-center">
-        <div className="max-w-[1400px] mx-auto px-[60px] w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-[60px] w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             
-            {/* Text */}
             <motion.div style={{ opacity, x }}>
               <span className="text-xs uppercase tracking-[3px] text-[#8b8b4b] mb-4 block">
                 {t('label')}
               </span>
-              <h2 className="text-4xl lg:text-5xl text-stone-900 mb-6 leading-tight">
+              <h2 className="text-3xl lg:text-5xl text-stone-900 mb-6 leading-tight">
                 {t('title')}
               </h2>
               <p className="text-stone-500 leading-relaxed mb-8">
@@ -92,23 +100,17 @@ export default function ChairShowcase() {
               </ul>
             </motion.div>
 
-            {/* 3D Model */}
-            <div className="h-[500px] lg:h-[600px] bg-white">
+            <div className="h-[300px] lg:h-[500px]">
               <Canvas 
-                camera={{ position: [0, 0, 5], fov: 45 }}
-                style={{ background: 'white' }}
+                camera={{ position: [0, 2, 7], fov: 40 }}
+                dpr={[1, 1.8]}
+                frameloop={isVisible ? 'always' : 'demand'}
               >
-                <ambientLight intensity={0.8} />
+                <ambientLight intensity={1.5} />
                 <directionalLight position={[10, 10, 5]} intensity={1.2} />
-                <directionalLight position={[-10, 5, -5]} intensity={0.5} />
-                <ChairModel scrollProgress={scrollYProgress} />
-                <ContactShadows 
-                  position={[0, -1.5, 0]} 
-                  opacity={0.3} 
-                  blur={2.5}
-                  color="#1c1917"
-                />
-                <Environment preset="studio" background={false} />
+                <ChairModel scrollProgress={scrollYProgress} isVisible={isVisible} />
+                <ContactShadows position={[0, -1.5, 0]} opacity={0.3} blur={2.5} scale={10} />
+                <Environment preset="warehouse" />
               </Canvas>
             </div>
 
