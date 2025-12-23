@@ -910,6 +910,41 @@
     "description": "Contactez-nous aujourd'hui pour discuter de vos besoins en mobilier de bureau et obtenir un devis personnalisé pour votre entreprise.",
     "button": "Contactez-Nous"
   }
-}
+},
+  "contact": {
+    "hero": {
+      "label": "Contact",
+      "title": "CONTACTEZ-NOUS",
+      "description": "Notre équipe est à votre disposition pour répondre à toutes vos questions."
+    },
+    "info": {
+      "address": { "title": "Adresse", "content": "Bd de la corniche, Ain diab\n20180, Casablanca" },
+      "phone": { "title": "Téléphone", "content": "+212 5 20 24 16 37\n+212 6 61 48 16 16" },
+      "email": { "title": "Email", "content": "contact@kwesk.com" },
+      "hours": { "title": "Horaires", "content": "Lun - Ven: 9h00 - 18h00\nSam: 9h00 - 12h00" }
+    },
+    "form": {
+      "label": "Formulaire",
+      "title": "ENVOYEZ-NOUS UN MESSAGE",
+      "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+      "fields": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Email",
+        "phone": "Téléphone",
+        "subject": "Sujet",
+        "message": "Message"
+      },
+      "placeholders": {
+        "firstName": "Votre prénom",
+        "lastName": "Votre nom",
+        "email": "Votre email",
+        "phone": "Votre téléphone",
+        "select": "Sélectionnez un sujet",
+        "message": "Votre message"
+      },
+      "submit": "Envoyer le message"
+    }
+  }
 
 }
