@@ -21,7 +21,7 @@ interface Chair {
 const chairs: Chair[] = [
   {
     label: 'WINNER',
-    image: '/images/chairs/winner.jpg',
+    image: '/winner-125/winner125-hero.png',
     variants: [
       { label: 'WINNER 125', href: '/chairs/winner-125' },
       { label: 'WINNER C', href: '/chairs/winner-c' }
@@ -29,7 +29,7 @@ const chairs: Chair[] = [
   },
   {
     label: 'GAMMA',
-    image: '/images/chairs/gamma.jpg',
+    image: '/gamma/hero.jpg',
     variants: [
       { label: 'GAMMA 150', href: '/chairs/gamma-150' },
       { label: 'GAMMA C', href: '/chairs/gamma-c' }
@@ -37,14 +37,14 @@ const chairs: Chair[] = [
   },
   {
     label: 'CORPO',
-    image: '/images/chairs/corpo.jpg',
+    image: '/corpo-100/corpohero.jpg',
     variants: [
       { label: 'CORPO 100', href: '/chairs/corpo-100' }
     ]
   },
   {
     label: 'BY',
-    image: '/images/chairs/by.jpg',
+    image: '/by100/by100hero.png',
     variants: [
       { label: 'BY 100', href: '/chairs/by-100' },
       { label: 'BY G', href: '/chairs/by-g' }
@@ -52,12 +52,12 @@ const chairs: Chair[] = [
   },
   {
     label: 'CHALLENGER',
-    image: '/images/chairs/challenger.jpg',
+    image: '/challenger/chalhero.png',
     href: '/chairs/challenger'
   },
   {
     label: 'EXCLUSIVE',
-    image: '/images/chairs/exclusive.jpg',
+    image: '/exclusive/exhero.jpg',
     variants: [
       { label: 'EXCLUSIVE 500', href: '/chairs/exclusive-500' },
       { label: 'EXCLUSIVE G', href: '/chairs/exclusive-g' }
@@ -65,7 +65,7 @@ const chairs: Chair[] = [
   },
   {
     label: 'CADDY',
-    image: '/images/chairs/caddy.jpg',
+    image: '/caddy/chero.png',
     href: '/chairs/caddy'
   }
 ]

@@ -1,13 +1,16 @@
 import ChairProduct from '../../components/ChairProduct'
 import { getTranslations } from 'next-intl/server'
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+import { baseUrl, getAlternates } from '../../../../lib/metadata'
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'exclusive' })
-  
   return {
     title: t('meta.title'),
-    description: t('meta.description')
+    description: t('meta.description'),
+    alternates: getAlternates(locale, '/chairs/exclusive'),
+    openGraph: { title: t('meta.title'), description: t('meta.description'), url: `${baseUrl}/${locale}/exclusive`, images: [{ url: `${baseUrl}/exclusive/exhero.jpg` }] },
   }
 }
 

@@ -8,13 +8,16 @@ import AboutNormes from './components/AboutNormes'
 import Customers from '@/app/shared/Customers'
 import AboutCta from './components/AboutCta'
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+import { baseUrl, getAlternates } from '../../../lib/metadata'
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'about' })
-  
   return {
     title: t('meta.title'),
-    description: t('meta.description')
+    description: t('meta.description'),
+    alternates: getAlternates(locale, '/about'),
+    openGraph: { title: t('meta.title'), description: t('meta.description'), url: `${baseUrl}/${locale}/about`, images: [{ url: `${baseUrl}/about-hero.jpg` }] },
   }
 }
 

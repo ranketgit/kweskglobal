@@ -1,6 +1,17 @@
 {
+  "metadata": {
+  "title": "Kwesk | Ergonomic Office Chair Manufacturer",
+  "description": "Kwesk, manufacturer and supplier of business office chairs. Discover our range of ergonomic chairs made for large enterprises.",
+  "keywords": "office chair, ergonomic chair, Kwesk, professional furniture, call center chairs, business chairs, enterprise furniture"
+},
+"home": {
+  "meta": {
+    "title": "Ergonomic Office Chair Manufacturer",
+    "description": "Kwesk, manufacturer and supplier of business office chairs. Discover our range of ergonomic chairs made for large enterprises. Italian mechanisms, German gas lifts, 5-year warranty."
+  }
+},
   "hero": {
-    "title": "Ergonomic Office Chairs Built for Business",
+    "title": "Office Chair Factory",
     "subtitle": "Manufacturer and supplier of premium ergonomic seating for enterprises",
     "cta": "Discover Our Range"
   },
@@ -14,9 +25,9 @@
   },
   "intro": {
     "label": "Our Company",
-    "title1": "OFFICE",
-    "title2": "FURNITURE",
-    "title3": "WorldWide",
+    "title1": "OFFICE CHAIR MANUFACTURER",
+    "title2": "",
+    "title3": "",
     "description": "KWESK designs and manufactures chairs for intensive use in the office or at home.",
     "quote": "Beyond the unanimous robustness of all KWESK products, our engineers focus their efforts on innovation, always with the aim of offering furniture that exceeds the expectations of companies. For example, we cite reinforced structures with a steel-based alloy, our anti-allergic air-mesh coating, our high-density foam and our antistatic and dust-proof plastic.",
     "authorName": "Tarik Benjelloun",
@@ -75,6 +86,7 @@
   }
 },
 
+
 "chairProduct": {
   "version": "Version",
   "buy": "BUY",
@@ -90,10 +102,11 @@
   "availableColors": "Available colors"
 },
 
+
 "by100": {
   "meta": {
-    "title": "BY 100 | Large Business Office Chair - Kwesk Morocco",
-    "description": "The BY 100 armchair by Kwesk, office chair manufacturer in Morocco. Customized and ergonomic office chair for professional business."
+    "title": "BY 100 | Executive Office Chair",
+    "description": "The BY 100 executive chair by Kwesk. Customized and ergonomic office chair for professional businesses."
   },
   "description": "With its high asynchronous backrest and innovative design, the BY 100 will easily equip your executive or administrative offices for a reduced cost, optimized comfort and a long lifespan.",
   "versionType": "President Chair",
@@ -146,9 +159,9 @@
   }
 },
 "byG": {
-  "meta": {
-    "title": "BY G | Professional Ergonomic Office Chair in Morocco",
-    "description": "Discover the BY G, business office chair by Kwesk, office chair supplier in Morocco. Ergonomic chair manufactured for large companies."
+ "meta": {
+    "title": "BY G | Professional Ergonomic Office Chair",
+    "description": "Discover the BY G, business office chair by Kwesk. Ergonomic chair manufactured for large enterprises."
   },
   "description": "With its low asynchronous backrest, the BY G complements our BY 100 armchair to welcome your visitors to your office. Equipped with the same features, it can also equip your meeting rooms at a lower cost while offering appreciable comfort over a few hours of use.",
   "versionType": "Operator Chair",
@@ -217,8 +230,8 @@
 },
 "caddy": {
   "meta": {
-    "title": "Caddy | Professional Training Room Chair - Kwesk",
-    "description": "The Caddy series by Kwesk, office seating manufacturer in Morocco. Chair for training rooms and professional spaces, ergonomic and suitable for businesses."
+    "title": "Caddy | Professional Training Room Chair",
+    "description": "The Caddy series by Kwesk. Chair for training rooms and professional spaces, ergonomic and suitable for businesses."
   },
   "description": "CADDY chairs offer optimized ergonomics for training sessions. The adjustable tablet and storage spaces give users the mobility to modify the layout of your space according to your needs. You will train your teams with ease!",
   "version": "Version",
@@ -234,10 +247,11 @@
   "customColors": "CUSTOM COLORS"
 },
 
+
 "challenger": {
-  "meta": {
+ "meta": {
     "title": "Challenger | Ergonomic Office Chair with Headrest",
-    "description": "The Challenger by Kwesk, office chair brand and manufacturer in Morocco. Large business office chair with headrest, ergonomic for professional use."
+    "description": "The Challenger by Kwesk. Large business office chair with headrest, ergonomic for professional use."
   },
   "description": "The Challenger 175 remains one of the best options for companies looking for a corporate-look chair with an excellent level of comfort, optimized cost and a 5-year lifespan in intensive use like all KWESK chairs. Its wide and deep seat and its many possible adjustments offer an exceptional feeling of comfort even over long periods of use.",
   "versionType": "Operator Chair with adjustable headrest",
@@ -319,10 +333,11 @@
   }
 },
 
+
 "corpo100": {
   "meta": {
-    "title": "Corpo 100 | Large Business Office Chair - Kwesk Morocco",
-    "description": "The Corpo 100 by Kwesk, office chair factory in Morocco. Ergonomic business office chair, designed for corporate environments and intensive use."
+    "title": "Corpo 100 | Large Business Office Chair",
+    "description": "The Corpo 100 by Kwesk. Ergonomic business office chair, designed for corporate environments and intensive use."
   },
   "description": "The CORPO 100 offers the ultimate balance between comfort and style, designed to keep you productive all day long. Its sleek design and superior ergonomics make it a must-have for any modern workspace.",
   "versionType": "Operator Chair",
@@ -406,10 +421,11 @@
   }
 },
 
+
 "exclusiveG": {
-  "meta": {
-    "title": "Exclusive G | Professional Office Chair - Kwesk Morocco",
-    "description": "The Exclusive G chair by Kwesk, high-end office chair supplier in Morocco. Leather business office chair for professional use."
+ "meta": {
+    "title": "Exclusive G | Professional Office Chair",
+    "description": "The Exclusive G chair by Kwesk. Leather business office chair for professional use."
   },
   "description": "The EXCLUSIVE G chair offers the same features as the EXCLUSIVE 500 president seat. Its pivoting armrest to welcome your VIP visitors in your office and meeting rooms.",
   "versionType": "Operator Chair",
@@ -486,10 +502,11 @@
   }
 },
 
+
 "exclusive": {
   "meta": {
-    "title": "Exclusive 500 | Ergonomic Office Chair - Kwesk Morocco",
-    "description": "The Exclusive 500 by Kwesk, office chair manufacturer in Morocco. Customized leather office chair with aluminum armrests for large businesses."
+    "title": "Exclusive 500 | Ergonomic Office Chair",
+    "description": "The Exclusive 500 by Kwesk. Customized leather office chair with aluminum armrests for large businesses."
   },
   "description": "The EXCLUSIVE 500 is the ultimate executive chair. It integrates many KWESK innovations such as interconnected backrest and seat and multiple adjustments combined with ergonomic and easy-to-access controls.",
   "versionType": "President Chair",
@@ -563,10 +580,12 @@
 },
 
 
+
+
 "gammaC": {
   "meta": {
-    "title": "Gamma C | Ergonomic Business Office Chair - Kwesk",
-    "description": "The Gamma C by Kwesk, office chair seller and manufacturer in Morocco. Ergonomic business office chair for professionals and large companies."
+    "title": "Gamma C | Ergonomic Business Office Chair",
+    "description": "The Gamma C by Kwesk. Ergonomic business office chair for professionals and large companies."
   },
   "description": "A wide and deep seat, an ergonomic metal frame and an innovative design make the GAMMA C the ideal chair for receiving your visitors. In a hall, a waiting room or in your office, the GAMMA C is an ideal concept for welcoming your visitors.",
   "versionType": "Visitor Chair",
@@ -619,8 +638,8 @@
 },
 "gamma": {
   "meta": {
-    "title": "Gamma | Professional Ergonomic Office Chair - Kwesk",
-    "description": "The Gamma series by Kwesk, office seating store in Morocco. Ergonomic large business office chair, designed for intensive professional environments."
+    "title": "Gamma | Professional Ergonomic Office Chair",
+    "description": "The Gamma series by Kwesk. Ergonomic large business office chair, designed for intensive professional environments."
   },
   "description": "The brand new Gamma 150 is the ultimate balance between comfort, price and robustness offered by Kwesk. This chair is the perfect choice for intensive use in the office or at home.",
   "versionType": "Operator Chair",
@@ -704,10 +723,11 @@
   }
 },
 
+
 "winner125": {
   "meta": {
-    "title": "Winner 125 | Mesh Office Chair with Armrests - Kwesk Morocco",
-    "description": "The Winner 125 by Kwesk, office chair factory in Morocco. Mesh business office chair with fixed armrests and wooden base for professionals."
+    "title": "Winner 125 | Mesh Office Chair with Armrests",
+    "description": "The Winner 125 by Kwesk. Mesh business office chair with fixed armrests for professionals."
   },
   "description": "The WINNER 125 chair is perfectly designed for an operator's desk, a sales consultant, an agency or a point of sale... With its operator chair equipped with optimal comfort and ergonomics, you can accomplish your missions with peace of mind!",
   "versionType": "Operator Chair",
@@ -781,10 +801,11 @@
   }
 },
 
+
 "winnerC": {
   "meta": {
-    "title": "Winner C | Ergonomic Business Office Chair - Kwesk",
-    "description": "Discover the Winner C by Kwesk, manufacturer of ergonomic office seats. Professional chair ideal for large businesses, designed in Morocco for intensive use."
+    "title": "Winner C | Ergonomic Business Office Chair",
+    "description": "Discover the Winner C by Kwesk. Professional chair ideal for large businesses, designed for intensive use."
   },
   "description": "The WINNER C visitor chair is perfectly designed to welcome your team/visitors with exceptional comfort and optimal ergonomics. In a hall, a waiting room or in front of your desk, the WINNER C is the reference for visitor chairs!",
   "versionType": "Visitor Chair",
@@ -831,10 +852,11 @@
   }
 },
 
+
 "about": {
   "meta": {
-    "title": "Kwesk | Office Chair Factory in Morocco",
-    "description": "Kwesk, professional company that makes desks and chairs. Discover our office furniture factory in Morocco, manufacturer of ergonomic chairs for businesses."
+    "title": "About Kwesk | Office Chair Manufacturer",
+    "description": "Kwesk, professional company manufacturing desks and chairs. Discover our office furniture factory, manufacturer of ergonomic chairs for enterprises."
   },
   "hero": {
     "label": "About Us",
@@ -910,6 +932,10 @@
   }
 },
   "contact": {
+    "meta": {
+    "title": "Contact Us | Kwesk",
+    "description": "Contact Kwesk for your ergonomic office chair needs. Get a quote, request information, or reach our sales team."
+  },
     "hero": {
       "label": "Contact",
       "title": "GET IN TOUCH",
@@ -944,7 +970,6 @@
       "submit": "Send Message"
     }
   },
-
   "footer": {
     "description": "KWESK designs and manufactures chairs for intensive use at the office or at home. Corporate chair leader since 2008.",
     "titles": {
@@ -963,4 +988,6 @@
   "customers": {
     "title": "OUR SATISFIED CUSTOMERS"
   }
+
+  
 }
