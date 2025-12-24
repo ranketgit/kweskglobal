@@ -59,7 +59,7 @@ const chairs: Chair[] = [
     label: 'EXCLUSIVE',
     image: '/exclusive/exhero.jpg',
     variants: [
-      { label: 'EXCLUSIVE 500', href: '/chairs/exclusive-500' },
+      { label: 'EXCLUSIVE 500', href: '/chairs/exclusive' },
       { label: 'EXCLUSIVE G', href: '/chairs/exclusive-g' }
     ]
   },
