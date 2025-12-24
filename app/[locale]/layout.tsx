@@ -73,9 +73,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [`${baseUrl}/og-image.jpg`],
     },
     icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon-16x16.png',
-      apple: '/apple-touch-icon.png',
+      icon: '/kwesk-favicon.png',
     },
     manifest: '/site.webmanifest',
   }
