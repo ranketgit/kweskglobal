@@ -27,17 +27,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const chairLinks = [
-    { label: "Challenger 175", href: "/challenger" },
-    { label: "Gamma 150", href: "/gamma" },
-    { label: "Gamma C", href: "/gamma-c" },
-    { label: "Winner 125", href: "/winner-125" },
-    { label: "Winner C", href: "/winner-c" },
-    { label: "Corpo 100", href: "/corpo-100" },
-    { label: "Exclusive 500", href: "/exclusive" },
-    { label: "Exclusive G", href: "/exclusive-g" },
-    { label: "BY 100", href: "/by-100" },
-    { label: "BY G", href: "/by-g" },
-    { label: "Caddy 80", href: "/caddy" },
+    { label: "Challenger 175", href: "/chairs/challenger" },
+    { label: "Gamma 150", href: "/chairs/gamma" },
+    { label: "Gamma C", href: "/chairs/gamma-c" },
+    { label: "Winner 125", href: "/chairs/winner-125" },
+    { label: "Winner C", href: "/chairs/winner-c" },
+    { label: "Corpo 100", href: "/chairs/corpo-100" },
+    { label: "Exclusive 500", href: "/chairs/exclusive" },
+    { label: "Exclusive G", href: "/chairs/exclusive-g" },
+    { label: "BY 100", href: "/chairs/by-100" },
+    { label: "BY G", href: "/chairs/by-g" },
+    { label: "Caddy 80", href: "/chairs/caddy" },
   ]
 
   const companyLinks = [
