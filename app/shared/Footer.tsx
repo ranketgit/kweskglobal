@@ -42,7 +42,7 @@ export default function Footer() {
 
   const companyLinks = [
     { label: t('company.home'), href: "/" },
-    { label: t('company.about'), href: "/a-propos" },
+    { label: t('company.about'), href: "/about" },
     { label: t('company.contact'), href: "/contact" },
   ]
 
