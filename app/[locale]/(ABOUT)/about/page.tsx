@@ -7,6 +7,7 @@ import Features from './components/Features'
 import AboutNormes from './components/AboutNormes'
 import Customers from '@/app/shared/Customers'
 import AboutCta from './components/AboutCta'
+import { Metadata } from 'next'
 
 import { baseUrl, getAlternates } from '../../../lib/metadata'
 

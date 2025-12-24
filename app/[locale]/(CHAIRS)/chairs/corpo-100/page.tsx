@@ -1,5 +1,7 @@
 import ChairProduct from '../../components/ChairProduct'
 import { getTranslations } from 'next-intl/server'
+import { Metadata } from 'next'
+
 
 import { baseUrl, getAlternates } from '../../../../lib/metadata'
 
