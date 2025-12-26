@@ -26,6 +26,9 @@ export default function Footer() {
   const t = useTranslations('footer')
   const currentYear = new Date().getFullYear()
 
+  const description = t('description')
+  const descriptionLines = description.split('.').filter((line: string) => line.trim() !== '')
+
   const chairLinks = [
     { label: "Challenger 175", href: "/chairs/challenger" },
     { label: "Gamma 150", href: "/chairs/gamma" },
@@ -50,9 +53,9 @@ export default function Footer() {
     <footer className="bg-[#1c1917] text-white pt-20">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-[60px]">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] gap-12 lg:gap-[60px] pb-12 border-b border-[#292524]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.2fr] gap-12 lg:gap-[50px] pb-12 border-b border-[#292524]">
           
-          <div className="lg:pr-10">
+          <div className="lg:pr-8">
             <Link href="/" className="inline-block">
               <Image 
                 src="/kwesk-logo.png" 
@@ -62,20 +65,24 @@ export default function Footer() {
                 className="brightness-0 invert h-auto w-auto" 
               />
             </Link>
-            <p className="text-sm text-[#a8a29e] leading-relaxed mt-6">
-              {t('description')}
-            </p>
-            <div className="flex gap-4 mt-8">
+            <div className="mt-5">
+              {descriptionLines.map((line: string, index: number) => (
+                <p key={index} className="text-xs text-[#a8a29e] leading-relaxed">
+                  {line.trim()}.
+                </p>
+              ))}
+            </div>
+            <div className="flex gap-3 mt-6">
               {socialLinks.map((social) => (
                 <a 
                   key={social.id}
                   href={social.href} 
-                  className="flex items-center justify-center w-10 h-10 bg-[#292524] rounded-full text-[#a8a29e] hover:bg-[#8b8b4b] hover:text-white transition-all duration-300"
+                  className="flex items-center justify-center w-9 h-9 bg-[#292524] rounded-full text-[#a8a29e] hover:bg-[#8b8b4b] hover:text-white transition-all duration-300"
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label={social.id}
                 >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-[18px] h-[18px]">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                     {social.path}
                   </svg>
                 </a>
@@ -84,13 +91,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[2px] mb-6">
+            <h4 className="text-xs font-semibold uppercase tracking-[2px] mb-5">
               {t('titles.chairs')}
             </h4>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-2">
               {chairLinks.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-[#a8a29e] hover:text-[#8b8b4b] transition-colors">
+                  <Link href={link.href} className="text-xs text-[#a8a29e] hover:text-[#8b8b4b] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -99,13 +106,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-[2px] mb-6">
+            <h4 className="text-xs font-semibold uppercase tracking-[2px] mb-5">
               {t('titles.company')}
             </h4>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-2">
               {companyLinks.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-[#a8a29e] hover:text-[#8b8b4b] transition-colors">
+                  <Link href={link.href} className="text-xs text-[#a8a29e] hover:text-[#8b8b4b] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -113,40 +120,37 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-6">
-            <h4 className="text-sm font-semibold uppercase tracking-[2px] mb-2">
+          <div className="flex flex-col gap-5">
+            <h4 className="text-xs font-semibold uppercase tracking-[2px] mb-1">
               {t('titles.contact')}
             </h4>
-            <div className="flex gap-4 items-start">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-[#8b8b4b] shrink-0 mt-1">
+            <div className="flex gap-3 items-start">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4 text-[#8b8b4b] shrink-0 mt-0.5">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
               </svg>
-              <p className="text-sm text-[#a8a29e] leading-relaxed">
+              <p className="text-xs text-[#a8a29e] leading-relaxed">
                 Bd de la corniche, Ain diab<br/>20180, Casablanca
               </p>
             </div>
-            <div className="flex gap-4 items-center">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-[#8b8b4b] shrink-0">
+            <div className="flex gap-3 items-center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4 text-[#8b8b4b] shrink-0">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              <p className="text-sm text-[#a8a29e]">+212 5 20 24 16 37</p>
+              <p className="text-xs text-[#a8a29e]">+212 5 20 24 16 37</p>
             </div>
-            <div className="flex gap-4 items-center">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-[#8b8b4b] shrink-0">
+            <div className="flex gap-3 items-center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4 text-[#8b8b4b] shrink-0">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
               </svg>
-              <p className="text-sm text-[#a8a29e]">contact@kwesk.com</p>
+              <p className="text-xs text-[#a8a29e]">contact@kwesk.com</p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center py-8 gap-4">
-          <p className="text-[13px] text-[#78716c]">
+        <div className="flex flex-col md:flex-row justify-between items-center py-6 gap-4">
+          <p className="text-xs text-[#78716c]">
             © {currentYear} KWESK. {t('rights')}
           </p>
-          <div className="flex gap-8">
-            {/* Add legal links here if needed */}
-          </div>
         </div>
 
       </div>

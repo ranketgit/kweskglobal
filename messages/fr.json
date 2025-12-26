@@ -943,7 +943,7 @@
     "hero": {
       "label": "Contact",
       "title": "CONTACTEZ-NOUS",
-      "description": "Notre équipe est à votre disposition pour répondre à toutes vos questions."
+      "description": ""
     },
     "info": {
       "address": { "title": "Adresse", "content": "Bd de la corniche, Ain diab\n20180, Casablanca" },
@@ -954,7 +954,7 @@
     "form": {
       "label": "Formulaire",
       "title": "ENVOYEZ-NOUS UN MESSAGE",
-      "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+      "description": "Veuillez remplir ce formulaire ou nous envoyer un email à contact@kwesk.com",
       "fields": {
         "firstName": "Prénom",
         "lastName": "Nom",
@@ -975,7 +975,7 @@
     }
   },
     "footer": {
-      "description": "KWESK conçoit et fabrique des chaises pour une utilisation intensive au bureau ou à la maison. Leader des chaises corporate depuis 2008.",
+      "description": "KWESK conçoit et fabrique des sièges destinés à un usage intensif, au bureau comme à la maison. À ce jour, de nombreuses entreprises font confiance à la marque KWESK, principalement pour la robustesse et le design raffiné de ses modèles. Ce succès est le fruit de plusieurs années de recherche et développement, ainsi que de la vaste expérience de son fondateur dans le secteur des centres d'appels, où les sièges sont généralement soumis à de fortes contraintes. Les fauteuils KWESK sont ainsi optimisés pour les entreprises en quête de confort, de style et surtout de durabilité. Les sièges KWESK sont certifiés BIFMA et EN1335-1-2-3.",
       "titles": {
         "chairs": "Nos Chaises",
         "company": "Entreprise",

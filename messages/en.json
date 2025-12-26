@@ -939,7 +939,7 @@
     "hero": {
       "label": "Contact",
       "title": "GET IN TOUCH",
-      "description": "Our team is at your disposal to answer all your questions and support you in your project."
+      "description": ""
     },
     "info": {
       "address": { "title": "Address", "content": "Bd de la corniche, Ain diab\n20180, Casablanca" },
@@ -950,7 +950,7 @@
     "form": {
       "label": "Form",
       "title": "SEND US A MESSAGE",
-      "description": "Fill out the form below and we will get back to you as soon as possible.",
+      "description": "Please fill out this form to contact us, or send an email to contact@kwesk.com",
       "fields": {
         "firstName": "First Name",
         "lastName": "Last Name",
@@ -971,7 +971,7 @@
     }
   },
   "footer": {
-    "description": "KWESK designs and manufactures chairs for intensive use at the office or at home. Corporate chair leader since 2008.",
+    "description": "KWESK designs and manufactures chairs for intensive use in offices or at home. To date, many companies rely on KWESK brand mainly due to its sturdiness and the refined design of its chairs. This is the result of several years of research and development as well as the extensive experience of its founder in call centres where the chairs are generally highly stressed. KWESK chairs are thus optimised for companies looking for comfort, style and especially durability. KWESK chairs are BIFMA and EN1335-1-2-3 certified.",
     "titles": {
       "chairs": "Our Chairs",
       "company": "Company",
