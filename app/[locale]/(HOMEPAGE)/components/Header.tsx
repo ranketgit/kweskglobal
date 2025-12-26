@@ -31,7 +31,7 @@ const chairs: Chair[] = [
     label: 'GAMMA',
     image: '/gamma/hero.jpg',
     variants: [
-      { label: 'GAMMA 150', href: '/chairs/gamma-150' },
+      { label: 'GAMMA 150', href: '/chairs/gamma' },
       { label: 'GAMMA C', href: '/chairs/gamma-c' }
     ]
   },
