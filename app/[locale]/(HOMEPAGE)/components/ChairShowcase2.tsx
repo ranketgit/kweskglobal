@@ -8,7 +8,7 @@ import { useScroll, useTransform, motion, MotionValue } from 'framer-motion'
 import * as THREE from 'three'
 
 function ChairModel({ scrollProgress, isVisible }: { scrollProgress: MotionValue<number>, isVisible: boolean }) {
-  const { scene } = useGLTF('/chair.glb')
+  const { scene } = useGLTF('/chair3.glb')
   const meshRef = useRef<THREE.Group>(null)
 
   useEffect(() => {
