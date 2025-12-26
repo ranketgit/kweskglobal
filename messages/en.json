@@ -17,7 +17,7 @@
   },
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "Company",
     "chairs": "Chairs",
     "contact": "Contact",
     "cta": "Free Quote",
@@ -927,7 +927,7 @@
   },
   "cta": {
     "title": "Ready to Upgrade Your Workspace?",
-    "description": "Contact us today to discuss your office furniture needs and get a personalized quote for your business.",
+    "description": "Our experienced consultants will be happy to advise and quote the kwesk chairs that best meet your needs.",
     "button": "Contact Us"
   }
 },
