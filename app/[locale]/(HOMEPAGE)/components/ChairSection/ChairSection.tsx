@@ -46,7 +46,7 @@ export default function ChairsSection() {
 
   return (
     <section className="bg-white py-20">
-      <h2 className="text-4xl lg:text-6xl text-center text-stone-900 mb-8 px-4">
+      <h2 id='products' className="text-4xl lg:text-6xl text-center text-stone-900 mb-8 px-4">
         {t('sectionTitle1')}<br/>
         {t('sectionTitle2')}
       </h2>
