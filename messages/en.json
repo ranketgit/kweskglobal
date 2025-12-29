@@ -998,7 +998,8 @@
     "company": {
       "home": "Home",
       "about": "About Us",
-      "contact": "Contact"
+      "contact": "Contact",
+      "news": "News"
     },
     "rights": "All rights reserved."
   },

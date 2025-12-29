@@ -29,6 +29,7 @@ export default function Footer() {
     { label: t('company.home'), href: "/" },
     { label: t('company.about'), href: "/about" },
     { label: t('company.contact'), href: "/contact" },
+    { label: t('company.news'), href: "/blog" },
   ]
 
   return (

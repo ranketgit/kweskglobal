@@ -1002,7 +1002,8 @@
       "company": {
         "home": "Accueil",
         "about": "À Propos",
-        "contact": "Contact"
+        "contact": "Contact",
+        "news": "Nouveaute"
       },
       "rights": "Tous droits réservés."
     },
