@@ -19,7 +19,10 @@ export default function ChairsSection() {
       title: 'GAMMA',
       description: t('gamma.description'),
       image: '/chairs/gamma-chair.jpg',
-      versions: [{ name: 'GAMMA 150', type: t('gamma.type') }],
+      versions: [
+        { name: 'GAMMA 150', type: t('gamma.type') },
+        { name: 'GAMMA C', type: t('gammaC.type') }
+      ],
       imagePosition: 'left' as const,
       href: '/chairs/gamma'
     },
@@ -41,6 +44,37 @@ export default function ChairsSection() {
       versions: [{ name: 'CORPO 100', type: t('corpo.type') }],
       imagePosition: 'left' as const,
       href: '/chairs/corpo-100'
+    },
+    {
+      title: 'BY',
+      description: t('by.description'),
+      image: '/by100/by1.jpg',
+      versions: [
+        { name: 'BY 100', type: t('by.type1') },
+        { name: 'BY G', type: t('by.type2') },
+        { name: 'BY C', type: t('by.type3') }
+      ],
+      imagePosition: 'right' as const,
+      href: '/chairs/by-100'
+    },
+    {
+      title: 'EXCLUSIVE',
+      description: t('exclusive.description'),
+      image: '/exclusive/2.jpg',
+      versions: [
+        { name: 'EXCLUSIVE 500', type: t('exclusive.type1') },
+        { name: 'EXCLUSIVE G', type: t('exclusive.type2') }
+      ],
+      imagePosition: 'left' as const,
+      href: '/chairs/exclusive'
+    },
+    {
+      title: 'CADDY',
+      description: t('caddy.description'),
+      image: '/chairs/caddy-chair.png',
+      versions: [{ name: 'CADDY 80', type: t('caddy.type') }],
+      imagePosition: 'right' as const,
+      href: '/chairs/caddy'
     }
   ]
 

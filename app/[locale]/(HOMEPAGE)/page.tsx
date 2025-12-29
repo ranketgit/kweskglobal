@@ -31,8 +31,7 @@ export default function HomePage() {
       <Intro />
       <Metrics />
       <Categories />
-      <ChairShowcase />
-      <ChairShowcase2 />
+    
       <ChairsSection />
       <Customers />
     </main>

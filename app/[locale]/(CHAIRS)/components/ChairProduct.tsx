@@ -79,7 +79,7 @@ export default function ChairProduct({
   const prevImage = () => setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
 
   return (
-    <main className="pt-[100px]">
+    <main className="pt-[100px] overflow-x-hidden">
       
       {/* Hero */}
       <section className="relative h-[50vh] bg-stone-800">
@@ -92,12 +92,12 @@ export default function ChairProduct({
       </section>
 
       {/* Product Info */}
-      <section className="relative bg-white z-10 py-16">
-        <div className="max-w-6xl mx-auto px-8 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <section className="relative bg-white z-10 py-12 lg:py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             
             {/* Gallery */}
-            <div className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               <div className="relative">
                 <div className="relative aspect-square">
                   <Image 
@@ -128,16 +128,16 @@ export default function ChairProduct({
               </div>
 
               {/* Thumbnails */}
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center gap-2 sm:gap-4 flex-wrap">
                 {images.map((img, i) => (
                   <button 
                     key={i}
                     onClick={() => setCurrentImage(i)}
-                    className={`p-2 border rounded transition-colors ${
+                    className={`p-1 sm:p-2 border rounded transition-colors flex-shrink-0 ${
                       currentImage === i ? 'border-[#8b8b4b]' : 'border-stone-200 hover:border-stone-400'
                     }`}
                   >
-                    <div className="relative w-16 h-16">
+                    <div className="relative w-12 h-12 sm:w-16 sm:h-16">
                       <Image src={img} alt={`${name} view ${i + 1}`} fill className="object-contain" />
                     </div>
                   </button>
@@ -146,9 +146,9 @@ export default function ChairProduct({
             </div>
 
             {/* Info */}
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl text-stone-900">{name}</h1>
-              <p className="text-stone-500 leading-relaxed">{description}</p>
+            <div className="space-y-4 lg:space-y-6">
+              <h1 className="text-3xl lg:text-5xl text-stone-900">{name}</h1>
+              <p className="text-stone-500 leading-relaxed text-sm lg:text-base break-words">{description}</p>
               
               <div className="space-y-2">
                 <p className="text-stone-400 text-sm">{t('version')}</p>
@@ -170,22 +170,22 @@ export default function ChairProduct({
       </section>
 
       {/* Features Diagram */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-8 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             
-            <div className="relative aspect-square max-w-md">
+            <div className="relative aspect-square max-w-xs sm:max-w-md mx-auto lg:mx-0">
               <Image src={featuresDiagram} alt="Features" fill className="object-contain" />
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8">
               <div>
-                <h3 className="text-2xl text-stone-900 mb-4">{t('standardFeatures')}</h3>
+                <h3 className="text-xl lg:text-2xl text-stone-900 mb-4">{t('standardFeatures')}</h3>
                 <ul className="space-y-2">
                   {standardFeatures.map((f, i) => (
                     <li key={i} className="flex items-start gap-2 text-stone-600 text-sm">
-                      <span className="text-[#8b8b4b]">✓</span>
-                      {f}
+                      <span className="text-[#8b8b4b] flex-shrink-0">✓</span>
+                      <span className="break-words">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -193,12 +193,12 @@ export default function ChairProduct({
 
               {options.length > 0 && (
                 <div>
-                  <h3 className="text-2xl text-stone-900 mb-4">{t('options')}</h3>
+                  <h3 className="text-xl lg:text-2xl text-stone-900 mb-4">{t('options')}</h3>
                   <ul className="space-y-2">
                     {options.map((o, i) => (
                       <li key={i} className="flex items-start gap-2 text-stone-600 text-sm">
-                        <span className="text-[#8b8b4b]">✓</span>
-                        {o}
+                        <span className="text-[#8b8b4b] flex-shrink-0">✓</span>
+                        <span className="break-words">{o}</span>
                       </li>
                     ))}
                   </ul>
@@ -212,15 +212,15 @@ export default function ChairProduct({
 
       {/* Frame */}
       {frame && (
-        <section className="py-16 bg-white border-t border-stone-200">
-          <div className="max-w-6xl mx-auto px-8 lg:px-16">
-            <h2 className="text-3xl text-stone-900 mb-12">{t('frame')}</h2>
+        <section className="py-12 lg:py-16 bg-white border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('frame')}</h2>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative aspect-square max-w-sm">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
                 <Image src={frame.image} alt="Cadre" fill className="object-contain" />
               </div>
-              <p className="text-stone-600 leading-relaxed">{frame.description}</p>
+              <p className="text-stone-600 leading-relaxed text-sm lg:text-base">{frame.description}</p>
             </div>
           </div>
         </section>
@@ -228,19 +228,19 @@ export default function ChairProduct({
 
       {/* Ergonomy */}
       {ergonomy && (
-        <section className="py-16 bg-white border-t border-stone-200">
-          <div className="max-w-6xl mx-auto px-8 lg:px-16">
-            <h2 className="text-3xl text-stone-900 mb-12">{t('ergonomy')}</h2>
+        <section className="py-12 lg:py-16 bg-white border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('ergonomy')}</h2>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative aspect-square max-w-sm">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
                 <Image src={ergonomy.image} alt="Ergonomie" fill className="object-contain" />
               </div>
               <ul className="space-y-2">
                 {ergonomy.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-stone-600 text-sm">
-                    <span className="text-[#8b8b4b]">●</span>
-                    {f}
+                    <span className="text-[#8b8b4b] flex-shrink-0">●</span>
+                    <span className="break-words">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -251,30 +251,30 @@ export default function ChairProduct({
 
       {/* Mechanisms */}
       {mechanisms.length > 0 && (
-        <section className="py-16 bg-white border-t border-stone-200">
-          <div className="max-w-6xl mx-auto px-8 lg:px-16">
-            <h2 className="text-3xl text-stone-900 mb-12">{t('mechanisms')}</h2>
+        <section className="py-12 lg:py-16 bg-white border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('mechanisms')}</h2>
             
-            <div className="space-y-16">
+            <div className="space-y-12 lg:space-y-16">
               {mechanisms.map((mech, i) => (
-                <div key={i} className="grid lg:grid-cols-2 gap-12 items-center">
+                <div key={i} className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="relative aspect-square max-w-sm">
+                    <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
                       <Image src={mech.image} alt={mech.name} fill className="object-contain" />
                     </div>
-                    {mech.madeIn && <p className="text-xs text-stone-400 mt-2">{mech.madeIn}</p>}
+                    {mech.madeIn && <p className="text-xs text-stone-400 mt-2 text-center lg:text-left">{mech.madeIn}</p>}
                   </div>
                   <div className={`space-y-4 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="flex items-center gap-3">
-                      <h3 className="text-2xl text-stone-900">{mech.name}</h3>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <h3 className="text-xl lg:text-2xl text-stone-900">{mech.name}</h3>
                       <span className="text-xs text-stone-400">({mech.tag})</span>
                     </div>
                     {mech.features.length > 0 && (
                       <ul className="space-y-2">
                         {mech.features.map((f, j) => (
                           <li key={j} className="flex items-start gap-2 text-stone-600 text-sm">
-                            <span className="text-[#8b8b4b]">●</span>
-                            {f}
+                            <span className="text-[#8b8b4b] flex-shrink-0">●</span>
+                            <span className="break-words">{f}</span>
                           </li>
                         ))}
                       </ul>
@@ -289,23 +289,23 @@ export default function ChairProduct({
 
       {/* Gas Lift */}
       {gasLift && (
-        <section className="py-16 bg-white border-t border-stone-200">
-          <div className="max-w-6xl mx-auto px-8 lg:px-16">
-            <h2 className="text-3xl text-stone-900 mb-12">{t('gasLift')}</h2>
+        <section className="py-12 lg:py-16 bg-white border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('gasLift')}</h2>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
-                <div className="relative aspect-square max-w-sm">
+                <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
                   <Image src={gasLift.image} alt="Vérin à gaz" fill className="object-contain" />
                 </div>
-                <p className="text-xs text-stone-400 mt-2">{gasLift.madeIn}</p>
+                <p className="text-xs text-stone-400 mt-2 text-center lg:text-left">{gasLift.madeIn}</p>
               </div>
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <h3 className="text-2xl text-stone-900">{t('gasLiftSystem')}</h3>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <h3 className="text-xl lg:text-2xl text-stone-900">{t('gasLiftSystem')}</h3>
                   <span className="text-xs text-stone-400">({t('default')})</span>
                 </div>
-                <p className="text-stone-600 leading-relaxed">{gasLift.description}</p>
+                <p className="text-stone-600 leading-relaxed text-sm lg:text-base break-words">{gasLift.description}</p>
               </div>
             </div>
           </div>
@@ -314,18 +314,18 @@ export default function ChairProduct({
 
       {/* Double Cylinder */}
       {doubleCylinder && (
-        <section className="py-16 bg-white border-t border-stone-200">
-          <div className="max-w-6xl mx-auto px-8 lg:px-16">
-            <h2 className="text-3xl text-stone-900 mb-12">{t('doubleCylinder')}</h2>
+        <section className="py-12 lg:py-16 bg-white border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('doubleCylinder')}</h2>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative aspect-square max-w-sm">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
                 <Image src={doubleCylinder.image} alt="Double cylindre" fill className="object-contain" />
               </div>
               <div className="space-y-4">
-                <p className="text-stone-600 leading-relaxed">{doubleCylinder.description}</p>
+                <p className="text-stone-600 leading-relaxed text-sm lg:text-base break-words">{doubleCylinder.description}</p>
                 {doubleCylinder.diagramImage && (
-                  <div className="relative aspect-video max-w-md">
+                  <div className="relative aspect-video max-w-xs sm:max-w-md">
                     <Image src={doubleCylinder.diagramImage} alt="Diagramme" fill className="object-contain" />
                   </div>
                 )}
@@ -337,24 +337,24 @@ export default function ChairProduct({
 
       {/* Materials */}
       {materials.map((mat, i) => (
-        <section key={i} className="py-16 bg-white border-t border-stone-200">
-          <div className="max-w-6xl mx-auto px-8 lg:px-16">
-            <h2 className="text-3xl text-stone-900 mb-12">{mat.sectionTitle || mat.name.toUpperCase()}</h2>
+        <section key={i} className="py-12 lg:py-16 bg-white border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{mat.sectionTitle || mat.name.toUpperCase()}</h2>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                <div className="relative aspect-square max-w-sm">
+                <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
                   <Image src={mat.image} alt={mat.name} fill className="object-contain rounded-lg" />
                 </div>
                 
                 {mat.colors && mat.colors.length > 0 && (
                   <div className="mt-4">
-                    <p className="text-sm text-stone-500 mb-2">{t('availableColors')}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <p className="text-sm text-stone-500 mb-2 text-center lg:text-left">{t('availableColors')}</p>
+                    <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
                       {mat.colors.map((color, j) => (
                         <span 
                           key={j}
-                          className="w-6 h-6 rounded-full border border-stone-200" 
+                          className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-stone-200 flex-shrink-0" 
                           style={{ backgroundColor: color }}
                         />
                       ))}
@@ -362,20 +362,20 @@ export default function ChairProduct({
                   </div>
                 )}
                 
-                <p className="text-xs text-stone-400 mt-4">{mat.madeIn}</p>
+                <p className="text-xs text-stone-400 mt-4 text-center lg:text-left">{mat.madeIn}</p>
               </div>
               
               <div className={`space-y-4 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="flex items-center gap-3">
-                  <h3 className="text-2xl text-stone-900">{mat.name}</h3>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <h3 className="text-xl lg:text-2xl text-stone-900">{mat.name}</h3>
                   <span className="text-xs text-stone-400">({mat.tag})</span>
                 </div>
                 {mat.features.length > 0 && (
                   <ul className="space-y-2">
                     {mat.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2 text-stone-600 text-sm">
-                        <span className="text-[#8b8b4b]">●</span>
-                        {f}
+                        <span className="text-[#8b8b4b] flex-shrink-0">●</span>
+                        <span className="break-words">{f}</span>
                       </li>
                     ))}
                   </ul>

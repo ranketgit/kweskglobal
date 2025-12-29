@@ -36,14 +36,14 @@
   },
   "metrics": {
     "title": "About KWESK",
-    "subtitle": "A commitment to quality, innovation and customer satisfaction",
+    "subtitle": "",
     "chairs": "chairs delivered per year",
     "ranges": "ranges",
     "employees": "employees",
     "countries": "countries"
   },
   "categories": {
-  "title": "OUR CHAIRS",
+  "title": "Our Desk Chairs",
   "discover": "Discover"
 },
 "showcase": {
@@ -63,7 +63,7 @@
   "feature3": "Multi-tilt mechanism"
 },
 "chairs": {
-  "sectionTitle1": "OUR CHAIRS IN",
+  "sectionTitle1": "OUR DESK CHAIRS",
   "sectionTitle2": "",
   "version": "Version",
   "learnMore": "Learn more",
@@ -83,7 +83,25 @@
   "corpo": {
     "description": "The CORPO 100 offers the ultimate balance between comfort and style, designed to keep you productive all day long. Its sleek design and superior ergonomics make it a must-have for any modern workspace.",
     "type": "Operator Chair"
-  }
+  },
+  "by": {
+  "description": "The BY range offers a panel of three complementary asynchronous chairs to equip your offices, meeting rooms or to welcome your visitors. With a wooden frame and high density injected foam, the BY chairs are a low cost, durable solution offering a refined design and appreciable comfort.",
+  "type1": "President Chair",
+  "type2": "Operator Chair",
+  "type3": "Visitor Chair"
+},
+"gammaC": {
+  "type": "Visitor Chair"
+},
+"exclusive": {
+  "description": "The EXCLUSIVE range perfectly meets the highest expectations of companies in terms of design and comfort. Its avant-garde design, its materials and its advanced settings provide a high level of comfort for its users. The EXCLUSIVE chairs can be customised according to the use: general management, VIP meeting room, liberal professions...",
+  "type1": "President Chair",
+  "type2": "Operator Chair"
+},
+"caddy": {
+  "description": "CADDY chairs offer optimised ergonomics for training sessions. The adjustable shelf and storage spaces give users the mobility to change the layout of your space according to your needs. You will be training your teams with ease!",
+  "type": "Training Chair"
+}
 },
 
 
@@ -920,7 +938,7 @@
   },
   "normes": {
     "label": "Certifications",
-    "title": "International Standards"
+    "title": "All KWESK products meet the following standards"
   },
   "customers": {
     "title": "OUR SATISFIED CUSTOMERS"

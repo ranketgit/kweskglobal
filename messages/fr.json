@@ -36,14 +36,14 @@
   },
   "metrics": {
     "title": "À propos de KWESK",
-    "subtitle": "Un engagement envers la qualité, l'innovation et la satisfaction client",
+    "subtitle": "",
     "chairs": "chaises livrées par an",
     "ranges": "gammes",
     "employees": "employés",
     "countries": "pays"
   },
   "categories": {
-  "title": "NOS CHAISES",
+  "title": "Nos Chaises de Bureau",
   "discover": "Découvrir"
 },
 "showcase": {
@@ -63,7 +63,7 @@
   "feature3": "Mécanisme multi-inclinaison"
 },
 "chairs": {
-  "sectionTitle1": "NOS CHAISES",
+  "sectionTitle1": "NOS CHAISES DE BUREAUX",
   "sectionTitle2": "",
   "version": "Version",
   "learnMore": "En savoir plus",
@@ -83,7 +83,25 @@
   "corpo": {
     "description": "Le CORPO 100 offre l'équilibre ultime entre confort et style, conçu pour vous garder productif toute la journée. Son design élégant et son ergonomie supérieure en font un incontournable pour tout espace de travail moderne.",
     "type": "Chaise Opérateur"
-  }
+  },
+  "by": {
+  "description": "La gamme BY offre un panel de trois chaises asynchrones complémentaires pour équiper vos bureaux, salles de réunion ou accueillir vos visiteurs. Avec un cadre en bois et une mousse injectée haute densité, les chaises BY sont une solution économique et durable offrant un design raffiné et un confort appréciable.",
+  "type1": "Chaise Président",
+  "type2": "Fauteuil Opérateur",
+  "type3": "Chaise Visiteur"
+},
+"gammaC": {
+  "type": "Chaise Visiteur"
+},
+"exclusive": {
+  "description": "La gamme EXCLUSIVE répond parfaitement aux plus hautes attentes des entreprises en termes de design et de confort. Son design avant-gardiste, ses matériaux et ses réglages avancés offrent un haut niveau de confort à ses utilisateurs. Les chaises EXCLUSIVE peuvent être personnalisées selon l'usage : direction générale, salle de réunion VIP, professions libérales...",
+  "type1": "Chaise Président",
+  "type2": "Fauteuil Opérateur"
+},
+"caddy": {
+  "description": "Les chaises CADDY offrent une ergonomie optimisée pour les sessions de formation. La tablette réglable et les espaces de rangement donnent aux utilisateurs la mobilité de modifier l'agencement de votre espace selon vos besoins. Vous formerez vos équipes avec facilité !",
+  "type": "Chaise Formation"
+}
 },
 
 

@@ -29,7 +29,7 @@ export default function Metrics() {
               key={index}
               className={`flex-1 min-w-[150px] text-center px-8 py-4 ${index !== metrics.length - 1 ? 'border-r border-stone-200' : ''}`}
             >
-              <span className="block text-5xl text-stone-900 mb-2">
+              <span className="block text-5xl text-[#8b8b4b] mb-2">
                 {metric.value}
               </span>
               <span className="text-sm text-stone-400">
