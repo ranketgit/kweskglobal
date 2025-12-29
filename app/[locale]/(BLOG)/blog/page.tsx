@@ -4,6 +4,7 @@ import { baseUrl, getAlternates } from '../../../lib/metadata'
 import { getPosts } from '../../../lib/blog'
 import Image from 'next/image'
 import Link from 'next/link'
+import AboutCta from '../../(ABOUT)/about/components/AboutCta'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -159,6 +160,8 @@ export default async function BlogPage({ params }: Props) {
           )}
         </div>
       </section>
+
+      <AboutCta />
 
     </main>
   )
