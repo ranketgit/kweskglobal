@@ -1009,6 +1009,44 @@
 
     "customers": {
       "title": "NOS CLIENTS SATISFAITS"
+    },
+
+    "blog": {
+  "meta": {
+    "title": "Actualités & Articles | Kwesk",
+    "description": "Dernières actualités et articles sur le mobilier de bureau ergonomique de Kwesk."
+  },
+  "hero": {
+    "title": "ACTUALITÉS"
+  },
+  "intro": {
+    "label": "NOS ACTUALITÉS",
+    "title": "Découvrez toutes nos actualités",
+    "description": "KWESK conçoit et fabrique des chaises ergonomiques pour une utilisation intensive au bureau ou à la maison. Les chaises KWESK sont certifiées BIFMA et EN1335-1-2-3."
+  },
+  "categories": {
+    "releases": {
+      "title": "Nouveautés",
+      "description": "Découvrez les nouvelles chaises de bureau KWESK et les versions récentes."
+    },
+    "standards": {
+      "title": "Normes & Certifications",
+      "description": "Explorez les principales normes de qualité, sécurité et confort, les nouveautés et nos certifications."
+    },
+    "innovations": {
+      "title": "Innovations",
+      "description": "Explorez les dernières innovations et technologies des chaises de bureau KWESK."
     }
+  },
+  "allPosts": "Tous les Articles",
+  "learnMore": "En Savoir Plus",
+  "noPosts": "Aucun article pour le moment."
+},
+
+"news": {
+  "label": "ACTUALITÉS KWESK",
+  "title": "ACTUALITÉS",
+  "learnMore": "En Savoir Plus"
+}
 
 }

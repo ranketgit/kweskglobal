@@ -1005,7 +1005,43 @@
 
   "customers": {
     "title": "OUR SATISFIED CUSTOMERS"
-  }
+  },
+  "blog": {
+  "meta": {
+    "title": "News & Articles | Kwesk",
+    "description": "Latest news and articles about ergonomic office furniture from Kwesk."
+  },
+  "hero": {
+    "title": "NEWS"
+  },
+  "intro": {
+    "label": "OUR NEWS",
+    "title": "Discover all our news",
+    "description": "KWESK designs and manufactures ergonomic chairs for intensive use in the office or at home. KWESK chairs are BIFMA and EN1335-1-2-3 certified."
+  },
+  "categories": {
+    "releases": {
+      "title": "New Releases",
+      "description": "Discover KWESK new office chairs and release versions."
+    },
+    "standards": {
+      "title": "Standards & Certifications",
+      "description": "Explore the major quality, security and comfort standards, new releases and our certifications."
+    },
+    "innovations": {
+      "title": "Innovations",
+      "description": "Explore KWESK's latest office chairs innovations and technologies."
+    }
+  },
+  "allPosts": "All Articles",
+  "learnMore": "Learn More",
+  "noPosts": "No articles yet."
+},
+"news": {
+  "label": "KWESK NEWS",
+  "title": "NEWS",
+  "learnMore": "Learn More"
+}
 
   
 }
