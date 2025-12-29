@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 
 const logos = [
   "/logos/l1.png",
@@ -38,7 +37,7 @@ export default function Customers() {
 
         <div className="relative w-full">
           <div 
-            className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]"
+            className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
           >
             <motion.div 
               className="flex items-center py-4"
@@ -49,7 +48,7 @@ export default function Customers() {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20,
+                  duration: 25,
                   ease: "linear",
                 },
               }}
@@ -58,12 +57,12 @@ export default function Customers() {
               {duplicatedLogos.map((logo, i) => (
                 <div 
                   key={i} 
-                  className="flex-shrink-0 px-8 lg:px-12 transition-opacity duration-300 opacity-60 hover:opacity-100"
+                  className="flex-shrink-0 px-10 lg:px-16"
                 >
                   <img 
                     src={logo} 
                     alt="Customer logo" 
-                    className="h-10 lg:h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+                    className="h-16 lg:h-24 w-auto object-contain" 
                   />
                 </div>
               ))}

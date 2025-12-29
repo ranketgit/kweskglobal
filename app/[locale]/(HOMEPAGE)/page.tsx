@@ -7,6 +7,7 @@ import Metrics from './components/Metrics'
 import Categories from './components/Categories'
 import ChairsSection from './components/ChairSection/ChairSection'
 import NewsSection from './components/NewsSection'
+import Customers from '@/app/shared/Customers'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -33,6 +34,7 @@ export default async function HomePage({ params }: Props) {
       <Categories />
       <ChairsSection />
       <NewsSection locale={locale} />
+      <Customers />
     </main>
   )
 }
