@@ -42,13 +42,13 @@ export default function Intro() {
               {t('description')}
             </p>
 
-            {/* Quote */}
-            <div className="relative pl-8 border-l-2 border-[#8b8b4b]/30">
-              <span className="absolute -left-3 -top-2 text-5xl text-[#8b8b4b]/40">"</span>
-              <blockquote className="text-sm text-stone-600 leading-relaxed">
-                {t('quote')}
-              </blockquote>
-            </div>
+           {/* Quote */}
+<div className="relative pl-8">
+  <span className="absolute left-0 -top-2 text-5xl text-[#8b8b4b]/40">"</span>
+  <blockquote className="text-sm text-stone-600 leading-relaxed">
+    {t('quote')}
+  </blockquote>
+</div>
 
             {/* Author */}
             <div className="mt-8 flex items-center gap-4">

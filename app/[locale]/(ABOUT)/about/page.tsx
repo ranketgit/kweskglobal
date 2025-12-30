@@ -10,6 +10,7 @@ import AboutCta from './components/AboutCta'
 import { Metadata } from 'next'
 
 import { baseUrl, getAlternates } from '../../../lib/metadata'
+import Intro from '../../(HOMEPAGE)/components/Intro'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -38,7 +39,7 @@ export default async function AboutPage() {
 
       {/* Content */}
       <div className="relative bg-white z-10">
-        <AboutHero />
+        <Intro />
         
         <AboutSection 
           label={t('company.label')}
@@ -60,7 +61,7 @@ export default async function AboutPage() {
         
         <AboutStats />
         
-        <AboutDifference />
+ 
         
         <Features />
         

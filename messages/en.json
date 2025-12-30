@@ -18,7 +18,7 @@
   "nav": {
     "home": "Home",
     "about": "Company",
-    "chairs": "Chairs",
+    "chairs": "Our Chairs",
     "contact": "Contact",
     "cta": "Free Quote",
     "viewProduct": "View Product"
@@ -43,7 +43,7 @@
     "countries": "countries"
   },
   "categories": {
-  "title": "Our Desk Chairs",
+  "title": "Our Office Chairs",
   "discover": "Discover"
 },
 "showcase": {
@@ -63,7 +63,7 @@
   "feature3": "Multi-tilt mechanism"
 },
 "chairs": {
-  "sectionTitle1": "OUR DESK CHAIRS",
+  "sectionTitle1": "OUR OFFICE CHAIRS",
   "sectionTitle2": "",
   "version": "Version",
   "learnMore": "Learn more",
@@ -107,7 +107,7 @@
 
 "chairProduct": {
   "version": "Version",
-  "buy": "BUY",
+  "buy": "Get A Free Quote",
   "standardFeatures": "STANDARD FEATURES",
   "options": "OPTIONS",
   "frame": "FRAME",
@@ -254,7 +254,7 @@
   "description": "CADDY chairs offer optimized ergonomics for training sessions. The adjustable tablet and storage spaces give users the mobility to modify the layout of your space according to your needs. You will train your teams with ease!",
   "version": "Version",
   "versionType": "Training Chair",
-  "buy": "BUY",
+  "buy": "Get A Free Quote",
   "standardFeatures": "STANDARD FEATURES",
   "features": {
     "f1": "Rotating tablet",
@@ -883,14 +883,14 @@
   "company": {
     "label": "Our Company",
     "title": "KWESK is the first office furniture manufacturer to design chairs intended for intensive use in call centers and particularly in any business.",
-    "p1": "To date, several hundred thousand companies trust the KWESK brand mainly because of the robustness and refined design of its chairs and desks.",
-    "p2": "KWESK products are recognized today as essential furniture for companies seeking comfort, style and above all durability."
+    "p1": "To date, several hundred thousand businesses rely on the KWESK brand mainly due to its sturdiness and the refined design of its chairs and desktops. This is the result of several years of research and development as well as the extensive experience of its founders in the call centre field.",
+    "p2": "KWESK products are thus recognised today as indispensable furnishings for businesses looking for comfort, style and especially durability. KWESK Chairs and desktops have demonstrated exceptional resistance during Highly Accelerated Life Tests."
   },
   "history": {
     "label": "Our History",
     "title": "The KWESK story began in 2008 when its founder Tarik Benjelloun decided to put his call center experience to good use.",
-    "p1": "He brought together seasoned skills in desk and chair design to develop innovative products resistant to the most intensive use.",
-    "p2": "After a few years, the KWESK team was proud to announce that its chairs and desks equip millions of workstations around the world."
+    "p1": "He brought together seasoned skills in the design of desktops and chairs in order to develop innovative products in terms of design that are resistant to the most intensive use in the most extreme conditions. After a battery of usability tests and highly accelerated life tests, the KWESK team decided to",
+    "p2": "mass produce 4 models of chairs and desktops essentially covering all the broad needs of call centres and businesses. After a few years, the KWESK team was proud to be able to announce that its chairs and desktops equip millions of workstations around the world."
   },
   "stats": {
     "chairs": "Chairs delivered per year",
@@ -921,19 +921,19 @@
   "features": {
     "quality": {
       "title": "Quality",
-      "desc": "KWESK chairs comply with BIFMA and EN1335-1-2-3."
+      "desc": "KWESK chairs are BIFMA and EN1335-1-2-3 compliant."
     },
     "shipping": {
-      "title": "Delivery",
-      "desc": "Worldwide delivery via our affiliate network."
+      "title": "Shipping",
+      "desc": "Woldwide delivery through our affiliate network."
     },
     "warranty": {
       "title": "Warranty",
-      "desc": "Minimum 5-year warranty."
+      "desc": "Kwesk chairs come with a warranty of at least 5 years."
     },
     "service": {
-      "title": "After-Sales",
-      "desc": "Repair and maintenance via our network."
+      "title": "After-sale services",
+      "desc": "Repair, maintenance and renovation through our affiliate network."
     }
   },
   "normes": {
@@ -944,7 +944,7 @@
     "title": "OUR SATISFIED CUSTOMERS"
   },
   "cta": {
-    "title": "Ready to Upgrade Your Workspace?",
+    "title": "Get a Free Quote",
     "description": "Our experienced consultants will be happy to advise and quote the kwesk chairs that best meet your needs.",
     "button": "Contact Us"
   }
@@ -960,7 +960,7 @@
       "description": ""
     },
     "info": {
-      "address": { "title": "Address", "content": "Bd de la corniche, Ain diab\n20180, Casablanca" },
+      "address": { "title": "Address", "content": "KWESK Anfa Place Tour Ouest, Niv 1 Anfa Place bd de la corniche, Ain diab 20180, Casablanca" },
       "phone": { "title": "Phone", "content": "+212 5 20 24 16 37\n+212 6 61 48 16 16" },
       "email": { "title": "Email", "content": "contact@kwesk.com" },
       "hours": { "title": "Hours", "content": "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 9:00 AM - 12:00 PM" }

@@ -18,7 +18,7 @@
   "nav": {
     "home": "Accueil",
     "about": "Entreprise",
-    "chairs": "Chaises",
+    "chairs": "Nos Chaises",
     "contact": "Contact",
     "cta": "Devis Gratuit",
     "viewProduct": "Voir le Produit"
@@ -107,7 +107,7 @@
 
 "chairProduct": {
   "version": "Version",
-  "buy": "ACHETER",
+  "buy": "Demander un devis",
   "standardFeatures": "CARACTÉRISTIQUES STANDARD",
   "options": "OPTIONS",
   "frame": "CADRE",
@@ -256,7 +256,7 @@
   "description": "Les chaises CADDY offrent une ergonomie optimisée pour les sessions de formation. La tablette réglable et les espaces de rangement donnent aux utilisateurs la mobilité de modifier l'agencement de votre espace selon vos besoins. Vous formerez vos équipes avec facilité !",
   "version": "Version",
   "versionType": "Chaise Formation",
-  "buy": "ACHETER",
+  "buy": "Demander un devis",
   "standardFeatures": "CARACTÉRISTIQUES STANDARD",
   "features": {
     "f1": "Tablette rotative",
@@ -948,7 +948,7 @@
     "title": "NOS CLIENTS SATISFAITS"
   },
   "cta": {
-    "title": "Prêt à Améliorer Votre Espace de Travail ?",
+    "title": "Demander un devis gratuit",
     "description": "Nos consultants expérimentés se feront un plaisir de vous conseiller et de vous proposer un devis pour les sièges KWESK répondant le mieux à vos besoins.",
     "button": "Contactez-Nous"
   }
@@ -964,7 +964,7 @@
       "description": ""
     },
     "info": {
-      "address": { "title": "Adresse", "content": "Bd de la corniche, Ain diab\n20180, Casablanca" },
+      "address": { "title": "Adresse", "content": "KWESK Anfa Place Tour Ouest, Niv 1 Anfa Place bd de la corniche, Ain diab 20180, Casablanca" },
       "phone": { "title": "Téléphone", "content": "+212 5 20 24 16 37\n+212 6 61 48 16 16" },
       "email": { "title": "Email", "content": "contact@kwesk.com" },
       "hours": { "title": "Horaires", "content": "Lun - Ven: 9h00 - 18h00\nSam: 9h00 - 12h00" }

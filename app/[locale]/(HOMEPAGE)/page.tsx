@@ -8,6 +8,8 @@ import Categories from './components/Categories'
 import ChairsSection from './components/ChairSection/ChairSection'
 import NewsSection from './components/NewsSection'
 import Customers from '@/app/shared/Customers'
+import AboutNormes from '../(ABOUT)/about/components/AboutNormes'
+import Features from '../(ABOUT)/about/components/Features'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -33,6 +35,7 @@ export default async function HomePage({ params }: Props) {
       <Metrics />
       <Categories />
       <ChairsSection />
+      <Features />
       <NewsSection locale={locale} />
       <Customers />
     </main>

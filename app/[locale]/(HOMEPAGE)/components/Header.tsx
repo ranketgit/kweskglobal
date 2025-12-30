@@ -115,9 +115,7 @@ export default function Header() {
           <Link href="/about" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
             {t('about')}
           </Link>
-          <Link href="/blog" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
-            News
-          </Link>
+        
           
           {/* Chairs Dropdown Trigger */}
           <div className="group">
@@ -172,6 +170,10 @@ export default function Header() {
               </div>
             </div>
           </div>
+
+          <Link href="/blog" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
+            News
+          </Link>
 
           <Link href="/contact" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
             {t('contact')}
@@ -239,9 +241,7 @@ export default function Header() {
           <Link href="/about" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
             {t('about')}
           </Link>
-          <Link href="/blog" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
-            News
-          </Link>
+         
           
           {/* Mobile Chairs Accordion */}
           <button 
@@ -295,6 +295,10 @@ export default function Header() {
               </div>
             ))}
           </div>
+
+          <Link href="/blog" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
+            News
+          </Link>
 
           <Link href="/contact" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
             {t('contact')}

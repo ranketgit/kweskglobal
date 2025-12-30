@@ -19,7 +19,6 @@ interface Material {
   sectionTitle?: string
   image: string
   features: string[]
-  colors?: string[]
   madeIn: string
 }
 
@@ -174,7 +173,7 @@ export default function ChairProduct({
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             
-            <div className="relative aspect-square max-w-xs sm:max-w-md mx-auto lg:mx-0">
+            <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
               <Image src={featuresDiagram} alt="Features" fill className="object-contain" />
             </div>
 
@@ -217,7 +216,7 @@ export default function ChairProduct({
             <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('frame')}</h2>
             
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
+              <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
                 <Image src={frame.image} alt="Cadre" fill className="object-contain" />
               </div>
               <p className="text-stone-600 leading-relaxed text-sm lg:text-base">{frame.description}</p>
@@ -233,7 +232,7 @@ export default function ChairProduct({
             <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('ergonomy')}</h2>
             
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
+              <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
                 <Image src={ergonomy.image} alt="Ergonomie" fill className="object-contain" />
               </div>
               <ul className="space-y-2">
@@ -259,7 +258,7 @@ export default function ChairProduct({
               {mechanisms.map((mech, i) => (
                 <div key={i} className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
+                    <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
                       <Image src={mech.image} alt={mech.name} fill className="object-contain" />
                     </div>
                     {mech.madeIn && <p className="text-xs text-stone-400 mt-2 text-center lg:text-left">{mech.madeIn}</p>}
@@ -295,7 +294,7 @@ export default function ChairProduct({
             
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
-                <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
+                <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
                   <Image src={gasLift.image} alt="Vérin à gaz" fill className="object-contain" />
                 </div>
                 <p className="text-xs text-stone-400 mt-2 text-center lg:text-left">{gasLift.madeIn}</p>
@@ -319,13 +318,13 @@ export default function ChairProduct({
             <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('doubleCylinder')}</h2>
             
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
+              <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
                 <Image src={doubleCylinder.image} alt="Double cylindre" fill className="object-contain" />
               </div>
               <div className="space-y-4">
                 <p className="text-stone-600 leading-relaxed text-sm lg:text-base break-words">{doubleCylinder.description}</p>
                 {doubleCylinder.diagramImage && (
-                  <div className="relative aspect-video max-w-xs sm:max-w-md">
+                  <div className="relative aspect-video max-w-sm sm:max-w-lg">
                     <Image src={doubleCylinder.diagramImage} alt="Diagramme" fill className="object-contain" />
                   </div>
                 )}
@@ -343,25 +342,9 @@ export default function ChairProduct({
             
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                <div className="relative aspect-square max-w-xs mx-auto lg:mx-0">
+                <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
                   <Image src={mat.image} alt={mat.name} fill className="object-contain rounded-lg" />
                 </div>
-                
-                {mat.colors && mat.colors.length > 0 && (
-                  <div className="mt-4">
-                    <p className="text-sm text-stone-500 mb-2 text-center lg:text-left">{t('availableColors')}</p>
-                    <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                      {mat.colors.map((color, j) => (
-                        <span 
-                          key={j}
-                          className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-stone-200 flex-shrink-0" 
-                          style={{ backgroundColor: color }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
                 <p className="text-xs text-stone-400 mt-4 text-center lg:text-left">{mat.madeIn}</p>
               </div>
               
