@@ -993,6 +993,7 @@
     }
   },
     "footer": {
+      "privacy": "Politique de confidentialité",
       "description": "KWESK conçoit et fabrique des sièges destinés à un usage intensif, au bureau comme à la maison. À ce jour, de nombreuses entreprises font confiance à la marque KWESK, principalement pour la robustesse et le design raffiné de ses modèles. Ce succès est le fruit de plusieurs années de recherche et développement, ainsi que de la vaste expérience de son fondateur dans le secteur des centres d'appels, où les sièges sont généralement soumis à de fortes contraintes. Les fauteuils KWESK sont ainsi optimisés pour les entreprises en quête de confort, de style et surtout de durabilité. Les sièges KWESK sont certifiés BIFMA et EN1335-1-2-3.",
       "titles": {
         "chairs": "Nos Chaises",
@@ -1048,6 +1049,131 @@
   "label": "ACTUALITÉS KWESK",
   "title": "ACTUALITÉS",
   "learnMore": "En Savoir Plus"
+},
+
+"privacy" : {
+  "meta": {
+    "title": "Politique de Confidentialité | KWESK",
+    "description": "Politique de confidentialité de KWESK. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles."
+  },
+  "hero": {
+    "title": "PRIVACY POLICY"
+  },
+  "label": "POLITIQUE DE CONFIDENTIALITÉ",
+  "intro": {
+    "title": "Politique de confidentialité",
+    "description": "Bienvenue sur <strong>KWESK</strong> (kwesk.com). Nous attachons une grande importance à la protection de vos données personnelles. Cette politique de confidentialité vous explique quelles données nous collectons, comment nous les utilisons, et quels droits vous avez.",
+    "name": "Nom",
+    "address": "Adresse",
+    "contact": "Contact",
+    "phone": "Téléphone"
+  },
+  "dataCollection": {
+    "title": "Quelles données personnelles nous collectons",
+    "intro": "Nous pouvons collecter :",
+    "directInfo": {
+      "title": "Informations que vous nous fournissez directement",
+      "name": "Votre nom, prénom",
+      "email": "Votre adresse email",
+      "phone": "Votre numéro de téléphone",
+      "contactForm": "Informations de contact via formulaire \"Nous contacter\""
+    },
+    "navigationData": {
+      "title": "Données de navigation",
+      "ip": "Adresse IP",
+      "browser": "Type de navigateur",
+      "pages": "Pages visitées",
+      "date": "Date et heure de visite",
+      "referrers": "Référents (d'où vous venez)"
+    },
+    "cookies": {
+      "title": "Cookies et technologies similaires",
+      "description": "nous pouvons utiliser des cookies pour améliorer votre expérience, analyser l'utilisation de notre site, et pour des finalités marketing."
+    }
+  },
+  "purposes": {
+    "title": "Finalités du traitement",
+    "intro": "Nous utilisons vos données personnelles pour :",
+    "services": {
+      "title": "Fournir nos services",
+      "description": "répondre à vos demandes via le formulaire de contact, traiter les communications, etc."
+    },
+    "marketing": {
+      "title": "Marketing et communications",
+      "description": "vous envoyer des newsletters, des offres, des actualités (si vous avez accepté)."
+    },
+    "analysis": {
+      "title": "Analyse et amélioration",
+      "description": "comprendre comment les utilisateurs utilisent notre site pour améliorer nos produits (fauteuils) et l'ergonomie du site."
+    },
+    "security": {
+      "title": "Sécurité et prévention des fraudes",
+      "description": "détecter des activités suspectes, protéger le site et vos données."
+    },
+    "legal": {
+      "title": "Obligations légales",
+      "description": "respecter les lois et régulations applicables."
+    }
+  },
+  "sharing": {
+    "title": "Partage des données",
+    "intro": "Nous pouvons partager vos données dans les cas suivants :",
+    "providers": "Avec des <strong>prestataires</strong> (ex : hébergeur, outils d'analytics, marketing), uniquement dans la mesure nécessaire à leurs services.",
+    "authorities": "Avec des <strong>autorités légales</strong>, si la loi l'exige (par exemple pour des enquêtes judiciaires).",
+    "merger": "En cas de <strong>fusion, acquisition ou cession d'entreprise</strong>, avec les parties concernées, toujours sous réserve d'engagements de confidentialité."
+  },
+  "security": {
+    "title": "Sécurité des données",
+    "measures": "Nous mettons en place des <strong>mesures techniques et organisationnelles</strong> pour protéger vos données contre l'accès non autorisé, la perte, l'altération ou la divulgation.",
+    "disclaimer": "Cependant, aucune méthode de transmission sur Internet ou stockage électronique n'est totalement sécurisée ; nous ne pouvons pas garantir une sécurité parfaite."
+  },
+  "retention": {
+    "title": "Conservation des données",
+    "duration": "Nous conservons vos données <strong>aussi longtemps que nécessaire</strong> pour atteindre les finalités pour lesquelles elles ont été collectées (ex : répondre à vos demandes, vous envoyer des communications).",
+    "archival": "Ensuite, vos données peuvent être archivées ou anonymisées pour des raisons d'historique, de conformité légale ou de résolution de litiges."
+  },
+  "rights": {
+    "title": "Vos droits",
+    "intro": "Selon votre juridiction (et notamment si vous êtes en Europe), vous pouvez avoir les droits suivants :",
+    "access": {
+      "title": "Droit d'accès",
+      "description": "savoir quelles données nous possédons à votre sujet."
+    },
+    "rectification": {
+      "title": "Droit de rectification",
+      "description": "corriger des données inexactes ou incomplètes."
+    },
+    "erasure": {
+      "title": "Droit à l'effacement",
+      "description": "demander que vos données soient supprimées (dans la mesure où cela n'empêche pas des obligations légales ou contractuelles)."
+    },
+    "restriction": {
+      "title": "Droit de limiter le traitement",
+      "description": "demander que nous ne traitions plus vos données pour certaines finalités."
+    },
+    "portability": {
+      "title": "Droit à la portabilité",
+      "description": "obtenir vos données dans un format structuré, couramment utilisé."
+    },
+    "withdrawal": {
+      "title": "Droit de retirer votre consentement",
+      "description": "si le traitement repose sur votre consentement (ex : pour les newsletters), vous pouvez retirer ce consentement à tout moment."
+    },
+    "opposition": {
+      "title": "Droit d'opposition",
+      "description": "vous opposer à un traitement fondé sur notre intérêt légitime."
+    },
+    "contact": "Pour exercer ces droits, vous pouvez nous contacter à <strong>contact@kwesk.com</strong>"
+  },
+  "cookies": {
+    "title": "Cookies et traceurs",
+    "usage": "Nous utilisons des cookies pour optimiser votre expérience sur notre site, mesurer les performances et pour des campagnes marketing.",
+    "settings": "Vous pouvez configurer votre navigateur pour refuser ou supprimer les cookies. Cependant, certaines fonctionnalités du site pourraient ne pas fonctionner correctement sans cookies."
+  },
+  "thirdParty": {
+    "title": "Liens vers des sites tiers",
+    "description": "Notre site peut contenir des liens vers des <strong>sites tiers</strong> (par exemple, des fournisseurs ou des partenaires). Nous ne contrôlons pas les pratiques de ces sites et ne sommes pas responsables de leur politique de confidentialité. Nous vous invitons à lire leur politique lorsque vous les visitez."
+  }
 }
 
 }

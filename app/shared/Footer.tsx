@@ -148,6 +148,9 @@ bd de la corniche, Ain diab
           <p className="text-xs text-[#78716c]">
             © {currentYear} KWESK. {t('rights')}
           </p>
+          <Link href="/politique-de-confidentialite" className="text-xs text-[#78716c] hover:text-[#8b8b4b] transition-colors">
+            {t('privacy')}
+          </Link>
         </div>
 
       </div>

@@ -989,6 +989,7 @@
     }
   },
   "footer": {
+    "privacy": "Privacy Policy",
     "description": "KWESK designs and manufactures chairs for intensive use in offices or at home. To date, many companies rely on KWESK brand mainly due to its sturdiness and the refined design of its chairs. This is the result of several years of research and development as well as the extensive experience of its founder in call centres where the chairs are generally highly stressed. KWESK chairs are thus optimised for companies looking for comfort, style and especially durability. KWESK chairs are BIFMA and EN1335-1-2-3 certified.",
     "titles": {
       "chairs": "Our Chairs",
@@ -1042,6 +1043,132 @@
   "label": "KWESK NEWS",
   "title": "NEWS",
   "learnMore": "Learn More"
+},
+
+
+"privacy" : {
+  "meta": {
+    "title": "Privacy Policy | KWESK",
+    "description": "KWESK privacy policy. Learn how we collect, use and protect your personal data."
+  },
+  "hero": {
+    "title": "PRIVACY POLICY"
+  },
+  "label": "PRIVACY POLICY",
+  "intro": {
+    "title": "Privacy Policy",
+    "description": "Welcome to <strong>KWESK</strong> (kwesk.com). We attach great importance to the protection of your personal data. This privacy policy explains what data we collect, how we use it, and what rights you have.",
+    "name": "Name",
+    "address": "Address",
+    "contact": "Contact",
+    "phone": "Phone"
+  },
+  "dataCollection": {
+    "title": "What personal data we collect",
+    "intro": "We may collect:",
+    "directInfo": {
+      "title": "Information you provide directly",
+      "name": "Your first and last name",
+      "email": "Your email address",
+      "phone": "Your phone number",
+      "contactForm": "Contact information via \"Contact Us\" form"
+    },
+    "navigationData": {
+      "title": "Navigation data",
+      "ip": "IP address",
+      "browser": "Browser type",
+      "pages": "Pages visited",
+      "date": "Date and time of visit",
+      "referrers": "Referrers (where you came from)"
+    },
+    "cookies": {
+      "title": "Cookies and similar technologies",
+      "description": "we may use cookies to improve your experience, analyze the use of our site, and for marketing purposes."
+    }
+  },
+  "purposes": {
+    "title": "Purposes of processing",
+    "intro": "We use your personal data to:",
+    "services": {
+      "title": "Provide our services",
+      "description": "respond to your requests via the contact form, process communications, etc."
+    },
+    "marketing": {
+      "title": "Marketing and communications",
+      "description": "send you newsletters, offers, news (if you have agreed)."
+    },
+    "analysis": {
+      "title": "Analysis and improvement",
+      "description": "understand how users use our site to improve our products (chairs) and site ergonomics."
+    },
+    "security": {
+      "title": "Security and fraud prevention",
+      "description": "detect suspicious activities, protect the site and your data."
+    },
+    "legal": {
+      "title": "Legal obligations",
+      "description": "comply with applicable laws and regulations."
+    }
+  },
+  "sharing": {
+    "title": "Data sharing",
+    "intro": "We may share your data in the following cases:",
+    "providers": "With <strong>service providers</strong> (e.g.: hosting, analytics tools, marketing), only to the extent necessary for their services.",
+    "authorities": "With <strong>legal authorities</strong>, if required by law (for example for judicial investigations).",
+    "merger": "In case of <strong>merger, acquisition or sale of business</strong>, with the parties concerned, always subject to confidentiality commitments."
+  },
+  "security": {
+    "title": "Data security",
+    "measures": "We implement <strong>technical and organizational measures</strong> to protect your data against unauthorized access, loss, alteration or disclosure.",
+    "disclaimer": "However, no method of transmission over the Internet or electronic storage is completely secure; we cannot guarantee perfect security."
+  },
+  "retention": {
+    "title": "Data retention",
+    "duration": "We retain your data <strong>as long as necessary</strong> to achieve the purposes for which it was collected (e.g.: respond to your requests, send you communications).",
+    "archival": "Thereafter, your data may be archived or anonymized for historical, legal compliance or dispute resolution purposes."
+  },
+  "rights": {
+    "title": "Your rights",
+    "intro": "Depending on your jurisdiction (and particularly if you are in Europe), you may have the following rights:",
+    "access": {
+      "title": "Right of access",
+      "description": "know what data we hold about you."
+    },
+    "rectification": {
+      "title": "Right of rectification",
+      "description": "correct inaccurate or incomplete data."
+    },
+    "erasure": {
+      "title": "Right to erasure",
+      "description": "request that your data be deleted (insofar as this does not prevent legal or contractual obligations)."
+    },
+    "restriction": {
+      "title": "Right to restrict processing",
+      "description": "request that we no longer process your data for certain purposes."
+    },
+    "portability": {
+      "title": "Right to portability",
+      "description": "obtain your data in a structured, commonly used format."
+    },
+    "withdrawal": {
+      "title": "Right to withdraw consent",
+      "description": "if processing is based on your consent (e.g.: for newsletters), you can withdraw this consent at any time."
+    },
+    "opposition": {
+      "title": "Right to object",
+      "description": "object to processing based on our legitimate interest."
+    },
+    "contact": "To exercise these rights, you can contact us at <strong>contact@kwesk.com</strong>"
+  },
+  "cookies": {
+    "title": "Cookies and trackers",
+    "usage": "We use cookies to optimize your experience on our site, measure performance and for marketing campaigns.",
+    "settings": "You can configure your browser to refuse or delete cookies. However, some features of the site may not function properly without cookies."
+  },
+  "thirdParty": {
+    "title": "Links to third-party sites",
+    "description": "Our site may contain links to <strong>third-party sites</strong> (for example, suppliers or partners). We do not control the practices of these sites and are not responsible for their privacy policy. We invite you to read their policy when you visit them."
+  }
 }
 
   
