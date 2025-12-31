@@ -82,6 +82,12 @@ export default function Header() {
   const [expandedChair, setExpandedChair] = useState<string | null>(null)
   const [langOpen, setLangOpen] = useState(false)
 
+  // Check if we're on the homepage
+  const isHomepage = pathname === `/${locale}` || pathname === '/'
+
+  // Determine if header should be in "solid" mode (white bg, dark text)
+  const isSolid = scrolled || !isHomepage
+
   const switchLocale = (newLocale: string) => {
     const path = pathname.replace(`/${locale}`, `/${newLocale}`)
     router.push(path)
@@ -99,7 +105,7 @@ export default function Header() {
   }, [mobileOpen])
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${scrolled ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]' : ''}`}>
+    <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${isSolid ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]' : ''}`}>
       <div className={`max-w-[1400px] mx-auto px-[60px] flex items-center justify-between relative z-[1001] transition-all duration-300 ${scrolled ? 'h-[75px]' : 'h-[100px]'}`}>
         
         {/* Logo */}
@@ -109,17 +115,17 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-10">
-          <Link href="/" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
+          <Link href="/" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             {t('home')}
           </Link>
-          <Link href="/about" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
+          <Link href="/about" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             {t('about')}
           </Link>
         
           
           {/* Chairs Dropdown Trigger */}
           <div className="group">
-            <button className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
+            <button className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
               {t('chairs')}
               <svg className="w-3 h-3 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="6 9 12 15 18 9" />
@@ -171,11 +177,11 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/blog" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
+          <Link href="/blog" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             News
           </Link>
 
-          <Link href="/contact" className={`text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}>
+          <Link href="/contact" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             {t('contact')}
           </Link>
         </nav>
@@ -185,7 +191,7 @@ export default function Header() {
           <div className="relative">
             <button 
               onClick={() => setLangOpen(!langOpen)}
-              className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${scrolled ? 'text-stone-900' : 'text-white'}`}
+              className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}
             >
               {locale}
               <svg className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -214,7 +220,7 @@ export default function Header() {
           {/* CTA */}
           <Link 
             href="/contact" 
-            className={`px-6 py-2.5 rounded-full text-sm transition-colors ${scrolled ? 'bg-[#8b8b4b] text-white' : 'bg-stone-900 text-white'}`}
+            className={`px-6 py-2.5 rounded-full text-sm transition-colors ${isSolid ? 'bg-[#8b8b4b] text-white' : 'bg-stone-900 text-white'}`}
           >
             {t('cta')}
           </Link>
@@ -226,9 +232,9 @@ export default function Header() {
           className="lg:hidden flex flex-col gap-1.5 relative z-[1200]"
           aria-label="Menu"
         >
-          <span className={`w-6 h-0.5 transition-colors ${scrolled ? 'bg-stone-900' : 'bg-white'}`} />
-          <span className={`w-6 h-0.5 transition-colors ${scrolled ? 'bg-stone-900' : 'bg-white'}`} />
-          <span className={`w-6 h-0.5 transition-colors ${scrolled ? 'bg-stone-900' : 'bg-white'}`} />
+          <span className={`w-6 h-0.5 transition-colors ${isSolid ? 'bg-stone-900' : 'bg-white'}`} />
+          <span className={`w-6 h-0.5 transition-colors ${isSolid ? 'bg-stone-900' : 'bg-white'}`} />
+          <span className={`w-6 h-0.5 transition-colors ${isSolid ? 'bg-stone-900' : 'bg-white'}`} />
         </button>
       </div>
 

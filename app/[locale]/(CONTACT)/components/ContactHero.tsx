@@ -4,7 +4,7 @@ export default function ContactHero() {
   const t = useTranslations('contact.hero');
 
   return (
-    <section className="py-[120px] lg:pt-[160px] lg:pb-[80px] text-center bg-white">
+    <section className="pt-32  text-center bg-white">
       <div className="max-w-[800px] mx-auto px-6 lg:px-[60px]">
         <span className="text-xs uppercase tracking-[3px] text-[#8b8b4b] block mb-6">
           {t('label')}

@@ -6,7 +6,7 @@ export default function ContactForm() {
   const t = useTranslations('contact.form');
 
   return (
-    <section className="py-[120px] bg-[#fafaf9]">
+    <section className="py-24 bg-[#fafaf9]">
       <div className="max-w-[1100px] mx-auto px-6 lg:px-[60px]">
         <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-16 lg:gap-[100px]">
           

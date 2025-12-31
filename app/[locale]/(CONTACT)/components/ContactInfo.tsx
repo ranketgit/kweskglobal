@@ -12,8 +12,8 @@ export default function ContactInfo() {
   const items = ['address', 'phone', 'email', 'hours'] as const;
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-[1100px] mx-auto px-6 lg:px-[60px]">
+    <section className="py- bg-white">
+      <div className="max-w-275 mx-auto px-6 lg:px-15">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {items.map((item) => (
             <div key={item} className="text-center group">

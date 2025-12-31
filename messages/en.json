@@ -955,12 +955,12 @@
     "description": "Contact Kwesk for your ergonomic office chair needs. Get a quote, request information, or reach our sales team."
   },
     "hero": {
-      "label": "Contact",
-      "title": "GET IN TOUCH",
+      "label": "KWESK",
+      "title": "CONTACT US",
       "description": ""
     },
     "info": {
-      "address": { "title": "Address", "content": "KWESK Anfa Place Tour Ouest, Niv 1 Anfa Place bd de la corniche, Ain diab 20180, Casablanca" },
+      "address": { "title": "Address", "content": "KWESK Anfa Place Tour Ouest, Niv 1 bd de la corniche, Ain diab 20180, Casablanca" },
       "phone": { "title": "Phone", "content": "+212 5 20 24 16 37\n+212 6 61 48 16 16" },
       "email": { "title": "Email", "content": "contact@kwesk.com" },
       "hours": { "title": "Hours", "content": "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 9:00 AM - 12:00 PM" }

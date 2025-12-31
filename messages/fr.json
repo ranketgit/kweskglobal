@@ -959,12 +959,12 @@
       "description": "Contactez Kwesk pour vos besoins en chaises de bureau ergonomiques. Demandez un devis, des informations, ou contactez notre équipe commerciale."
     },
     "hero": {
-      "label": "Contact",
+      "label": "KWESK",
       "title": "CONTACTEZ-NOUS",
       "description": ""
     },
     "info": {
-      "address": { "title": "Adresse", "content": "KWESK Anfa Place Tour Ouest, Niv 1 Anfa Place bd de la corniche, Ain diab 20180, Casablanca" },
+      "address": { "title": "Adresse", "content": "KWESK Anfa Place Tour Ouest, Niv 1 bd de la corniche, Ain diab 20180, Casablanca" },
       "phone": { "title": "Téléphone", "content": "+212 5 20 24 16 37\n+212 6 61 48 16 16" },
       "email": { "title": "Email", "content": "contact@kwesk.com" },
       "hours": { "title": "Horaires", "content": "Lun - Ven: 9h00 - 18h00\nSam: 9h00 - 12h00" }
