@@ -993,6 +993,7 @@
     }
   },
     "footer": {
+      "terms": "Conditions d'Utilisation",
       "privacy": "Politique de confidentialité",
       "description": "KWESK conçoit et fabrique des sièges destinés à un usage intensif, au bureau comme à la maison. À ce jour, de nombreuses entreprises font confiance à la marque KWESK, principalement pour la robustesse et le design raffiné de ses modèles. Ce succès est le fruit de plusieurs années de recherche et développement, ainsi que de la vaste expérience de son fondateur dans le secteur des centres d'appels, où les sièges sont généralement soumis à de fortes contraintes. Les fauteuils KWESK sont ainsi optimisés pour les entreprises en quête de confort, de style et surtout de durabilité. Les sièges KWESK sont certifiés BIFMA et EN1335-1-2-3.",
       "titles": {
@@ -1173,6 +1174,102 @@
   "thirdParty": {
     "title": "Liens vers des sites tiers",
     "description": "Notre site peut contenir des liens vers des <strong>sites tiers</strong> (par exemple, des fournisseurs ou des partenaires). Nous ne contrôlons pas les pratiques de ces sites et ne sommes pas responsables de leur politique de confidentialité. Nous vous invitons à lire leur politique lorsque vous les visitez."
+  }
+},
+
+"terms": {
+  "meta": {
+    "title": "Conditions d'Utilisation | KWESK",
+    "description": "Conditions d'utilisation du site web KWESK. Consultez nos termes et conditions pour l'utilisation de nos services et de notre site."
+  },
+  "hero": {
+    "title": "Conditions d'Utilisation"
+  },
+  "label": "KWESK",
+  "intro": {
+    "title": "Conditions Générales d'Utilisation",
+    "description": "Bienvenue sur le site web de <strong>KWESK</strong>. En accédant et en utilisant ce site, vous acceptez de vous conformer et d'être lié par les conditions suivantes. Veuillez les lire attentivement avant d'utiliser notre site.",
+    "name": "Raison sociale",
+    "address": "Adresse",
+    "website": "Site web"
+  },
+  "acceptance": {
+    "title": "Acceptation des Conditions",
+    "description": "En accédant ou en utilisant notre site web, vous reconnaissez avoir lu, compris et accepté d'être lié par ces conditions.",
+    "agreement": "Ces conditions constituent un accord juridiquement contraignant entre vous et KWESK.",
+    "modifications": "KWESK se réserve le droit de modifier ces conditions à tout moment sans préavis.",
+    "continued": "Votre utilisation continue du site après toute modification constitue une acceptation des nouvelles conditions."
+  },
+  "access": {
+    "title": "Accès au Site",
+    "availability": "KWESK s'efforce d'assurer la disponibilité du site 24 heures sur 24, 7 jours sur 7, mais ne garantit pas un accès ininterrompu.",
+    "maintenance": "L'accès peut être temporairement suspendu pour maintenance, mises à jour ou circonstances indépendantes de notre volonté.",
+    "responsibility": "Les utilisateurs sont responsables de s'assurer qu'ils disposent de l'équipement et de la connexion internet nécessaires pour accéder au site."
+  },
+  "intellectual": {
+    "title": "Propriété Intellectuelle",
+    "intro": "Tout le contenu de ce site est protégé par les lois sur la propriété intellectuelle :",
+    "ownership": "<strong>Propriété du contenu :</strong> Tous les textes, images, graphiques, logos, vidéos et autres contenus de ce site sont la propriété exclusive de KWESK ou de ses concédants de licence.",
+    "trademarks": "<strong>Marques de commerce :</strong> Le nom KWESK, le logo et toutes les marques associées sont des marques déposées de KWESK.",
+    "images": "<strong>Images des produits :</strong> Toutes les photographies de produits et la documentation technique sont propriétaires et ne peuvent être reproduites sans autorisation.",
+    "prohibition": "Toute reproduction, distribution, modification ou utilisation du contenu sans le consentement écrit préalable de KWESK est strictement interdite."
+  },
+  "authorizedUse": {
+    "title": "Utilisation Autorisée",
+    "intro": "Vous êtes autorisé à utiliser ce site web aux fins suivantes :",
+    "personal": "Navigation personnelle et non commerciale et collecte d'informations sur les produits KWESK.",
+    "information": "Téléchargement ou impression de contenu uniquement pour référence personnelle.",
+    "contact": "Contacter KWESK pour des demandes concernant les produits, services ou opportunités commerciales."
+  },
+  "prohibitedUse": {
+    "title": "Utilisations Interdites",
+    "intro": "Les activités suivantes sont strictement interdites :",
+    "illegal": "Utiliser le site à des fins illégales ou non autorisées.",
+    "harmful": "Transmettre tout contenu nuisible, menaçant, abusif ou diffamatoire.",
+    "copy": "Copier, reproduire ou redistribuer tout contenu sans autorisation écrite.",
+    "scraping": "Utiliser des systèmes automatisés, des bots ou des scrapers pour extraire des données du site.",
+    "interference": "Tenter d'interférer avec le bon fonctionnement du site.",
+    "unauthorized": "Tenter d'obtenir un accès non autorisé à toute partie du site ou de ses systèmes."
+  },
+  "products": {
+    "title": "Produits et Services",
+    "description": "<strong>Informations sur les produits :</strong> KWESK est spécialisé dans le mobilier de bureau professionnel, notamment les sièges ergonomiques et les bureaux conçus pour une utilisation intensive dans les centres d'appels et les entreprises.",
+    "accuracy": "Nous nous efforçons de fournir des descriptions, spécifications et images de produits précises, mais ne pouvons garantir une exactitude complète.",
+    "availability": "La disponibilité des produits peut varier. Contactez-nous directement pour les informations actuelles sur les stocks et la livraison.",
+    "prices": "Les prix et spécifications sont susceptibles de changer sans préavis. Veuillez demander un devis pour les tarifs actuels."
+  },
+  "liability": {
+    "title": "Limitation de Responsabilité",
+    "noWarranty": "<strong>Aucune garantie :</strong> Ce site et son contenu sont fournis « tels quels » sans aucune garantie, expresse ou implicite.",
+    "damages": "KWESK ne sera pas responsable des dommages directs, indirects, accessoires ou consécutifs résultant de l'utilisation de ce site.",
+    "thirdParty": "Nous ne sommes pas responsables de toute perte ou dommage causé par la confiance accordée aux informations obtenues via ce site.",
+    "force": "KWESK n'est pas responsable de tout manquement dû à des circonstances indépendantes de notre volonté."
+  },
+  "externalLinks": {
+    "title": "Liens Externes",
+    "description": "Ce site peut contenir des liens vers des sites web tiers. <strong>KWESK n'a aucun contrôle sur le contenu, les politiques de confidentialité ou les pratiques de ces sites externes</strong> et n'assume aucune responsabilité à leur égard. L'accès aux liens externes se fait à vos propres risques."
+  },
+  "indemnification": {
+    "title": "Indemnisation",
+    "description": "Vous acceptez d'indemniser, défendre et dégager de toute responsabilité KWESK, ses dirigeants, administrateurs, employés et agents de toute réclamation, dommage, perte ou dépense résultant de votre utilisation du site ou de la violation de ces conditions."
+  },
+  "law": {
+    "title": "Droit Applicable",
+    "jurisdiction": "<strong>Loi applicable :</strong> Ces conditions sont régies et interprétées conformément aux lois du Royaume du Maroc.",
+    "disputes": "Tout litige découlant de l'utilisation de ce site sera soumis à la compétence exclusive des tribunaux de Casablanca, Maroc."
+  },
+  "modifications": {
+    "title": "Modifications des Conditions",
+    "description": "KWESK se réserve le droit de mettre à jour ou de modifier ces conditions à tout moment. Les modifications prendront effet immédiatement après leur publication sur le site. Nous vous encourageons à consulter régulièrement ces conditions.",
+    "lastUpdate": "Dernière mise à jour",
+    "date": "Janvier 2025"
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "description": "Si vous avez des questions concernant ces conditions d'utilisation, veuillez nous contacter :",
+    "emailLabel": "Email",
+    "phoneLabel": "Téléphone",
+    "addressLabel": "Adresse"
   }
 }
 

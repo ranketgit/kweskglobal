@@ -989,6 +989,7 @@
     }
   },
   "footer": {
+    "terms": "Terms of Use",
     "privacy": "Privacy Policy",
     "description": "KWESK designs and manufactures chairs for intensive use in offices or at home. To date, many companies rely on KWESK brand mainly due to its sturdiness and the refined design of its chairs. This is the result of several years of research and development as well as the extensive experience of its founder in call centres where the chairs are generally highly stressed. KWESK chairs are thus optimised for companies looking for comfort, style and especially durability. KWESK chairs are BIFMA and EN1335-1-2-3 certified.",
     "titles": {
@@ -1169,7 +1170,103 @@
     "title": "Links to third-party sites",
     "description": "Our site may contain links to <strong>third-party sites</strong> (for example, suppliers or partners). We do not control the practices of these sites and are not responsible for their privacy policy. We invite you to read their policy when you visit them."
   }
-}
+},
+
+"terms": {
+    "meta": {
+      "title": "Terms of Use | KWESK",
+      "description": "Terms of use for the KWESK website. Read our terms and conditions for using our services and website."
+    },
+    "hero": {
+      "title": "Terms of Use"
+    },
+    "label": "KWESK",
+    "intro": {
+      "title": "General Terms of Use",
+      "description": "Welcome to the <strong>KWESK</strong> website. By accessing and using this website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully before using our site.",
+      "name": "Company Name",
+      "address": "Address",
+      "website": "Website"
+    },
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "description": "By accessing or using our website, you acknowledge that you have read, understood, and agree to be bound by these terms.",
+      "agreement": "These terms constitute a legally binding agreement between you and KWESK.",
+      "modifications": "KWESK reserves the right to modify these terms at any time without prior notice.",
+      "continued": "Your continued use of the website after any changes constitutes acceptance of the new terms."
+    },
+    "access": {
+      "title": "Website Access",
+      "availability": "KWESK strives to ensure the website is available 24 hours a day, 7 days a week, but does not guarantee uninterrupted access.",
+      "maintenance": "Access may be temporarily suspended for maintenance, updates, or circumstances beyond our control.",
+      "responsibility": "Users are responsible for ensuring they have the necessary equipment and internet connection to access the website."
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "intro": "All content on this website is protected by intellectual property laws:",
+      "ownership": "<strong>Content ownership:</strong> All texts, images, graphics, logos, videos, and other content on this website are the exclusive property of KWESK or its licensors.",
+      "trademarks": "<strong>Trademarks:</strong> The KWESK name, logo, and all related trademarks are registered trademarks of KWESK.",
+      "images": "<strong>Product images:</strong> All product photographs and technical documentation are proprietary and may not be reproduced without authorization.",
+      "prohibition": "Any reproduction, distribution, modification, or use of the content without prior written consent from KWESK is strictly prohibited."
+    },
+    "authorizedUse": {
+      "title": "Authorized Use",
+      "intro": "You are authorized to use this website for the following purposes:",
+      "personal": "Personal, non-commercial browsing and information gathering about KWESK products.",
+      "information": "Downloading or printing content for personal reference only.",
+      "contact": "Contacting KWESK for inquiries about products, services, or business opportunities."
+    },
+    "prohibitedUse": {
+      "title": "Prohibited Use",
+      "intro": "The following activities are strictly prohibited:",
+      "illegal": "Using the website for any illegal or unauthorized purpose.",
+      "harmful": "Transmitting any harmful, threatening, abusive, or defamatory content.",
+      "copy": "Copying, reproducing, or redistributing any content without written permission.",
+      "scraping": "Using automated systems, bots, or scrapers to extract data from the website.",
+      "interference": "Attempting to interfere with the proper functioning of the website.",
+      "unauthorized": "Attempting to gain unauthorized access to any part of the website or its systems."
+    },
+    "products": {
+      "title": "Products and Services",
+      "description": "<strong>Product information:</strong> KWESK specializes in professional office furniture, including ergonomic chairs and desks designed for intensive use in call centers and businesses.",
+      "accuracy": "We strive to provide accurate product descriptions, specifications, and images, but cannot guarantee complete accuracy.",
+      "availability": "Product availability may vary. Contact us directly for current stock and delivery information.",
+      "prices": "Prices and specifications are subject to change without notice. Please request a quote for current pricing."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "noWarranty": "<strong>No warranty:</strong> This website and its content are provided \"as is\" without any warranties, express or implied.",
+      "damages": "KWESK shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of this website.",
+      "thirdParty": "We are not responsible for any loss or damage caused by reliance on information obtained through this website.",
+      "force": "KWESK is not liable for any failure to perform due to circumstances beyond our reasonable control."
+    },
+    "externalLinks": {
+      "title": "External Links",
+      "description": "This website may contain links to third-party websites. <strong>KWESK has no control over the content, privacy policies, or practices of these external sites</strong> and assumes no responsibility for them. Accessing external links is at your own risk."
+    },
+    "indemnification": {
+      "title": "Indemnification",
+      "description": "You agree to indemnify, defend, and hold harmless KWESK, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of the website or violation of these terms."
+    },
+    "law": {
+      "title": "Applicable Law",
+      "jurisdiction": "<strong>Governing law:</strong> These terms are governed by and construed in accordance with the laws of the Kingdom of Morocco.",
+      "disputes": "Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the courts of Casablanca, Morocco."
+    },
+    "modifications": {
+      "title": "Modifications to Terms",
+      "description": "KWESK reserves the right to update or modify these terms at any time. Changes will be effective immediately upon posting to the website. We encourage you to review these terms periodically.",
+      "lastUpdate": "Last updated",
+      "date": "January 2025"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about these terms of use, please contact us:",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address"
+    }
+  }
 
   
 }
