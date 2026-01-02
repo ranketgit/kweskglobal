@@ -27,17 +27,6 @@ export default function ChairsSection() {
       href: '/chairs/gamma'
     },
     {
-      title: 'WINNER',
-      description: t('winner.description'),
-      image: '/chairs/winner-chair.jpg',
-      versions: [
-        { name: 'WINNER 125', type: t('winner.type1') },
-        { name: 'WINNER C', type: t('winner.type2') }
-      ],
-      imagePosition: 'right' as const,
-      href: '/chairs/winner-125'
-    },
-    {
       title: 'CORPO 100',
       description: t('corpo.description'),
       image: '/chairs/corpo-chair.jpg',

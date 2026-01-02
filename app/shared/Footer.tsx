@@ -15,8 +15,7 @@ export default function Footer() {
     { label: "Challenger 175", href: "/chairs/challenger" },
     { label: "Gamma 150", href: "/chairs/gamma" },
     { label: "Gamma C", href: "/chairs/gamma-c" },
-    { label: "Winner 125", href: "/chairs/winner-125" },
-    { label: "Winner C", href: "/chairs/winner-c" },
+
     { label: "Corpo 100", href: "/chairs/corpo-100" },
     { label: "Exclusive 500", href: "/chairs/exclusive" },
     { label: "Exclusive G", href: "/chairs/exclusive-g" },
