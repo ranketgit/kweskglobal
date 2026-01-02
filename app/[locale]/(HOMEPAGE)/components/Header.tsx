@@ -19,14 +19,7 @@ interface Chair {
 }
 
 const chairs: Chair[] = [
-  {
-    label: 'WINNER',
-    image: '/winner-125/winner125-hero.png',
-    variants: [
-      { label: 'WINNER 125', href: '/chairs/winner-125' },
-      { label: 'WINNER C', href: '/chairs/winner-c' }
-    ]
-  },
+ 
   {
     label: 'GAMMA',
     image: '/gamma/hero.jpg',
