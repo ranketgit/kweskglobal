@@ -972,7 +972,7 @@
     "form": {
       "label": "Formulaire",
       "title": "ENVOYEZ-NOUS UN MESSAGE",
-      "description": "Veuillez remplir ce formulaire ou nous envoyer un email à contact@kwesk.com",
+      "description": "Veuillez remplir ce formulaire ou nous envoyer un email à <email>contact@kwesk.com</email>",
       "fields": {
         "firstName": "Prénom",
         "lastName": "Nom",

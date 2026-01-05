@@ -9,27 +9,80 @@ const icons = {
 
 export default function ContactInfo() {
   const t = useTranslations('contact.info');
-  const items = ['address', 'phone', 'email', 'hours'] as const;
 
   return (
-    <section className="py- bg-white">
-      <div className="max-w-275 mx-auto px-6 lg:px-15">
+    <section className="py-20 bg-white">
+      <div className="max-w-[1100px] mx-auto px-6 lg:px-[60px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {items.map((item) => (
-            <div key={item} className="text-center group">
-              <div className="w-12 h-12 mx-auto text-[#8b8b4b] mb-6 transition-transform group-hover:scale-110">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  {icons[item]}
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-stone-900 mb-4 uppercase tracking-wider">
-                {t(`${item}.title`)}
-              </h3>
-              <p className="text-sm text-stone-500 leading-relaxed whitespace-pre-line">
-                {t(`${item}.content`)}
-              </p>
+          
+          {/* Address */}
+          <div className="text-center group">
+            <div className="w-12 h-12 mx-auto text-[#8b8b4b] mb-6 transition-transform group-hover:scale-110">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                {icons.address}
+              </svg>
             </div>
-          ))}
+            <h3 className="text-lg font-semibold text-stone-900 mb-4 uppercase tracking-wider">
+              {t('address.title')}
+            </h3>
+            <p className="text-sm text-stone-500 leading-relaxed whitespace-pre-line">
+              {t('address.content')}
+            </p>
+          </div>
+
+          {/* Phone */}
+          <div className="text-center group">
+            <div className="w-12 h-12 mx-auto text-[#8b8b4b] mb-6 transition-transform group-hover:scale-110">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                {icons.phone}
+              </svg>
+            </div>
+            <h3 className="text-lg font-semibold text-stone-900 mb-4 uppercase tracking-wider">
+              {t('phone.title')}
+            </h3>
+            <div className="text-sm text-stone-500 leading-relaxed flex flex-col gap-1">
+              <a href="tel:+212520241637" className="hover:text-[#8b8b4b] transition-colors">
+                +212 5 20 24 16 37
+              </a>
+              <a href="tel:+212661481616" className="hover:text-[#8b8b4b] transition-colors">
+                +212 6 61 48 16 16
+              </a>
+            </div>
+          </div>
+
+          {/* Email */}
+          <div className="text-center group">
+            <div className="w-12 h-12 mx-auto text-[#8b8b4b] mb-6 transition-transform group-hover:scale-110">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                {icons.email}
+              </svg>
+            </div>
+            <h3 className="text-lg font-semibold text-stone-900 mb-4 uppercase tracking-wider">
+              {t('email.title')}
+            </h3>
+            <a 
+              href="mailto:contact@kwesk.com" 
+              className="text-sm text-stone-500 hover:text-[#8b8b4b] transition-colors"
+            >
+              contact@kwesk.com
+            </a>
+          </div>
+
+          {/* Hours */}
+          <div className="text-center group">
+            <div className="w-12 h-12 mx-auto text-[#8b8b4b] mb-6 transition-transform group-hover:scale-110">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                {icons.hours}
+              </svg>
+            </div>
+            <h3 className="text-lg font-semibold text-stone-900 mb-4 uppercase tracking-wider">
+              {t('hours.title')}
+            </h3>
+            <p className="text-sm text-stone-500 leading-relaxed whitespace-pre-line">
+              {t('hours.content')}
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

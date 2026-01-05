@@ -968,7 +968,7 @@
     "form": {
       "label": "Form",
       "title": "SEND US A MESSAGE",
-      "description": "Please fill out this form to contact us, or send an email to contact@kwesk.com",
+      "description": "Please fill out this form to contact us, or send an email to <email>contact@kwesk.com</email>",
       "fields": {
         "firstName": "First Name",
         "lastName": "Last Name",
