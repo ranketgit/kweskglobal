@@ -33,7 +33,7 @@ export default function ContactForm() {
             <input type="hidden" name="_subject" value="Nouveau message depuis le site KWESK" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://kwesk.com/merci" />
+            <input type="hidden" name="_next" value="https://kwesk.com/thankyou" />
             <input type="text" name="_honey" className="hidden" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
