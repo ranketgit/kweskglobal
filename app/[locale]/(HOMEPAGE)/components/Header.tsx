@@ -118,12 +118,12 @@ export default function Header() {
           
           {/* Chairs Dropdown Trigger */}
           <div className="group">
-            <button className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
+            <Link href='/mobilier-de-bureau-professionnel' className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
               {t('chairs')}
               <svg className="w-3 h-3 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="6 9 12 15 18 9" />
               </svg>
-            </button>
+            </Link>
 
             {/* Mega Menu */}
             <div className={`absolute left-10 right-10 ${scrolled ? 'top-[70px]' : 'top-[90px]'} bg-white shadow-[0_40px_80px_rgba(0,0,0,0.15)] rounded-3xl border border-stone-100 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-400 overflow-hidden`}>
@@ -170,6 +170,7 @@ export default function Header() {
             </div>
           </div>
 
+         
           <Link href="/blog" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             News
           </Link>
