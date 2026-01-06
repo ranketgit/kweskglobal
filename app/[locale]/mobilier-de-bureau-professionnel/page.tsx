@@ -67,7 +67,7 @@ export default function CitiesIndexPage() {
               KWESK FRANCE
             </span>
             <h1 className="text-4xl lg:text-6xl text-white font-bold uppercase tracking-tight text-center">
-              Mobilier de Bureau<br />Professionnel en France
+            Fabricant de Chaises de Bureau<br />Professionnel en France
             </h1>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function CitiesIndexPage() {
                       {city.City}
                     </h3>
                     <p className="text-stone-500 text-sm line-clamp-2">
-                      Mobilier de bureau professionnel à {city.City}
+                    Fabricant de Chaises de Bureau {city.City}
                     </p>
                     <span className="inline-flex items-center gap-1 text-[#8b8b4b] text-sm mt-4">
                       Découvrir

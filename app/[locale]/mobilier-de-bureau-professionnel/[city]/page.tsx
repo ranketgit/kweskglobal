@@ -180,7 +180,7 @@ export default async function CityPage({ params }: Props) {
       <section className="py-20 bg-stone-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-16 text-center">
           <h2 className="text-3xl lg:text-4xl text-white font-bold mb-6">
-            Mobilier de Bureau Professionnel à {cityData.City}
+          Fabricant de Chaises de Bureau {cityData.City}
           </h2>
           <p className="text-stone-400 mb-8">
             Contactez nos experts pour un accompagnement personnalisé.
