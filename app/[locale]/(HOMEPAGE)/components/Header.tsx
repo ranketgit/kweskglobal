@@ -83,7 +83,7 @@ export default function Header() {
 
   const switchLocale = (newLocale: string) => {
     const path = pathname.replace(`/${locale}`, `/${newLocale}`)
-    router.push(path)
+    window.location.href = path
     setLangOpen(false)
   }
 
