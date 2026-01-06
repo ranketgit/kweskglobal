@@ -6,6 +6,7 @@ import './globals.css'
 import Header from './(HOMEPAGE)/components/Header'
 import Footer from '../shared/Footer'
 import { Metadata } from 'next'
+import Script from 'next/script'
 
 const baseUrl = 'https://kwesk.com'
 
@@ -96,6 +97,20 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-JQTGF9HKXF"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JQTGF9HKXF');
+          `}
+        </Script>
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
