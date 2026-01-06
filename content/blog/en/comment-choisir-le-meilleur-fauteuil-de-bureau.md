@@ -4,7 +4,6 @@ description: "Discover how to choose the best ergonomic office chair to prevent 
 date: "2026-01-05"
 image: "/blog/fauteuils-de-bureau.webp"
 ---
-# **How to Choose the Best Office Chair**
 
 "My back hurts." This phrase echoes through French offices day after day. If you're among the millions of workers experiencing pain related to poor posture, you're not alone. The good news? A solution exists and it can transform your professional daily life: the ergonomic **office chair**.
 
