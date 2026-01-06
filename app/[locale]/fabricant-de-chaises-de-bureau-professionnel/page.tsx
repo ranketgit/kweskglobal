@@ -97,7 +97,7 @@ export default function CitiesIndexPage() {
                 {citiesByProvince[province].map((city) => (
                   <Link 
                     key={city.id}
-                    href={`/fabriquant-de-chaises-de-bureau-professionnel/${generateSlug(city.City)}`}
+                    href={`/fabricant-de-chaises-de-bureau-professionnel/${generateSlug(city.City)}`}
                     className="group bg-white p-6 border border-stone-200 hover:border-[#8b8b4b] transition-colors"
                   >
                     <h3 className="font-bold text-stone-900 mb-2 group-hover:text-[#8b8b4b] transition-colors">
