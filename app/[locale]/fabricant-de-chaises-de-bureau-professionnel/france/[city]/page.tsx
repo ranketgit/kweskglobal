@@ -1,15 +1,18 @@
 import { Metadata } from 'next'
-import citiesData from '../../../../data/cities-fr.json'
-import ChairsSection from '../../(HOMEPAGE)/components/ChairSection/ChairSection'
+import citiesData from '../../../../../data/cities-fr.json'
+import ChairsSection from '../../../(HOMEPAGE)/components/ChairSection/ChairSection'
 import Customers from '@/app/shared/Customers'
-import AboutNormes from '../../(ABOUT)/about/components/AboutNormes'
-import Features from '../../(ABOUT)/about/components/Features'
+import AboutNormes from '../../../(ABOUT)/about/components/AboutNormes'
+import Features from '../../../(ABOUT)/about/components/Features'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getAlternates } from '@/app/lib/metadata'
 import {redirect} from 'next/navigation'
 
 export const dynamic = 'force-static'
 export const dynamicParams = false
+
+
 
 type CityData = {
   id: string
@@ -24,7 +27,7 @@ type CityData = {
 }
 
 type Props = { 
-  params: Promise<{ city: string }> 
+  params: Promise<{ city: string, locale: string }> 
 }
 
 function generateSlug(city: string): string {
@@ -55,7 +58,7 @@ function getCityBySlug(slug: string): CityData | undefined {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { city } = await params
+  const { city, locale } = await params
   const cityData = getCityBySlug(city)
   
   if (!cityData) {
@@ -65,6 +68,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: cityData.meta_title,
     description: cityData.meta_description,
+    alternates: {
+      canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel/france/${city}`,
+    },
   }
 }
 

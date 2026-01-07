@@ -82,7 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // City pages - only French since it's programmatic SEO for France
   const cityUrls = (citiesData as CityData[]).map((city) => ({
-    url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/${generateSlug(city.City)}`,
+    url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/france/${generateSlug(city.City)}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,

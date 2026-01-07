@@ -46,9 +46,20 @@ function groupByProvince(cities: CityData[]): Record<string, CityData[]> {
   }, {} as Record<string, CityData[]>)
 }
 
-export const metadata: Metadata = {
-  title: 'Mobilier de Bureau Professionnel en France | KWESK',
-  description: 'Découvrez nos solutions de mobilier de bureau professionnel dans toute la France. Livraison et installation dans votre ville.',
+type Props = {
+  params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+
+  return {
+    title: 'Mobilier de Bureau Professionnel en France | KWESK',
+    description: 'Découvrez nos solutions de mobilier de bureau professionnel dans toute la France. Livraison et installation dans votre ville.',
+    alternates: {
+      canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel`,
+    },
+  }
 }
 
 export default function CitiesIndexPage() {
@@ -97,7 +108,7 @@ export default function CitiesIndexPage() {
                 {citiesByProvince[province].map((city) => (
                   <Link 
                     key={city.id}
-                    href={`/fabricant-de-chaises-de-bureau-professionnel/${generateSlug(city.City)}`}
+                    href={`/fabricant-de-chaises-de-bureau-professionnel/france/${generateSlug(city.City)}`}
                     className="group bg-white p-6 border border-stone-200 hover:border-[#8b8b4b] transition-colors"
                   >
                     <h3 className="font-bold text-stone-900 mb-2 group-hover:text-[#8b8b4b] transition-colors">
