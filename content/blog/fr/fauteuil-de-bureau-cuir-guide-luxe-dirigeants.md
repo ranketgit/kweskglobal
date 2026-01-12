@@ -290,9 +290,3 @@ Avec une croissance du marché de 5,9% annuellement et l'importance croissante d
 [Explorez notre gamme complète de fauteuils ergonomiques professionnels](https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel) et découvrez comment KWESK allie expertise manufacturière, innovation et durabilité pour créer les sièges de direction de demain.
 
 ---
-
-**Sources :**
-- [Leather Office Chair Market Trends](https://www.marketreportanalytics.com/reports/leather-office-chair-204561)
-- [Office Chairs Market Growth Report 2035](https://www.marketresearchfuture.com/reports/office-chairs-market-12018)
-- [Fauteuil de bureau : tendances 2025](https://www.francebureau.com/actualites/p-fauteuil-de-bureau-tendances-et-nouveautes.html)
-- [Comment choisir son fauteuil ergonomique en 2025](https://www.soburo.com/guides/choisir-le-fauteuil-ergonomique-ideal-en-2025-n40)
