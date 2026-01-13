@@ -69,6 +69,7 @@ export default function CitiesIndexPage() {
 
   return (
     <main className="pt-[100px]">
+      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel" />
       
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] bg-stone-900 overflow-hidden">

@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 export default function ContactHero() {
+  
   const t = useTranslations('contact.hero');
 
   return (

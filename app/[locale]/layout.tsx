@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, getTranslations } from 'next-intl/server'
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import './globals.css'
@@ -88,6 +88,8 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+  
+  setRequestLocale(locale)
 
   if (!routing.locales.includes(locale as any)) {
     notFound()
@@ -98,7 +100,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JQTGF9HKXF"
           strategy="afterInteractive"

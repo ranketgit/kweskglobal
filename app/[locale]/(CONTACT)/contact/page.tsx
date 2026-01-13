@@ -4,8 +4,11 @@ import { baseUrl, getAlternates } from '../../../lib/metadata'
 import ContactHero from '../components/ContactHero'
 import ContactInfo from '../components/ContactInfo'
 import ContactForm from '../components/ContactForm'
+import { localeParams } from '@/app/lib/staticParams'
 
 type Props = { params: Promise<{ locale: string }> }
+
+export const generateStaticParams = () => localeParams
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
@@ -23,12 +26,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function ContactPage() {
+export default function ContactPage({params} : Props) {
+  
   return (
+    <>
+    <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/contact" />
     <main className="bg-white">
       <ContactHero />
       <ContactInfo />
       <ContactForm />
     </main>
+    </>
+    
   )
 }

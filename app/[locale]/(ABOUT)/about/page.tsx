@@ -8,9 +8,16 @@ import AboutNormes from './components/AboutNormes'
 import Customers from '@/app/shared/Customers'
 import AboutCta from './components/AboutCta'
 import { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 
 import { baseUrl, getAlternates } from '../../../lib/metadata'
 import Intro from '../../(HOMEPAGE)/components/Intro'
+
+import { routing } from '@/i18n/routing'
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -23,10 +30,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 }
 
-export default async function AboutPage() {
-  const t = await getTranslations('about')
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const {locale} = await params
+  setRequestLocale(locale)
+  const t = await getTranslations({ locale, namespace: 'about' })
 
   return (
+    <>
+      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/about" />
+    
     <main className="pt-[100px]">
       {/* Sticky Hero Image */}
       <div className="sticky top-0 h-[70vh] w-full -z-10">
@@ -72,5 +84,6 @@ export default async function AboutPage() {
         <AboutCta />
       </div>
     </main>
+    </>
   )
 }

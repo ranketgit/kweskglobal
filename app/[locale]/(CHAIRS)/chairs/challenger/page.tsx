@@ -2,6 +2,7 @@ import ChairProduct from '../../components/ChairProduct'
 import { getTranslations } from 'next-intl/server'
 import { baseUrl, getAlternates } from '../../../../lib/metadata'
 import { Metadata } from 'next'
+import { useTranslations } from 'next-intl'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -14,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 }
 
-export default async function ChallengerPage() {
-  const t = await getTranslations('challenger')
+export default function ChallengerPage(){
+  const t = useTranslations('challenger')
 
   const challengerData = {
     heroBg: "/challenger/chalhero.png",

@@ -56,6 +56,7 @@ export default async function BlogPage({ params }: Props) {
 
   return (
     <main className="pt-[100px]">
+      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/blog" />
       
       {/* Hero */}
       <section className="relative h-[50vh] bg-stone-800 overflow-hidden">

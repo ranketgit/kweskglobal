@@ -7,6 +7,10 @@ const intlMiddleware = createMiddleware(routing)
 export default function middleware(request: NextRequest) {
   const response = intlMiddleware(request)
 
+   // x-default hreflang
+   const pathWithoutLocale = request.nextUrl.pathname.replace(/^\/(en|fr)/, '') || ''
+   response.headers.set('x-default-url', `https://kwesk.com/fr${pathWithoutLocale}`)
+
   if (response.status === 307 || response.status === 308) {
     const location = response.headers.get('location')
 

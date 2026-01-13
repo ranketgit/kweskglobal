@@ -108,5 +108,8 @@ export default async function By100Page() {
     ]
   }
 
-  return <ChairProduct {...by100Data} />
+  return <>
+  
+  <ChairProduct {...by100Data} />
+  </>
 }
