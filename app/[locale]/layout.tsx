@@ -49,7 +49,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         'en': `${baseUrl}/en`,
         'fr': `${baseUrl}/fr`,
-        'x-default': `${baseUrl}/fr`,
       },
     },
     openGraph: {
@@ -99,6 +98,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JQTGF9HKXF"
           strategy="afterInteractive"
