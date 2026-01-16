@@ -19,7 +19,6 @@ interface Chair {
 }
 
 const chairs: Chair[] = [
- 
   {
     label: 'GAMMA',
     image: '/gamma/hero.jpg',
@@ -75,10 +74,7 @@ export default function Header() {
   const [expandedChair, setExpandedChair] = useState<string | null>(null)
   const [langOpen, setLangOpen] = useState(false)
 
-  // Check if we're on the homepage
   const isHomepage = pathname === `/${locale}` || pathname === '/'
-
-  // Determine if header should be in "solid" mode (white bg, dark text)
   const isSolid = scrolled || !isHomepage
 
   const switchLocale = (newLocale: string) => {
@@ -101,12 +97,10 @@ export default function Header() {
     <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${isSolid ? 'bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)]' : ''}`}>
       <div className={`max-w-[1400px] mx-auto px-[60px] flex items-center justify-between relative z-[1001] transition-all duration-300 ${scrolled ? 'h-[75px]' : 'h-[100px]'}`}>
         
-        {/* Logo */}
         <Link href="/" className="relative h-10 w-32">
           <Image src="/kwesk-logo.png" alt="KWESK" fill className="object-contain" />
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-10">
           <Link href="/" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             {t('home')}
@@ -115,8 +109,6 @@ export default function Header() {
             {t('about')}
           </Link>
         
-          
-          {/* Chairs Dropdown Trigger */}
           <div className="group">
             <Link href='/fabricant-de-chaises-de-bureau-professionnel' className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
               {t('chairs')}
@@ -125,42 +117,24 @@ export default function Header() {
               </svg>
             </Link>
 
-            {/* Mega Menu */}
             <div className={`absolute left-10 right-10 ${scrolled ? 'top-[70px]' : 'top-[90px]'} bg-white shadow-[0_40px_80px_rgba(0,0,0,0.15)] rounded-3xl border border-stone-100 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-400 overflow-hidden`}>
               <div className="p-8 grid grid-cols-4 gap-8">
                 {chairs.map((chair) => (
-                  <div 
-                    key={chair.label} 
-                    className="flex flex-col gap-3"
-                  >
+                  <div key={chair.label} className="flex flex-col gap-3">
                     <div className="relative w-full h-20 rounded-lg overflow-hidden bg-stone-100">
-                      <Image 
-                        src={chair.image} 
-                        alt={chair.label} 
-                        fill 
-                        className="object-cover" 
-                      />
+                      <Image src={chair.image} alt={chair.label} fill className="object-cover" />
                     </div>
-
                     <span className="text-xs text-stone-400 uppercase tracking-wide">{chair.label}</span>
-
                     {chair.variants ? (
                       <div className="flex flex-col gap-2">
                         {chair.variants.map((variant) => (
-                          <Link 
-                            key={variant.href} 
-                            href={variant.href}
-                            className="text-base text-stone-900 hover:text-[#8b8b4b] transition-colors"
-                          >
+                          <Link key={variant.href} href={variant.href} className="text-base text-stone-900 hover:text-[#8b8b4b] transition-colors">
                             {variant.label}
                           </Link>
                         ))}
                       </div>
                     ) : (
-                      <Link 
-                        href={chair.href!}
-                        className="text-base text-stone-900 hover:text-[#8b8b4b] transition-colors"
-                      >
+                      <Link href={chair.href!} className="text-base text-stone-900 hover:text-[#8b8b4b] transition-colors">
                         {chair.label}
                       </Link>
                     )}
@@ -170,7 +144,10 @@ export default function Header() {
             </div>
           </div>
 
-         
+          <Link href="/en/office-chair-manufacturer/usa" className={`text-sm uppercase tracking-wide  transition-colors ${isSolid ? 'text-[#8b8b4b]' : 'text-white hover:text-[#8b8b4b]'}`}>
+            USA
+          </Link>
+
           <Link href="/blog" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             News
           </Link>
@@ -181,58 +158,37 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          {/* Language Switcher */}
           <div className="relative">
-            <button 
-              onClick={() => setLangOpen(!langOpen)}
-              className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}
-            >
+            <button onClick={() => setLangOpen(!langOpen)} className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
               {locale}
               <svg className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="6 9 12 15 18 9" />
               </svg>
             </button>
-
             {langOpen && (
               <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-stone-100 overflow-hidden">
-                <button 
-                  onClick={() => switchLocale('en')}
-                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-stone-50 ${locale === 'en' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}
-                >
+                <button onClick={() => switchLocale('en')} className={`block w-full px-4 py-2 text-sm text-left hover:bg-stone-50 ${locale === 'en' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}>
                   English
                 </button>
-                <button 
-                  onClick={() => switchLocale('fr')}
-                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-stone-50 ${locale === 'fr' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}
-                >
+                <button onClick={() => switchLocale('fr')} className={`block w-full px-4 py-2 text-sm text-left hover:bg-stone-50 ${locale === 'fr' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}>
                   Français
                 </button>
               </div>
             )}
           </div>
 
-          {/* CTA */}
-          <Link 
-            href="/contact" 
-            className={`px-6 py-2.5 rounded-full text-sm transition-colors ${isSolid ? 'bg-[#8b8b4b] text-white' : 'bg-stone-900 text-white'}`}
-          >
+          <Link href="/contact" className={`px-6 py-2.5 rounded-full text-sm transition-colors ${isSolid ? 'bg-[#8b8b4b] text-white' : 'bg-stone-900 text-white'}`}>
             {t('cta')}
           </Link>
         </div>
 
-        {/* Burger */}
-        <button 
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden flex flex-col gap-1.5 relative z-[1200]"
-          aria-label="Menu"
-        >
+        <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden flex flex-col gap-1.5 relative z-[1200]" aria-label="Menu">
           <span className={`w-6 h-0.5 transition-colors ${isSolid ? 'bg-stone-900' : 'bg-white'}`} />
           <span className={`w-6 h-0.5 transition-colors ${isSolid ? 'bg-stone-900' : 'bg-white'}`} />
           <span className={`w-6 h-0.5 transition-colors ${isSolid ? 'bg-stone-900' : 'bg-white'}`} />
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`fixed top-0 left-0 w-full h-screen bg-white z-[1100] pt-24 px-6 pb-10 overflow-y-auto transition-transform duration-400 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <nav className="flex flex-col">
           <Link href="/" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
@@ -241,13 +197,8 @@ export default function Header() {
           <Link href="/about" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
             {t('about')}
           </Link>
-         
           
-          {/* Mobile Chairs Accordion */}
-          <button 
-            onClick={() => setMobileChairsOpen(!mobileChairsOpen)}
-            className="flex items-center justify-between py-4 text-lg text-stone-900 border-b border-stone-100"
-          >
+          <button onClick={() => setMobileChairsOpen(!mobileChairsOpen)} className="flex items-center justify-between py-4 text-lg text-stone-900 border-b border-stone-100">
             {t('chairs')}
             <svg className={`w-4 h-4 transition-transform ${mobileChairsOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <polyline points="6 9 12 15 18 9" />
@@ -259,10 +210,7 @@ export default function Header() {
               <div key={chair.label} className="py-4 border-b border-stone-50">
                 {chair.variants ? (
                   <>
-                    <button 
-                      onClick={() => setExpandedChair(expandedChair === chair.label ? null : chair.label)}
-                      className="flex items-center justify-between w-full text-base text-stone-900"
-                    >
+                    <button onClick={() => setExpandedChair(expandedChair === chair.label ? null : chair.label)} className="flex items-center justify-between w-full text-base text-stone-900">
                       {chair.label}
                       <svg className={`w-3 h-3 transition-transform ${expandedChair === chair.label ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <polyline points="6 9 12 15 18 9" />
@@ -271,12 +219,7 @@ export default function Header() {
                     <div className={`overflow-hidden transition-all duration-300 ${expandedChair === chair.label ? 'max-h-[500px] mt-3' : 'max-h-0'}`}>
                       <div className="flex flex-col gap-2 pl-4 border-l-2 border-stone-100">
                         {chair.variants.map((variant) => (
-                          <Link 
-                            key={variant.href}
-                            href={variant.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="text-base text-stone-500"
-                          >
+                          <Link key={variant.href} href={variant.href} onClick={() => setMobileOpen(false)} className="text-base text-stone-500">
                             {variant.label}
                           </Link>
                         ))}
@@ -284,17 +227,17 @@ export default function Header() {
                     </div>
                   </>
                 ) : (
-                  <Link 
-                    href={chair.href!}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-base text-stone-900"
-                  >
+                  <Link href={chair.href!} onClick={() => setMobileOpen(false)} className="text-base text-stone-900">
                     {chair.label}
                   </Link>
                 )}
               </div>
             ))}
           </div>
+
+          <Link href="/en/office-chair-manufacturer/usa" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-[#8b8b4b] font-bold border-b border-stone-100">
+            USA LOCATIONS
+          </Link>
 
           <Link href="/blog" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
             News
@@ -304,18 +247,11 @@ export default function Header() {
             {t('contact')}
           </Link>
 
-          {/* Mobile Language Switcher */}
           <div className="flex gap-4 py-4 border-b border-stone-100">
-            <button 
-              onClick={() => { switchLocale('en'); setMobileOpen(false) }}
-              className={`text-base ${locale === 'en' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}
-            >
+            <button onClick={() => { switchLocale('en'); setMobileOpen(false) }} className={`text-base ${locale === 'en' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}>
               English
             </button>
-            <button 
-              onClick={() => { switchLocale('fr'); setMobileOpen(false) }}
-              className={`text-base ${locale === 'fr' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}
-            >
+            <button onClick={() => { switchLocale('fr'); setMobileOpen(false) }} className={`text-base ${locale === 'fr' ? 'text-[#8b8b4b]' : 'text-stone-900'}`}>
               Français
             </button>
           </div>
