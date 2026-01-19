@@ -77,10 +77,20 @@ export default function Header() {
   const isHomepage = pathname === `/${locale}` || pathname === '/'
   const isSolid = scrolled || !isHomepage
 
+  // Updated logic to handle the specific page switch
   const switchLocale = (newLocale: string) => {
-    const path = pathname.replace(`/${locale}`, `/${newLocale}`)
-    window.location.href = path
-    setLangOpen(false)
+    let newPath = pathname;
+
+    if (locale === 'fr' && pathname.includes('/fabricant-de-chaises-de-bureau-professionnel')) {
+      newPath = '/en/office-chair-manufacturer/usa';
+    } else if (locale === 'en' && pathname.includes('/office-chair-manufacturer/usa')) {
+      newPath = '/fr/fabricant-de-chaises-de-bureau-professionnel';
+    } else {
+      newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
+    }
+
+    window.location.href = newPath;
+    setLangOpen(false);
   }
 
   useEffect(() => {
@@ -110,7 +120,11 @@ export default function Header() {
           </Link>
         
           <div className="group">
-            <Link href='/fabricant-de-chaises-de-bureau-professionnel' className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
+            {/* Dynamic Link for Chairs/USA based on locale */}
+            <Link 
+              href={locale === 'fr' ? '/fabricant-de-chaises-de-bureau-professionnel' : '/office-chair-manufacturer/usa'} 
+              className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}
+            >
               {t('chairs')}
               <svg className="w-3 h-3 transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="6 9 12 15 18 9" />
@@ -144,9 +158,7 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/en/office-chair-manufacturer/usa" className={`text-sm uppercase tracking-wide  transition-colors ${isSolid ? 'text-[#8b8b4b]' : 'text-white hover:text-[#8b8b4b]'}`}>
-            USA
-          </Link>
+          {/* USA Link was REMOVED from here */}
 
           <Link href="/blog" className={`text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}>
             News
@@ -206,6 +218,14 @@ export default function Header() {
           </button>
           
           <div className={`overflow-hidden transition-all duration-500 ${mobileChairsOpen ? 'max-h-[2000px]' : 'max-h-0'}`}>
+            <Link 
+              href={locale === 'fr' ? '/fabricant-de-chaises-de-bureau-professionnel' : '/office-chair-manufacturer/usa'} 
+              onClick={() => setMobileOpen(false)} 
+              className="py-4 pl-4 text-base text-[#8b8b4b] font-bold block border-b border-stone-50"
+            >
+              {locale === 'fr' ? 'VOIR TOUS LES MODÈLES' : 'USA LOCATIONS'}
+            </Link>
+
             {chairs.map((chair) => (
               <div key={chair.label} className="py-4 border-b border-stone-50">
                 {chair.variants ? (
@@ -234,10 +254,6 @@ export default function Header() {
               </div>
             ))}
           </div>
-
-          <Link href="/en/office-chair-manufacturer/usa" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-[#8b8b4b] font-bold border-b border-stone-100">
-            USA LOCATIONS
-          </Link>
 
           <Link href="/blog" onClick={() => setMobileOpen(false)} className="py-4 text-lg text-stone-900 border-b border-stone-100">
             News
