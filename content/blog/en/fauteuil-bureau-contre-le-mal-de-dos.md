@@ -1,7 +1,7 @@
 ---
 title: "Best Office Chairs for Back Pain: Top 5 Models Recommended by Experts"
 description: "Discover the 5 best office chairs for back pain recommended by experts. Complete guide with selection criteria and ergonomic tips for workplace comfort."
-date: "2025-01-20"
+date: "2026-01-20"
 image: "/blog/fauteuil-bureau-mal-de-dos.webp"
 ---
 
