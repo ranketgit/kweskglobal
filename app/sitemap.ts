@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import citiesData from '@/data/cities-fr.json'
-import { getPosts } from '@/lib/blog' // Make sure this path points to your lib file
+import { getPosts } from '../app/lib/blog' // Make sure this path points to your lib file
 
 const baseUrl = 'https://kwesk.com'
 
