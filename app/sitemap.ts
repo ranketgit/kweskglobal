@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import citiesData from '@/data/cities-fr.json'
+import { getPosts } from '@/lib/blog' // Make sure this path points to your lib file
 
 const baseUrl = 'https://kwesk.com'
 
@@ -28,7 +29,7 @@ function generateSlug(city: string): string {
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['fr', 'en']
   
-  // Static pages
+  // 1. Static pages
   const staticPages = [
     '',
     '/about',
@@ -39,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/thankyou',
   ]
 
-  // Chair pages
+  // 2. Chair pages
   const chairPages = [
     '/chairs/challenger',
     '/chairs/gamma',
@@ -72,7 +73,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  // City index page for both locales
+  // 3. Blog Posts (NEW)
+  // We fetch all posts for 'fr' and 'en' and create URLs
+  const blogUrls = locales.flatMap((locale) => {
+    const posts = getPosts(locale)
+    
+    return posts.map((post) => ({
+      url: `${baseUrl}/${locale}/blog/${post.slug}`,
+      lastModified: new Date(post.date), // Uses the date from the markdown file
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }))
+  })
+
+  // 4. City index page for both locales
   const cityIndexUrls = locales.map((locale) => ({
     url: `${baseUrl}/${locale}/fabricant-de-chaises-de-bureau-professionnel`,
     lastModified: new Date(),
@@ -80,7 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // City pages - only French since it's programmatic SEO for France
+  // 5. City pages - only French since it's programmatic SEO for France
   const cityUrls = (citiesData as CityData[]).map((city) => ({
     url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/france/${generateSlug(city.City)}`,
     lastModified: new Date(),
@@ -88,5 +102,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticUrls, ...chairUrls, ...cityIndexUrls, ...cityUrls]
+  // Return everything merged together
+  return [
+    ...staticUrls, 
+    ...chairUrls, 
+    ...blogUrls, 
+    ...cityIndexUrls, 
+    ...cityUrls
+  ]
 }

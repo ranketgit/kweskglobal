@@ -96,6 +96,31 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages()
+  
+  // 1. FETCH TRANSLATIONS FOR SCHEMA
+  const t = await getTranslations({ locale, namespace: 'metadata' })
+
+  // 2. DEFINE GLOBAL ORGANIZATION SCHEMA
+  // This tells Google "This entire website belongs to Kwesk"
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Kwesk',
+    url: baseUrl,
+    logo: `${baseUrl}/kwesk-favicon.png`, // Change this to your actual logo path if different
+    description: t('description'),
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+33-0-00-00-00-00', // UPDATE THIS with your real phone number
+      contactType: 'customer service',
+      areaServed: ['FR', 'US'],
+      availableLanguage: ['French', 'English']
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'FR' // Update this
+    }
+  }
 
   return (
     <html lang={locale}>
@@ -113,6 +138,12 @@ export default async function LocaleLayout({
             gtag('config', 'G-JQTGF9HKXF');
           `}
         </Script>
+        
+        {/* 3. INJECT THE GLOBAL SCHEMA HERE */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
