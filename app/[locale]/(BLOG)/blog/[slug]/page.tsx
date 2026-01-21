@@ -31,13 +31,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!post) return {}
   
+  // LOGIC: Use meta_title for SEO. If missing, fallback to the blog title.
+  const seoTitle = post.meta_title || post.title
+  const seoDescription = post.meta_description || post.description
+  
   return {
-    title: post.title,
-    description: post.description,
+    title: seoTitle,              // <title> tag for Google
+    description: seoDescription,  // <meta name="description"> for Google
     alternates: getAlternates(locale, `/blog/${slug}`),
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: seoTitle,
+      description: seoDescription,
       images: [{ url: `${baseUrl}${post.image}` }],
     },
   }
@@ -51,8 +55,28 @@ export default async function BlogPostPage({ params }: Props) {
 
   const htmlContent = await marked(post.content)
 
+  // SCHEMA: Uses the SEO description or the Blog description? 
+  // Usually better to use the SEO description for structured data too.
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.meta_title || post.title, 
+    description: post.meta_description || post.description,
+    image: `${baseUrl}${post.image}`,
+    datePublished: post.date,
+    author: {
+      '@type': 'Organization',
+      name: 'KWESK'
+    }
+  }
+
   return (
     <main className="pt-[100px]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero */}
       <section className="relative h-[40vh] bg-stone-800">
         <Image 
@@ -60,12 +84,14 @@ export default async function BlogPostPage({ params }: Props) {
           alt={post.title}
           fill
           className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <p className="text-sm text-white/70 mb-4">{post.date}</p>
-            <h1 className="text-3xl lg:text-5xl">{post.title}</h1>
+            {/* VISUALS: Still uses the editorial "title" from Markdown */}
+            <h1 className="text-3xl lg:text-5xl font-bold">{post.title}</h1>
           </div>
         </div>
       </section>

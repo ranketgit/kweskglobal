@@ -128,31 +128,37 @@ export default async function BlogPage({ params }: Props) {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map(post => (
-              <article key={post.slug} className="bg-white flex flex-col">
+              /* CHANGED: Replaced article with Link and added 'group' class */
+              <Link 
+                key={post.slug} 
+                href={`/blog/${post.slug}`}
+                className="group bg-white flex flex-col cursor-pointer"
+              >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image 
                     src={post.image} 
                     alt={post.title}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    /* CHANGED: specific hover -> group-hover for smoother effect */
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <p className="text-xs text-[#8b8b4b] mb-2">{post.date}</p>
-                  <h3 className="text-lg text-stone-900 mb-3 leading-tight">
+                  <h3 className="text-lg text-stone-900 mb-3 leading-tight group-hover:text-[#8b8b4b] transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-stone-500 text-sm leading-relaxed mb-6 flex-grow">
                     {post.description}
                   </p>
-                  <Link 
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center justify-center px-6 py-3 bg-[#8b8b4b] text-white text-sm hover:bg-[#7a7a42] transition-colors w-fit"
+                  {/* CHANGED: Link -> span (Fake button for visual purposes) */}
+                  <span 
+                    className="inline-flex items-center justify-center px-6 py-3 bg-[#8b8b4b] text-white text-sm group-hover:bg-[#7a7a42] transition-colors w-fit"
                   >
                     {t('learnMore')}
-                  </Link>
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
 

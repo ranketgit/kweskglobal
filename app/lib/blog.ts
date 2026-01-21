@@ -11,6 +11,9 @@ export interface Post {
   date: string
   image: string
   content: string
+  // Added these two fields so the rest of your app can see them
+  meta_title?: string
+  meta_description?: string
 }
 
 export function getPosts(locale: string): Post[] {
@@ -32,7 +35,10 @@ export function getPosts(locale: string): Post[] {
       description: data.description || '',
       date: data.date || '',
       image: data.image || '/chairs/challenger-chair.png',
-      content
+      content,
+      // Mapping the new SEO fields here
+      meta_title: data.meta_title || null,
+      meta_description: data.meta_description || null
     }
   })
   
@@ -53,6 +59,9 @@ export function getPost(locale: string, slug: string): Post | null {
     description: data.description || '',
     date: data.date || '',
     image: data.image || '/chairs/challenger-chair.png',
-    content
+    content,
+    // Mapping the new SEO fields here as well
+    meta_title: data.meta_title || null,
+    meta_description: data.meta_description || null
   }
 }
