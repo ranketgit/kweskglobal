@@ -82,28 +82,28 @@ export default withNextIntl({
         "Target": "https://kwesk.com/en/chairs/caddy"
       },
       {
-        "Source": "https://kwesk.com/fr/winner/",
+        "Source": "https://kwesk.com/fr/winner",
         "Target": "https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel"
       },
       {
-        "Source": "https://kwesk.com/fr/winner-125/",
+        "Source": "https://kwesk.com/fr/winner-125",
         "Target": "https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel"
       },
       {
-        "Source": "https://kwesk.com/fr/winner-c/",
+        "Source": "https://kwesk.com/fr/winner-c",
         "Target": "https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel"
       },
       {
-        "Source": "https://kwesk.com/en/winner/",
-        "Target": "https://kwesk.com/fr/office-chair-manufacturer/usa"
+        "Source": "https://kwesk.com/en/winner",
+        "Target": "https://kwesk.com/en/office-chair-manufacturer/usa"
       },
       {
-        "Source": "https://kwesk.com/en/winner-125/",
-        "Target": "https://kwesk.com/fr/office-chair-manufacturer/usa"
+        "Source": "https://kwesk.com/en/winner-125",
+        "Target": "https://kwesk.com/en/office-chair-manufacturer/usa"
       },
       {
-        "Source": "https://kwesk.com/en/winner-c/",
-        "Target": "https://kwesk.com/fr/office-chair-manufacturer/usa"
+        "Source": "https://kwesk.com/en/winner-c",
+        "Target": "https://kwesk.com/en/office-chair-manufacturer/usa"
       }
     ]
 
