@@ -2,6 +2,7 @@
 title: "Chaise de Bureau Ergonomique: Les 7 Critères Essentiels"
 description: "Chaise de bureau ergonomique : découvrez les 7 critères essentiels pour choisir le siège parfait et réduire vos douleurs dorsales de 45%."
 date: "2026-01-02"
+category: "ergonomics"
 image: "/blog/chaise-de -bureau-ergonomique.webp"
 meta_title: "Meilleure Chaise Ergonomique 2026 | Guide & Comparatif - KWESK"
 meta_description: "Comment choisir sa chaise ergonomique ? Découvrez les 7 critères vitaux pour réduire vos douleurs de dos. Avis d'experts et comparatif 2026."

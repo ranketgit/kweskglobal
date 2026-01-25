@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
-import { baseUrl, getAlternates } from '../../../lib/metadata'
-import { getPosts } from '../../../lib/blog'
+import { baseUrl, getAlternates } from '../../../lib/metadata' // Verify your path depth
+import { getPosts } from '../../../lib/blog' // Verify your path depth
 import Image from 'next/image'
 import Link from 'next/link'
-import AboutCta from '../../(ABOUT)/about/components/AboutCta'
+import AboutCta from '../../(ABOUT)/about/components/AboutCta' // Verify your path depth
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -23,6 +23,29 @@ export default async function BlogPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'blog' })
   const posts = getPosts(locale)
+
+  // SCHEMA: Identify this page as a Blog/Collection
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${baseUrl}/blog`,
+    name: t('meta.title'),
+    description: t('meta.description'),
+    publisher: {
+      '@type': 'Organization',
+      name: 'KWESK',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/kwesk-logo.png`
+      }
+    },
+    blogPost: posts.map(post => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      url: `${baseUrl}/blog/${post.category}/${post.slug}`,
+      datePublished: post.date
+    }))
+  }
 
   const categories = [
     {
@@ -56,6 +79,11 @@ export default async function BlogPage({ params }: Props) {
 
   return (
     <main className="pt-[100px]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
       <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/blog" />
       
       {/* Hero */}
@@ -128,10 +156,10 @@ export default async function BlogPage({ params }: Props) {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map(post => (
-              /* CHANGED: Replaced article with Link and added 'group' class */
+              /* --- CRITICAL FIX: URL now includes category --- */
               <Link 
                 key={post.slug} 
-                href={`/blog/${post.slug}`}
+                href={`/blog/${post.category}/${post.slug}`} 
                 className="group bg-white flex flex-col cursor-pointer"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -139,9 +167,12 @@ export default async function BlogPage({ params }: Props) {
                     src={post.image} 
                     alt={post.title}
                     fill
-                    /* CHANGED: specific hover -> group-hover for smoother effect */
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  {/* Optional: Add Category Badge on Image */}
+                  <div className="absolute top-4 left-4 bg-black/70 text-white text-xs px-3 py-1 uppercase tracking-wider">
+                    {post.category}
+                  </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <p className="text-xs text-[#8b8b4b] mb-2">{post.date}</p>
@@ -151,7 +182,6 @@ export default async function BlogPage({ params }: Props) {
                   <p className="text-stone-500 text-sm leading-relaxed mb-6 flex-grow">
                     {post.description}
                   </p>
-                  {/* CHANGED: Link -> span (Fake button for visual purposes) */}
                   <span 
                     className="inline-flex items-center justify-center px-6 py-3 bg-[#8b8b4b] text-white text-sm group-hover:bg-[#7a7a42] transition-colors w-fit"
                   >
