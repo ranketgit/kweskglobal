@@ -9,7 +9,6 @@ import Link from 'next/link'
 import './blog.css'
 import AboutCta from '@/app/[locale]/(ABOUT)/about/components/AboutCta'
 
-// 1. Correct Params Definition
 type Props = { 
   params: Promise<{ locale: string; category: string; slug: string }> 
 }

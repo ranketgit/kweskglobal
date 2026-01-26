@@ -25,9 +25,20 @@ function groupByState(cities: CityData[]): Record<string, CityData[]> {
   }, {} as Record<string, CityData[]>)
 }
 
-export const metadata: Metadata = {
-  title: 'Office Chair Manufacturer USA | KWESK Ergonomic Solutions',
-  description: 'Leading office chair manufacturer in the USA. Premium ergonomic solutions for importers and distributors across all major states.',
+type Props = {
+  params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+
+  return {
+    title: 'Office Chair Manufacturer USA | KWESK Ergonomic Solutions',
+    description: 'Leading office chair manufacturer in the USA. Premium ergonomic solutions for importers and distributors across all major states.',
+    alternates: {
+      canonical: `https://kwesk.com/${locale}/office-chair-manufacturer/usa`,
+    },
+  }
 }
 
 export default function USAIndexPage() {
