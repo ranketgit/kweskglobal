@@ -54,8 +54,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
 
   return {
-    title: 'Mobilier de Bureau Professionnel en France | KWESK',
-    description: 'Découvrez nos solutions de mobilier de bureau professionnel dans toute la France. Livraison et installation dans votre ville.',
+    title: 'Fabricant de Chaises de Bureau Professionnel en France | KWESK',
+    description: 'Fabricant de chaises de bureau professionnel pour distributeurs et grossistes en France. Sièges ergonomiques certifiés, achat en gros. Devis gratuit !',
     alternates: {
       canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel`,
     },
