@@ -38,7 +38,7 @@ export function getPosts(locale: string): Post[] {
       date: data.date || '',
       image: data.image || '/chairs/challenger-chair.png',
       // EXTRACT CATEGORY HERE (Default to 'uncategorized' if missing to prevent crashes)
-      category: data.category ? data.category.toLowerCase().replace(/\s+/g, '-') : 'general', 
+      category: data.category ? data.category.toLowerCase().replace(/\s+/g, '-') : 'mobilier-bureau', 
       content,
       meta_title: data.meta_title || null,
       meta_description: data.meta_description || null
@@ -63,7 +63,7 @@ export function getPost(locale: string, slug: string): Post | null {
     date: data.date || '',
     image: data.image || '/chairs/challenger-chair.png',
     // EXTRACT CATEGORY HERE TOO
-    category: data.category ? data.category.toLowerCase().replace(/\s+/g, '-') : 'general',
+    category: data.category ? data.category.toLowerCase().replace(/\s+/g, '-') : 'mobilier-bureau',
     content,
     meta_title: data.meta_title || null,
     meta_description: data.meta_description || null

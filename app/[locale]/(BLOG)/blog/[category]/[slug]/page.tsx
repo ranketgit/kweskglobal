@@ -23,7 +23,7 @@ export async function generateStaticParams() {
       // 2. FORCE 'general' IF CATEGORY IS MISSING
       const categorySlug = post.category 
         ? post.category.toLowerCase().replace(/\s+/g, '-') 
-        : 'general'
+        : 'mobilier-bureau'
 
       params.push({ 
         locale, 
@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: Props) {
   // (Optional: You can remove this check if you want flexible URLs)
   const currentPostCategory = post.category 
     ? post.category.toLowerCase().replace(/\s+/g, '-') 
-    : 'general'
+    : 'mobilier-bureau'
 
   if (category !== currentPostCategory) {
      // This handles the edge case where a user types the wrong category
