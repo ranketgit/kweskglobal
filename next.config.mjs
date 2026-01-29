@@ -7,7 +7,6 @@ export default withNextIntl({
     staticGenerationRetryCount: 1
   },
   async redirects() {
-    // 1. Your manual specific links
     const manualLinks = [
       // --- NEW BLOG REDIRECTS (FR) ---
       { "Source": "https://kwesk.com/fr/blog/comment-choisir-le-meilleur-fauteuil-de-bureau", "Target": "https://kwesk.com/fr/blog/mobilier-bureau/comment-choisir-le-meilleur-fauteuil-de-bureau" },
