@@ -237,6 +237,6 @@ Your choice of office furniture directly influences the performance and well-bei
 - Consider the total cost of ownership, not just the purchase price
 - Test before ordering in quantity
 
-KWESK supports companies in their office design projects with a complete range of [professional chairs](https://kwesk.com/en/blog/general/mobilier-pour-bureau-professionnel) designed for intensive use. Our 5-year warranty demonstrates our commitment to quality.
+KWESK supports companies in their office design projects with a complete range of [professional chairs](https://kwesk.com/en/office-chair-manufacturer/usa) designed for intensive use. Our 5-year warranty demonstrates our commitment to quality.
 
 Need personalized advice for equipping your offices? [Contact our experts](https://kwesk.com/en/contact) for a study tailored to your needs and budget.
