@@ -237,6 +237,6 @@ Le choix de vos meubles bureautique influence directement la performance et le b
 - Considérez le coût total de possession, pas seulement le prix d'achat
 - Testez avant de commander en quantité
 
-KWESK accompagne les entreprises dans leurs projets d'aménagement avec une gamme complète de [sièges professionnels](https://kwesk.com/fr/blog/mobilier-pour-bureau-professionnel) conçus pour l'usage intensif. Notre garantie de 5 ans témoigne de notre engagement qualité.
+KWESK accompagne les entreprises dans leurs projets d'aménagement avec une gamme complète de [sièges professionnels](https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel) conçus pour l'usage intensif. Notre garantie de 5 ans témoigne de notre engagement qualité.
 
 Besoin de conseils personnalisés pour équiper vos bureaux ? [Contactez nos experts](https://kwesk.com/fr/contact) pour une étude adaptée à vos besoins et votre budget.
