@@ -51,8 +51,8 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: 'Fabricant de Chaises de Bureau Professionnel | KWESK',
-    description: 'Fabricant de chaises de bureau professionnel pour distributeurs et grossistes en France. Sièges ergonomiques certifiés, achat en gros. Devis gratuit !',
+    title: 'Fabricant de Chaises de Bureau Professionnel en France',
+    description: 'Fabricant de chaises de bureau professionnelen France pour les distributeurs et grossistes. Sièges ergonomiques certifiés, achat en gros. Devis gratuit !',
     alternates: {
       canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel`,
     },
