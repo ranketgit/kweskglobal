@@ -218,7 +218,7 @@ export default function GlobalJsonLd() {
       },
       {
         "@type": "Product",
-        "@id": "https://kwesk.com/chairs/by-100#product",
+        "@id": "https://kwesk.com/chairs/by-1#product",
         "name": "BY 100",
         "description": "The BY range offers a panel of three complementary asynchronous chairs to equip your offices, meeting rooms or to welcome your visitors. With a wooden frame and high density injected foam, the BY chairs are a low cost, durable solution offering a refined design and appreciable comfort.",
         "category": "President Chair",
@@ -229,13 +229,13 @@ export default function GlobalJsonLd() {
           "@id": "https://kwesk.com/#organization"
         },
         "image": "https://kwesk.com/by100/by1.jpg",
-        "url": "https://kwesk.com/chairs/by-100",
+        "url": "https://kwesk.com/chairs/by-1",
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
           "price": "1399",
           "priceCurrency": "MAD",
-          "url": "https://kwesk.com/chairs/by-100",
+          "url": "https://kwesk.com/chairs/by-1",
           "seller": {
             "@id": "https://kwesk.com/#organization"
           },

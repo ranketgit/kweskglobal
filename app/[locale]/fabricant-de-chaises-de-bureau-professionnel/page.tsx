@@ -102,7 +102,7 @@ export default function CitiesIndexPage() {
       sub: "BY 100",
       bestFor: "Flex-office", 
       desc: "Léger, options empilables, esthétique moderne", 
-      href: "/chairs/by-100",
+      href: "/chairs/by-1",
       image: "/by100/by1.jpg" 
     },
     { 

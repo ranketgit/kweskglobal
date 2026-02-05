@@ -38,7 +38,7 @@ const chairs: Chair[] = [
     label: 'BY',
     image: '/by100/by100hero.png',
     variants: [
-      { label: 'BY 100', href: '/chairs/by-100' },
+      { label: 'BY 100', href: '/chairs/by-1' },
       { label: 'BY G', href: '/chairs/by-g' }
     ]
   },

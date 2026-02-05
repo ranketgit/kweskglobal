@@ -177,25 +177,23 @@
   }
 },
 "byG": {
- "meta": {
-    "title": "BY G | Professional Ergonomic Office Chair",
-    "description": "Discover the BY G, business office chair by Kwesk. Ergonomic chair manufactured for large enterprises."
+  "meta": {
+    "title": "BY G | Visitor & Meeting Chair",
+    "description": "The BY G chair by Kwesk. Ideal for visitors and meeting rooms. High density foam and double cylinder technology."
   },
-  "description": "With its low asynchronous backrest, the BY G complements our BY 100 armchair to welcome your visitors to your office. Equipped with the same features, it can also equip your meeting rooms at a lower cost while offering appreciable comfort over a few hours of use.",
-  "versionType": "Operator Chair",
+  "description": "The BY G complements the BY range to welcome your visitors. Equipped with high density foam and a robust design, it offers durability and comfort for meeting rooms and reception areas.",
+  "versionType": "Visitor Chair",
   "features": {
-    "f1": "Low backrest",
-    "f2": "A200 asynchronous mechanism (Italy)",
-    "f3": "Fixed armrests",
-    "f4": "High density injected foam seat and backrest 50 mm (Morocco)",
-    "f5": "Seat and backrest upholstered in 3D fabric (Denmark)",
-    "f6": "Double cylinder gas lift (Germany)"
+    "f1": "A200 mechanism (Fixed backrest)",
+    "f2": "High density injected foam 50 mm (Morocco)",
+    "f3": "Upholstered in 3D fabric",
+    "f4": "Double cylinder gas lift (Germany)",
+    "f5": "Silent casters for hard or soft floors (Italy)"
   },
   "options": {
-    "o1": "AX300 asynchronous mechanism (Italy)",
-    "o2": "Seat and backrest upholstered in faux leather",
-    "o3": "Aluminum base",
-    "o4": "Premium casters"
+    "o1": "AX300 asynchronous mechanism",
+    "o2": "Aluminum base",
+    "o3": "Premium casters"
   },
   "tags": {
     "default": "default",
@@ -204,17 +202,17 @@
   "madeIn": {
     "italy": "MADE IN ITALY",
     "germany": "MADE IN GERMANY",
-    "morocco": "MADE IN MOROCCO"
+    "morocco": "MADE IN MOROCCO",
+    "denmark": "MADE IN DENMARK"
   },
   "mechanisms": {
     "a200": {
-      "f1": "Asynchronous backrest tilt 17°",
-      "f2": "1 vertical locking position",
-      "f3": "Manual backrest tension adjustment"
+      "f1": "Fixed backrest",
+      "f2": "Seat height adjustment"
     },
     "ax300": {
-      "f1": "Asynchronous backrest tilt 15°",
-      "f2": "4 locking positions",
+      "f1": "Asynchronous backrest tilt 16°",
+      "f2": "1 locking position",
       "f3": "Manual backrest tension adjustment"
     }
   },
@@ -227,22 +225,14 @@
   "materials": {
     "fabric3d": {
       "name": "3D Fabric",
-      "sectionTitle": "BACKREST AND SEAT UPHOLSTERED IN 3D FABRIC",
+      "sectionTitle": "SEAT AND BACKREST UPHOLSTERED IN 3D FABRIC",
       "f1": "Multi-directional stretch",
       "f2": "100% polyester, 540 g/m",
-      "f3": "Martindale abrasion resistance: 65,000 (EN ISO 12947-2)",
-      "f4": "Pilling resistance scale 1-5, max. 5: 5 (EN ISO 12945-2)",
+      "f3": "Martindale abrasion resistance 85,000 (EN ISO 12947-2)",
+      "f4": "Pilling scale 1-5, max. 5: 4-5 (EN ISO 12945-2)",
       "f5": "Light fastness scale 1-8, max. 8: 5-7 (EN ISO 105-B02)",
       "f6": "Rubbing fastness scale 1-5, max. 5 - wet/dry: 4-5/4-5 (EN ISO 105x12)",
       "f7": "Flammability - CA TB 117-2013 - BS EN 1021 1&2 Cigarette and Match"
-    },
-    "similiLeather": {
-      "name": "Faux leather",
-      "sectionTitle": "SEAT AND BACKREST UPHOLSTERED IN FAUX LEATHER"
-    },
-    "aniline": {
-      "name": "100% natural full grain aniline leather",
-      "sectionTitle": "SEAT AND BACKREST UPHOLSTERED IN LEATHER"
     }
   }
 },
@@ -1276,7 +1266,72 @@
   "title": "Thank You",
   "message": "Your message has been sent successfully. We will get back to you shortly.",
   "backHome": "Back to Home"
-}
+},
 
+
+"by1": {
+  "meta": {
+    "title": "BY 1 | Executive Office Chair",
+    "description": "The BY 1 executive chair by Kwesk. High backrest, 3D fabric and double cylinder technology."
+  },
+  "description": "The BY 1 offers a refined design and appreciable comfort, featuring a high backrest and high-density injected foam. It is the perfect solution for executive offices looking for durability and ergonomic support at an optimized cost.",
+  "versionType": "President Chair",
+  "features": {
+    "f1": "High backrest",
+    "f2": "A200 asynchronous mechanism",
+    "f3": "Fixed armrests",
+    "f4": "High density injected foam seat and backrest 50 mm",
+    "f5": "Seat and backrest upholstered in 3D fabric",
+    "f6": "Double cylinder gas lift (Germany)",
+    "f7": "Aluminum base (Italy)",
+    "f8": "Premium casters"
+  },
+  "options": {
+    "o1": "Seat depth adjustment (Seat slide)",
+    "o2": "3D Adjustable armrests",
+    "o3": "Adjustable lumbar support",
+    "o4": "AX300 asynchronous mechanism (Option)"
+  },
+  "tags": {
+    "default": "default",
+    "optional": "optional"
+  },
+  "madeIn": {
+    "italy": "MADE IN ITALY",
+    "germany": "MADE IN GERMANY",
+    "morocco": "MADE IN MOROCCO",
+    "denmark": "MADE IN DENMARK"
+  },
+  "mechanisms": {
+    "a200": {
+      "f1": "Fixed backrest",
+      "f2": "Seat height adjustment"
+    },
+    "ax300": {
+      "f1": "Asynchronous backrest tilt 16°",
+      "f2": "1 locking position",
+      "f3": "Manual backrest tension adjustment"
+    }
+  },
+  "gasLift": {
+    "description": "The BY 1 is equipped with a gas lift manufactured in Germany by the world leader in shock absorbers. It allows variable height adjustment and smoothly absorbs the user's weight."
+  },
+  "doubleCylinder": {
+    "description": "New patented double cylinder system. Composed of a pressure tube and a guide tube. The self-supporting pressure tube is designed to allow a bending movement if the load is not centered on the seat."
+  },
+  "materials": {
+    "fabric3d": {
+      "name": "3D Fabric",
+      "sectionTitle": "SEAT AND BACKREST UPHOLSTERED IN 3D FABRIC",
+      "f1": "Multi-directional stretch",
+      "f2": "100% polyester, 540 g/m",
+      "f3": "Martindale abrasion resistance 85,000 (EN ISO 12947-2)",
+      "f4": "Pilling scale 1-5, max. 5: 4-5 (EN ISO 12945-2)",
+      "f5": "Light fastness scale 1-8, max. 8: 5-7 (EN ISO 105-B02)",
+      "f6": "Rubbing fastness scale 1-5, max. 5 - wet/dry: 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Flammability - CA TB 117-2013 - BS EN 1021 1&2 Cigarette and Match"
+    }
+  }
+}
   
 }

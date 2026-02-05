@@ -48,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/chairs/corpo-100',
     '/chairs/exclusive',
     '/chairs/exclusive-g',
-    '/chairs/by-100',
+    '/chairs/by-1',
     '/chairs/by-g',
     '/chairs/caddy',
   ]

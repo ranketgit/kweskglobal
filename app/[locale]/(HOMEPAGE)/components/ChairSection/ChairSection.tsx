@@ -44,7 +44,7 @@ export default function ChairsSection() {
         { name: 'BY C', type: t('by.type3') }
       ],
       imagePosition: 'right' as const,
-      href: '/chairs/by-100'
+      href: '/chairs/by-1'
     },
     {
       title: 'EXCLUSIVE',

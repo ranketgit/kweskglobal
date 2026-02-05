@@ -83,7 +83,7 @@ export default function USAIndexPage() {
       sub: "BY 100 / BY G",
       bestFor: "Hot-desking", 
       desc: "Lightweight, stackable options, modern aesthetic", 
-      href: "/chairs/by-100",
+      href: "/chairs/by-1",
       image: "/by100/by1.jpg" 
     },
     { 

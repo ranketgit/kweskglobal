@@ -177,77 +177,68 @@
   }
 },
 
-
 "byG": {
   "meta": {
-    "title": "Fauteuil Opérateur en France | BY G Dossier Bas - Kwesk",
-    "description": "Fauteuil opérateur BY G en France : chaise ergonomique avec dossier bas asynchrone et tissu 3D danois. Mécanisme italien, vérin allemand. Idéal salles de réunion et visiteurs."
+    "title": "BY G | Fauteuil Visiteur",
+    "description": "Le fauteuil visiteur BY G par Kwesk. Idéal pour salles de réunion. Mousse haute densité et tissu 3D résistant."
   },
-  "description": "Avec son dossier bas asynchrone, le BY G vient compléter notre fauteuil By 100 pour accueillir vos visiteurs dans votre bureau. Doté des mêmes fonctionnalités, il peut aussi équiper vos salles de réunion à moindre coût tout en offrant un confort appréciable sur quelques heures d'utilisation.",
-  "versionType": "Fauteuil Opérateur",
+  "description": "Le BY G complète la gamme BY pour accueillir vos visiteurs. Doté d'une mousse haute densité et d'une conception robuste, il offre durabilité et confort pour les salles de réunion et les espaces d'accueil.",
+  "versionType": "Fauteuil Visiteur",
   "features": {
-    "f1": "Dossier bas",
-    "f2": "Mécanisme asynchrone A200 (Italie)",
-    "f3": "Repose-bras fixes",
-    "f4": "Assise et dossier en mousse injectée haute densité 50 mm (Maroc)",
-    "f5": "Assise et dossier tapissés en tissu 3D (Danemark)",
-    "f6": "Vérin à double cylindre (Allemagne)"
+    "f1": "Mécanisme A200 (Dossier fixe)",
+    "f2": "Mousse injectée haute densité 50 mm (Maroc)",
+    "f3": "Tapissé en tissu 3D",
+    "f4": "Vérin à gaz double cylindre (Allemagne)",
+    "f5": "Roulettes silencieuses pour sols durs ou souples (Italie)"
   },
   "options": {
-    "o1": "Mécanisme asynchrone AX300 (Italie)",
-    "o2": "Assise et dossier tapissés en simili cuir",
-    "o3": "Base en aluminium",
-    "o4": "Roulettes Premium"
+    "o1": "Mécanisme asynchrone AX300",
+    "o2": "Base en aluminium",
+    "o3": "Roulettes premium"
   },
   "tags": {
-    "default": "par défaut",
+    "default": "défaut",
     "optional": "optionnel"
   },
   "madeIn": {
     "italy": "FABRIQUÉ EN ITALIE",
     "germany": "FABRIQUÉ EN ALLEMAGNE",
-    "morocco": "FABRIQUÉ AU MAROC"
+    "morocco": "FABRIQUÉ AU MAROC",
+    "denmark": "FABRIQUÉ AU DANEMARK"
   },
   "mechanisms": {
     "a200": {
-      "f1": "Inclinaison dossier asynchrone 17°",
-      "f2": "1 position de blocage vertical",
-      "f3": "Ajustement manuel de la tension du dossier"
+      "f1": "Dossier fixe",
+      "f2": "Ajustement de la hauteur de l’assise"
     },
     "ax300": {
-      "f1": "Inclinaison dossier asynchrone 15°",
-      "f2": "4 positions de blocage",
+      "f1": "Inclinaison dossier asynchrone 16°",
+      "f2": "1 position de blocage",
       "f3": "Ajustement manuel de la tension du dossier"
     }
   },
   "gasLift": {
-    "description": "Le BY G est équipé d'un vérin à gaz fabriqué en Allemagne par le leader mondial des amortisseurs. Il permet un réglage variable de la hauteur et absorbe en douceur le poids de l'utilisateur."
+    "description": "Le fauteuil BY G est équipé d’un vérin fabriqué en Allemagne par le leader mondial des amortisseurs. Il dispose d'un réglage en hauteur variable et absorbe en douceur le poids de l'occupant."
   },
   "doubleCylinder": {
-    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre un mouvement de flexion si la charge n'est pas centrée sur l'assise."
+    "description": "Nouveau système breveté à double cylindre. Composé d'un tube de pression et d'un tube de guidage. Le tube de pression autoportant est conçu pour permettre des moments de flexion si la charge n'est pas centrée sur l’assise."
   },
   "materials": {
     "fabric3d": {
       "name": "Tissu 3D",
-      "sectionTitle": "REVÊTEMENT DOSSIER ET ASSISE EN TISSU 3D",
-      "f1": "Étirement multidirectionnel",
-      "f2": "100% polyester, 540 g/m",
-      "f3": "Résistance à l'abrasion Martindale : 65 000 (EN ISO 12947-2)",
-      "f4": "Résistance au boulochage échelle 1-5, max. 5 : 5 (EN ISO 12945-2)",
-      "f5": "Résistance à la lumière échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
-      "f6": "Résistance au frottement échelle 1-5, max. 5 - humidité/sec : 4-5/4-5 (EN ISO 105x12)",
-      "f7": "Inflammabilité - CA TB 117-2013 - BS EN 1021 1&2 Cigarette et Allumette"
-    },
-    "similiLeather": {
-      "name": "Simili cuir",
-      "sectionTitle": "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN SIMILI CUIR"
-    },
-    "aniline": {
-      "name": "Cuir pleine fleur aniline 100% naturel",
-      "sectionTitle": "REVÊTEMENT ASSISE ET DOSSIER TAPISSÉS EN CUIR"
+      "sectionTitle": "ASSISE ET DOSSIER TAPISSÉS EN TISSU 3D",
+      "f1": "Etirement multidirectionnel",
+      "f2": "100% polyester, 540 g/ml",
+      "f3": "Résistance à l’abrasion Martindale : 85 000 (EN ISO 12947-2)",
+      "f4": "Résistance au boulochage échelle 1-5, max. 5 : 4-5 (EN ISO 12945-2)",
+      "f5": "Résistance à la lumières échelle 1-8, max. 8 : 5-7 (EN ISO 105-B02)",
+      "f6": "Résistance au frottement échelle 1-5, max. 5, humide/sec : 4-5/4-5 (EN ISO 105x12)",
+      "f7": "Inflammabilité : CA TB 117-2013 - BS EN 1021 1&2 Cigarette et allumette"
     }
   }
 },
+
+
 "caddy": {
   "meta": {
     "title": "Chaise Formation Professionnelle France | Caddy 80",
