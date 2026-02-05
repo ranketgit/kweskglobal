@@ -31,7 +31,8 @@ const chairs: Chair[] = [
     label: 'CORPO',
     image: '/corpo-100/corpohero.jpg',
     variants: [
-      { label: 'CORPO 100', href: '/chairs/corpo-100' }
+      { label: 'CORPO 100', href: '/chairs/corpo-100' },
+      { label: 'CORPO C', href: '/chairs/corpo-c' }
     ]
   },
   {

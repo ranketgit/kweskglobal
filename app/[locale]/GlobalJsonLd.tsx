@@ -143,7 +143,7 @@ export default function GlobalJsonLd() {
       {
         "@type": "Product",
         "@id": "https://kwesk.com/chairs/gamma-c#product",
-        "name": "GAMMA C",
+        "name": "CORPO C",
         "description": "Visitor chair version of the GAMMA range, offering the same balance between comfort, price and robustness.",
         "category": "Visitor Chair",
         "brand": {

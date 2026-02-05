@@ -592,10 +592,10 @@
 
 "gammaC": {
   "meta": {
-    "title": "Gamma C | Ergonomic Business Office Chair",
-    "description": "The Gamma C by Kwesk. Ergonomic business office chair for professionals and large companies."
+    "title": "CORPO C | Ergonomic Business Office Chair",
+    "description": "The CORPO C by Kwesk. Ergonomic business office chair for professionals and large companies."
   },
-  "description": "A wide and deep seat, an ergonomic metal frame and an innovative design make the GAMMA C the ideal chair for receiving your visitors. In a hall, a waiting room or in your office, the GAMMA C is an ideal concept for welcoming your visitors.",
+  "description": "A wide and deep seat, an ergonomic metal frame and an innovative design make the CORPO C the ideal chair for receiving your visitors. In a hall, a waiting room or in your office, the CORPO C is an ideal concept for welcoming your visitors.",
   "versionType": "Visitor Chair",
   "features": {
     "f1": "Stainless steel or matte black galvanized steel frame",
@@ -729,6 +729,34 @@
       "f7": "Flammability - CA TB 117-2013 - BS EN 1021 1&2 Cigarette and Match"
     }
   }
+},
+
+"gammac2": {
+  "meta": {
+    "title": "GAMMA C | Cantilever Visitor Chair",
+    "description": "The GAMMA C visitor chair. Cantilever structure with synchronous mechanism and upholstered comfort."
+  },
+  "description": "The GAMMA C combines the elegance of a cantilever structure with the advanced comfort of a synchronous mechanism. Ideal for meeting rooms and visitor areas.",
+  "versionType": "Visitor Chair",
+  "features": {
+    "f1": "Seat and backrest upholstered in fabric",
+    "f2": "Synchronous mechanism: Seat slide & tilt",
+    "f3": "Cantilever structure: Galvanized metal (Black or Matte White)"
+  },
+  "tags": {
+    "default": "default"
+  },
+  "madeIn": {
+    "morocco": "MADE IN MOROCCO"
+  },
+  "materials": {
+    "fabric": {
+      "name": "Fabric",
+      "sectionTitle": "UPHOLSTERED SEAT AND BACKREST",
+      "f1": "High quality upholstery"
+    }
+  },
+  "dimensionsTitle": "DIMENSIONS"
 },
 
 

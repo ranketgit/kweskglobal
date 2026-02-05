@@ -2,98 +2,74 @@ import ChairProduct from '../../components/ChairProduct'
 import { getTranslations } from 'next-intl/server'
 import { baseUrl, getAlternates } from '../../../../lib/metadata'
 import { Metadata } from 'next'
+import { useTranslations } from 'next-intl'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'gammaC' })
+  const t = await getTranslations({ locale, namespace: 'gammac2' })
+  
   return {
     title: t('meta.title'),
     description: t('meta.description'),
     alternates: getAlternates(locale, '/chairs/gamma-c'),
-    openGraph: { title: t('meta.title'), description: t('meta.description'), url: `${baseUrl}/${locale}/gamma-c`, images: [{ url: `${baseUrl}/gamma/gchero.jpg` }] },
+    openGraph: { 
+      title: t('meta.title'), 
+      description: t('meta.description'), 
+      url: `${baseUrl}/${locale}/gamma-c`, 
+      images: [{ url: `${baseUrl}/gamma-c/hero.jpg` }] 
+    },
   }
 }
 
-export default async function GammaCPage() {
-  const t = await getTranslations('gammaC')
+export default function GammaCPage() {
+  const t = useTranslations('gammac2')
 
   const gammaCData = {
-    heroBg: "/gamma/gchero.jpg",
+    heroBg: "/gamma-c/hero.jpg",
     name: "GAMMA C",
     description: t('description'),
     version: "GAMMA C",
     versionType: t('versionType'),
+    // Standard images array
     images: [
-      "/gamma/gc1.jpg",
-      "/gamma/gc2.jpg",
-      "/gamma/gc3.jpg",
-      "/gamma/gc4.jpg",
-      "/gamma/gc5.jpg",
+      "/gamma-c/GammaC-1.jpg",
+      "/gamma-c/GammaC-2.jpg",
+      "/gamma-c/GammaC-3.jpg",
+      "/gamma-c/GammaC-6.jpg",
+      "/gamma-c/GammaC-7.jpg",
+      "/gamma-c/GammaC-9.jpg"
     ],
-    featuresDiagram: "/gamma/features.png",
+    // If you usually use a single diagram, you can leave this null or use one of the dims
+    featuresDiagram: null, 
+    
+    // New specific property for the two dimension images requested
+    dimensionsImages: [
+      "/gamma-c/dim1.png", // The first drawing
+      "/gamma-c/dim2.png"  // The second drawing
+    ],
+
     standardFeatures: [
-      t('features.f1'),
-      t('features.f2'),
-      t('features.f3'),
-      t('features.f4'),
-      t('features.f5'),
+      t('features.f1'), // Upholstered
+      t('features.f2'), // Synchronous mechanism
+      t('features.f3'), // Cantilever structure
     ],
-    options: [],
+    options: [], // No specific options listed in the input
     frame: null,
     ergonomy: null,
-    mechanisms: [],
-    gasLift: null,
+    mechanisms: null, // Mechanism is listed in features, no detailed sub-block provided
+    gasLift: null, // Cantilever usually doesn't have gas lift
     doubleCylinder: null,
     materials: [
       {
-        name: t('materials.fabric3d.name'),
+        name: t('materials.fabric.name'),
         tag: t('tags.default'),
-        sectionTitle: t('materials.fabric3d.name'),
-        image: "/gamma/fabric3d.png",
+        sectionTitle: t('materials.fabric.sectionTitle'),
+        image: "/winner-125/3d.png", // Reusing shared fabric image
         features: [
-          t('materials.fabric3d.f1'),
-          t('materials.fabric3d.f2'),
-          t('materials.fabric3d.f3'),
-          t('materials.fabric3d.f4'),
-          t('materials.fabric3d.f5'),
-          t('materials.fabric3d.f6'),
-          t('materials.fabric3d.f7'),
+          t('materials.fabric.f1'), // Seat and back upholstered
         ],
-        colors: ["#1a1a1a", "#3d3d3d", "#6b7280", "#1e3a5f", "#1e40af", "#7c2d12", "#b91c1c", "#dc2626", "#f59e0b", "#ca8a04", "#65a30d", "#16a34a", "#0d9488", "#0ea5e9", "#6366f1", "#7c3aed", "#a855f7", "#ec4899"],
+        colors: ["#1a1a1a", "#4b5563", "#ffffff"], // Black, Grey, White (implied by structure options)
         madeIn: t('madeIn.morocco')
-      },
-      {
-        name: t('materials.aeroMesh.name'),
-        tag: t('tags.default'),
-        sectionTitle: t('materials.aeroMesh.name'),
-        image: "/winner-c/mesh.png",
-        features: [
-          t('materials.aeroMesh.f1'),
-          t('materials.aeroMesh.f2'),
-          t('materials.aeroMesh.f3'),
-          t('materials.aeroMesh.f4'),
-          t('materials.aeroMesh.f5'),
-          t('materials.aeroMesh.f6'),
-        ],
-        colors: ["#1a1a1a", "#4b5563", "#6b7280", "#0f766e", "#1e40af", "#b91c1c", "#ca8a04", "#16a34a"],
-        madeIn: t('madeIn.denmark')
-      },
-      {
-        name: t('materials.aeroMesh3d.name'),
-        tag: t('tags.optional'),
-        sectionTitle: t('materials.aeroMesh3d.name'),
-        image: "/winner-c/mesh3d.png",
-        features: [
-          t('materials.aeroMesh3d.f1'),
-          t('materials.aeroMesh3d.f2'),
-          t('materials.aeroMesh3d.f3'),
-          t('materials.aeroMesh3d.f4'),
-          t('materials.aeroMesh3d.f5'),
-          t('materials.aeroMesh3d.f6'),
-          t('materials.aeroMesh3d.f7'),
-        ],
-        colors: ["#1a1a1a", "#3f3f46", "#78716c", "#0d9488", "#2563eb", "#dc2626", "#d97706", "#22c55e", "#a855f7", "#ec4899", "#06b6d4", "#84cc16"],
-        madeIn: t('madeIn.denmark')
       }
     ]
   }

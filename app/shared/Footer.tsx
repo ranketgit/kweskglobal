@@ -16,6 +16,7 @@ export default function Footer() {
     { label: "Gamma 150", href: "/chairs/gamma" },
     { label: "Gamma C", href: "/chairs/gamma-c" },
     { label: "Corpo 100", href: "/chairs/corpo-100" },
+    { label: "Corpo C", href: "/chairs/corpo-c" },
     { label: "Exclusive 500", href: "/chairs/exclusive" },
     { label: "Exclusive G", href: "/chairs/exclusive-g" },
     { label: "BY 100", href: "/chairs/by-1" },

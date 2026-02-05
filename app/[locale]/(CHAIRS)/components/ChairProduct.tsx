@@ -20,6 +20,7 @@ interface Material {
   image: string
   features: string[]
   madeIn: string
+  colors?: string[]
 }
 
 interface ChairProductProps {
@@ -29,10 +30,10 @@ interface ChairProductProps {
   version: string
   versionType: string
   images: string[]
-  featuresDiagram: string
+  featuresDiagram: string | null
   standardFeatures: string[]
   options: string[]
-  mechanisms: Mechanism[]
+  mechanisms: Mechanism[] | null
   gasLift?: {
     image: string
     description: string
@@ -52,6 +53,8 @@ interface ChairProductProps {
     features: string[]
   } | null
   materials: Material[]
+  // New optional prop
+  dimensionsImages?: string[]
 }
 
 export default function ChairProduct({
@@ -69,9 +72,13 @@ export default function ChairProduct({
   doubleCylinder,
   frame,
   ergonomy,
-  materials
+  materials,
+  dimensionsImages
 }: ChairProductProps) {
   const t = useTranslations('chairProduct')
+  // Fallback for translations if 'dimensionsTitle' isn't in the global file yet
+  const dimensionsTitle = t.has('dimensionsTitle') ? t('dimensionsTitle') : 'DIMENSIONS'
+  
   const [currentImage, setCurrentImage] = useState(0)
 
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length)
@@ -169,45 +176,47 @@ export default function ChairProduct({
       </section>
 
       {/* Features Diagram */}
-      <section className="py-12 lg:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            
-            <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
-              <Image src={featuresDiagram} alt="Features" fill className="object-contain" />
-            </div>
-
-            <div className="space-y-6 lg:space-y-8">
-              <div>
-                <h3 className="text-xl lg:text-2xl text-stone-900 mb-4">{t('standardFeatures')}</h3>
-                <ul className="space-y-2">
-                  {standardFeatures.map((f, i) => (
-                    <li key={i} className="flex items-start gap-2 text-stone-600 text-sm">
-                      <span className="text-[#8b8b4b] flex-shrink-0">✓</span>
-                      <span className="break-words">{f}</span>
-                    </li>
-                  ))}
-                </ul>
+      {featuresDiagram && (
+        <section className="py-12 lg:py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              
+              <div className="relative aspect-square max-w-sm sm:max-w-lg mx-auto lg:mx-0">
+                <Image src={featuresDiagram} alt="Features" fill className="object-contain" />
               </div>
 
-              {options.length > 0 && (
+              <div className="space-y-6 lg:space-y-8">
                 <div>
-                  <h3 className="text-xl lg:text-2xl text-stone-900 mb-4">{t('options')}</h3>
+                  <h3 className="text-xl lg:text-2xl text-stone-900 mb-4">{t('standardFeatures')}</h3>
                   <ul className="space-y-2">
-                    {options.map((o, i) => (
+                    {standardFeatures.map((f, i) => (
                       <li key={i} className="flex items-start gap-2 text-stone-600 text-sm">
                         <span className="text-[#8b8b4b] flex-shrink-0">✓</span>
-                        <span className="break-words">{o}</span>
+                        <span className="break-words">{f}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-              )}
-            </div>
 
+                {options.length > 0 && (
+                  <div>
+                    <h3 className="text-xl lg:text-2xl text-stone-900 mb-4">{t('options')}</h3>
+                    <ul className="space-y-2">
+                      {options.map((o, i) => (
+                        <li key={i} className="flex items-start gap-2 text-stone-600 text-sm">
+                          <span className="text-[#8b8b4b] flex-shrink-0">✓</span>
+                          <span className="break-words">{o}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Frame */}
       {frame && (
@@ -249,7 +258,7 @@ export default function ChairProduct({
       )}
 
       {/* Mechanisms */}
-      {mechanisms.length > 0 && (
+      {mechanisms && mechanisms.length > 0 && (
         <section className="py-12 lg:py-16 bg-white border-t border-stone-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
             <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{t('mechanisms')}</h2>
@@ -368,6 +377,28 @@ export default function ChairProduct({
           </div>
         </section>
       ))}
+
+      {/* Dimensions - NEW SECTION */}
+      {dimensionsImages && dimensionsImages.length > 0 && (
+        <section className="py-12 lg:py-16 bg-white border-t border-stone-200">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-16">
+            <h2 className="text-2xl lg:text-3xl text-stone-900 mb-8 lg:mb-12">{dimensionsTitle}</h2>
+            
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+              {dimensionsImages.map((img, i) => (
+                <div key={i} className="relative aspect-square w-full max-w-lg mx-auto">
+                  <Image 
+                    src={img} 
+                    alt={`Dimensions ${i + 1}`} 
+                    fill 
+                    className="object-contain" 
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
     </main>
   )
