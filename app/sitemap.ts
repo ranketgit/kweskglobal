@@ -79,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const posts = getPosts(locale)
     
     return posts.map((post) => ({
-      url: `${baseUrl}/${locale}/blog/${post.slug}`,
+      url: `${baseUrl}/${locale}/blog/${post.category}/${post.slug}`,
       lastModified: new Date(post.date), // Uses the date from the markdown file
       changeFrequency: 'weekly' as const,
       priority: 0.8,
