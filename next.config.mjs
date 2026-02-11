@@ -8,7 +8,6 @@ export default withNextIntl({
   },
   async redirects() {
     const manualLinks = [
-      // --- NEW BLOG REDIRECTS (FR) ---
       { "Source": "https://kwesk.com/fr/blog/comment-choisir-le-meilleur-fauteuil-de-bureau", "Target": "https://kwesk.com/fr/blog/mobilier-bureau/comment-choisir-le-meilleur-fauteuil-de-bureau" },
       { "Source": "https://kwesk.com/fr/blog/chaise-de-bureau-ergonomique-criteres-essentiels", "Target": "https://kwesk.com/fr/blog/mobilier-bureau/chaise-de-bureau-ergonomique-criteres-essentiels" },
       { "Source": "https://kwesk.com/fr/blog/fauteuil-ergonomique-de-bureau-guide-achat-professionnel", "Target": "https://kwesk.com/fr/blog/mobilier-bureau/fauteuil-ergonomique-de-bureau-guide-achat-professionnel" },
@@ -20,8 +19,6 @@ export default withNextIntl({
       { "Source": "https://kwesk.com/fr/blog/general/remplacement-de-fauteuils-de-bureau", "Target": "https://kwesk.com/fr/blog/mobilier-bureau/general/remplacement-de-fauteuils-de-bureau" },
       { "Source": "https://kwesk.com/fr/blog/mobilier-pour-bureau-professionnel", "Target": "https://kwesk.com/fr/blog/mobilier-bureau/mobilier-pour-bureau-professionnel" },
       { "Source": "https://kwesk.com/fr/blog/meubles-bureautique", "Target": "https://kwesk.com/fr/blog/mobilier-bureau/meubles-bureautique" },
-
-      // --- NEW BLOG REDIRECTS (EN) ---
       { "Source": "https://kwesk.com/en/blog/comment-choisir-le-meilleur-fauteuil-de-bureau", "Target": "https://kwesk.com/en/blog/mobilier-bureau/comment-choisir-le-meilleur-fauteuil-de-bureau" },
       { "Source": "https://kwesk.com/en/blog/chaise-de-bureau-ergonomique-criteres-essentiels", "Target": "https://kwesk.com/en/blog/mobilier-bureau/chaise-de-bureau-ergonomique-criteres-essentiels" },
       { "Source": "https://kwesk.com/en/blog/fauteuil-ergonomique-de-bureau-guide-achat-professionnel", "Target": "https://kwesk.com/en/blog/mobilier-bureau/fauteuil-ergonomique-de-bureau-guide-achat-professionnel" },
@@ -33,8 +30,6 @@ export default withNextIntl({
       { "Source": "https://kwesk.com/en/blog/general/remplacement-de-fauteuils-de-bureau", "Target": "https://kwesk.com/en/blog/mobilier-bureau/general/remplacement-de-fauteuils-de-bureau" },
       { "Source": "https://kwesk.com/en/blog/mobilier-pour-bureau-professionnel", "Target": "https://kwesk.com/en/blog/mobilier-bureau/mobilier-pour-bureau-professionnel" },
       { "Source": "https://kwesk.com/en/blog/meubles-bureautique", "Target": "https://kwesk.com/en/blog/mobilier-bureau/meubles-bureautique" },
-
-      // --- PRE-EXISTING REDIRECTS ---
       { "Source": "https://kwesk.com/fr/gamma", "Target": "https://kwesk.com/fr/chairs/gamma" },
       { "Source": "https://kwesk.com/fr/gamma-c", "Target": "https://kwesk.com/fr/chairs/gamma-c" },
       { "Source": "https://kwesk.com/fr/corpo-100", "Target": "https://kwesk.com/fr/chairs/corpo-100" },
@@ -64,7 +59,7 @@ export default withNextIntl({
     const formattedManualLinks = manualLinks.map((link) => ({
       source: link.Source.replace('https://kwesk.com', ''),
       destination: link.Target,
-      permanent: true,
+      statusCode: 301,
     }));
 
     return [
@@ -72,7 +67,7 @@ export default withNextIntl({
       {
         source: '/fr/mobilier-de-bureau-professionnel-a-:city',
         destination: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/:city',
-        permanent: true,
+        statusCode: 301,
       }
     ]
   }
