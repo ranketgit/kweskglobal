@@ -2,14 +2,74 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+// Ensure these paths match your project structure
+import citiesFrData from '@/data/cities-fr.json'
+import citiesEnData from '@/data/cities-en.json'
+
+// --- HELPER FUNCTIONS FOR SLUGS ---
+
+// 1. French Slug Logic (Matches your French Page)
+function generateSlugFr(city: string): string {
+  return city
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/é/g, 'e')
+    .replace(/è/g, 'e')
+    .replace(/ê/g, 'e')
+    .replace(/à/g, 'a')
+    .replace(/â/g, 'a')
+    .replace(/ô/g, 'o')
+    .replace(/î/g, 'i')
+    .replace(/ï/g, 'i')
+    .replace(/ù/g, 'u')
+    .replace(/û/g, 'u')
+    .replace(/ç/g, 'c')
+}
+
+// 2. English Slug Logic (Matches your English Page)
+function generateSlugEn(text: string): string {
+  return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
+}
 
 export default function Footer() {
   const t = useTranslations('footer')
+  const locale = useLocale() 
   const currentYear = new Date().getFullYear()
 
   const description = t('description')
   const descriptionLines = description.split('.').filter((line: string) => line.trim() !== '')
+
+  // --- DATA PREPARATION ---
+  
+  // Decide which cities to show based on locale
+  let footerCities = []
+  
+  if (locale === 'fr') {
+    // --- FRENCH LOGIC ---
+    footerCities = (citiesFrData as any[]).map(city => ({
+      id: city.id,
+      label: city.City,
+      // Matches French Page: /fabricant.../france/[city]
+      href: `/fabricant-de-chaises-de-bureau-professionnel/france/${generateSlugFr(city.City)}`
+    }))
+  } else {
+    // --- ENGLISH LOGIC (Updated to match USAIndexPage) ---
+    footerCities = (citiesEnData as any[]).map(city => {
+      // We need the state slug for the URL based on your English code
+      const stateSlug = generateSlugEn(city.state); 
+      const citySlug = city.slug; // Assuming your JSON has the slug already, otherwise generate it
+
+      return {
+        id: citySlug, 
+        label: city.city,
+        // Matches English Page: /office.../usa/[state]/[city]
+        href: `/office-chair-manufacturer/usa/${stateSlug}/${citySlug}`
+      }
+    })
+  }
+
+  // --- STATIC LINKS ---
 
   const chairLinks = [
     { label: "Challenger 175", href: "/chairs/challenger" },
@@ -35,8 +95,10 @@ export default function Footer() {
     <footer className="bg-[#1c1917] text-white pt-20">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-[60px]">
         
+        {/* TOP SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.2fr] gap-12 lg:gap-[50px] pb-12 border-b border-[#292524]">
           
+          {/* Logo & Desc */}
           <div className="lg:pr-8">
             <Link href="/" className="inline-block">
               <Image 
@@ -82,6 +144,7 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Chair Links */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[2px] mb-5">
               {t('titles.chairs')}
@@ -97,6 +160,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Company Links */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[2px] mb-5">
               {t('titles.company')}
@@ -112,6 +176,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div className="flex flex-col gap-5">
             <h4 className="text-xs font-semibold uppercase tracking-[2px] mb-1">
               {t('titles.contact')}
@@ -152,6 +217,27 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* CITY LINKS SECTION (Dynamic based on Locale) */}
+        <div className="py-12 border-b border-[#292524]">
+          <h4 className="text-xs font-semibold uppercase tracking-[2px] mb-6 text-[#57534e]">
+            {locale === 'fr' ? 'Zones de Livraison' : 'Service Areas'}
+          </h4>
+          
+          {/* Grid Layout: 2 Columns on Mobile, up to 6 on Desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-2">
+            {footerCities.map((city) => (
+              <Link 
+                key={city.id} 
+                href={city.href}
+                className="text-[10px] text-[#57534e] hover:text-[#8b8b4b] transition-colors uppercase tracking-wide truncate"
+              >
+                {city.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* BOTTOM COPYRIGHT */}
         <div className="flex flex-col md:flex-row justify-between items-center py-6 gap-4">
           <p className="text-xs text-[#78716c]">
             © {currentYear} KWESK. {t('rights')}
