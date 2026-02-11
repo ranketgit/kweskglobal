@@ -9,8 +9,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t('meta.title'),
     description: t('meta.description'),
-    alternates: getAlternates(locale, '/chairs/gamma-c'),
-    openGraph: { title: t('meta.title'), description: t('meta.description'), url: `${baseUrl}/${locale}/gamma-c`, images: [{ url: `${baseUrl}/gamma/gchero.jpg` }] },
+    alternates: getAlternates(locale, '/chairs/corpo-c'),
+    openGraph: { title: t('meta.title'), description: t('meta.description'), url: `${baseUrl}/${locale}/corpo-c`, images: [{ url: `${baseUrl}/gamma/gchero.jpg` }] },
   }
 }
 
