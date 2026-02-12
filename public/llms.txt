@@ -1,0 +1,73 @@
+# KWESK
+
+> KWESK is a Moroccan ergonomic office chair manufacturer founded in 2008 by Tarik Benjelloun. We design and manufacture chairs engineered for intensive professional use in call centers, corporate offices, and home workspaces, delivering 20,000 chairs annually across 12 countries.
+
+Important notes:
+- Founded in 2008 by Tarik Benjelloun
+- Headquartered in Casablanca, Morocco
+- Focus on durability, ergonomics, and intensive-use engineering
+- European-sourced components (Italian mechanisms, German gas lifts, Danish fabrics)
+- BIFMA 2011 and EN1335-1-2-3 2016 certified
+- 5-year warranty on all products
+- 50 employees, 6 product ranges, 20,000 chairs delivered per year
+
+## Sitemaps
+[XML Sitemap](https://kwesk.com/sitemap.xml): Includes all crawlable and indexable pages.
+
+## Products - Office Chairs
+- [GAMMA 150 - Operator Chair](https://kwesk.com/en/chairs/gamma): Ergonomic operator chair for intensive daily use in offices and call centers.
+- [GAMMA-C - Visitor Chair](https://kwesk.com/en/chairs/gamma-c): Visitor variant of the GAMMA range for meeting rooms and reception areas.
+- [CORPO 100 - Operator Chair](https://kwesk.com/en/chairs/corpo-100): Professional operator chair combining comfort and durability for open-space environments.
+- [CHALLENGER 175 - Manager Chair](https://kwesk.com/en/chairs/challenger): Premium manager chair with reinforced structure for executive comfort.
+- [BY 100 - President Chair](https://kwesk.com/en/chairs/by-1): Executive president chair with refined design and superior ergonomics.
+- [BY-G - President Chair](https://kwesk.com/en/chairs/by-g): President chair variant with enhanced features for top-level executives.
+- [EXCLUSIVE 500 - President Chair](https://kwesk.com/en/chairs/exclusive): Top-of-the-range president chair with premium materials and maximum comfort.
+- [EXCLUSIVE-G - President Chair](https://kwesk.com/en/chairs/exclusive-g): Enhanced variant of the EXCLUSIVE range with additional features.
+- [CADDY 80 - Training Chair](https://kwesk.com/en/chairs/caddy): Versatile training and conference chair for multi-purpose professional spaces.
+
+## Company Info
+- [About Us](https://kwesk.com/en/about): Learn about KWESK's history, mission, and commitment to ergonomic excellence.
+- [Contact](https://kwesk.com/en/contact): Get in touch with the KWESK team for quotes, orders, or inquiries.
+- [Blog](https://kwesk.com/en/blog): Expert insights on ergonomics, office furniture, and workspace optimization.
+
+## Blog - Featured Articles
+- [How to Choose the Best Office Chair](https://kwesk.com/en/blog/mobilier-bureau/comment-choisir-le-meilleur-fauteuil-de-bureau): Complete buying guide for selecting the right office chair.
+- [Ergonomic Office Chair: The 7 Essential Criteria](https://kwesk.com/en/blog/mobilier-bureau/chaise-de-bureau-ergonomique-criteres-essentiels): Key criteria to evaluate when choosing an ergonomic chair.
+- [Best Office Chairs for Back Pain: Top 5 Models](https://kwesk.com/en/blog/mobilier-bureau/fauteuil-bureau-contre-le-mal-de-dos): Expert recommendations for chairs that relieve back pain.
+- [Ergonomic Office Chair: Complete Comparison & Expert Guide](https://kwesk.com/en/blog/mobilier-bureau/siege-ergonomique-bureau-comparatif): In-depth comparison of ergonomic seating options.
+- [Ergonomic Office Chair: Professional Buying Guide](https://kwesk.com/en/blog/mobilier-bureau/fauteuil-ergonomique-de-bureau-guide-achat-professionnel): Professional guide to choosing the right ergonomic chair for your needs.
+- [Focus on the EN 1335 Standard](https://kwesk.com/en/blog/mobilier-bureau/en1335-standard): Understanding the European standard that regulates office chairs.
+- [Office Layout: 12 Ideas to Optimize Productivity](https://kwesk.com/en/blog/mobilier-bureau/agencement-de-bureaux): Practical ideas for designing productive workspaces.
+- [Office Layout Design: Complete Guide](https://kwesk.com/en/blog/mobilier-bureau/amenagement-de-bureau): Comprehensive guide for professional workspace design.
+- [Executive Office Chair: Complete Guide](https://kwesk.com/en/blog/mobilier-bureau/siege-de-direction-comment-choisir-fauteuil-parfait-cadres): Guide to choosing the perfect executive chair.
+- [Leather Office Chair: Luxury Guide for Executives](https://kwesk.com/en/blog/mobilier-bureau/fauteuil-de-bureau-cuir-guide-luxe-dirigeants): Premium leather chair guide for executive offices.
+- [Office Chair Without Wheels: Benefits and Best Models](https://kwesk.com/en/blog/mobilier-bureau/chaise-de-bureau-sans-roulettes): Benefits and top picks for wheelless office chairs.
+- [Office Chair Replacement: When and How to Renew](https://kwesk.com/en/blog/mobilier-bureau/remplacement-de-fauteuils-de-bureau): Signs it's time to replace office chairs and how to plan renewals.
+- [Used Office Furniture: Smart Buying Guide](https://kwesk.com/en/blog/mobilier-bureau/mobilier-occasion-bureau): Guide to saving money with secondhand office furniture.
+- [2 Person Desk: Complete Setup Guide](https://kwesk.com/en/blog/mobilier-bureau/bureau-2-personnes-guide-amenagement): How to set up a double workstation.
+- [Computer Desk: How to Choose the Perfect Furniture](https://kwesk.com/en/blog/mobilier-bureau/bureau-informatique-meuble-parfait-setup): Choosing the ideal desk for your computer setup.
+- [Office Storage Furniture: 10 Solutions](https://kwesk.com/en/blog/mobilier-bureau/meuble-rangement-bureau): Storage solutions to optimize your workspace.
+- [Office Furniture: Guide for SMEs and Startups](https://kwesk.com/en/blog/mobilier-bureau/meubles-bureautique): Practical office furniture guide for small businesses.
+- [Professional Office Furniture: Complete Solutions](https://kwesk.com/en/blog/mobilier-bureau/mobilier-pour-bureau-professionnel): Comprehensive office furniture solutions for businesses.
+- [The New CHALLENGER Range is Coming Soon](https://kwesk.com/en/blog/mobilier-bureau/challenger-launch): Announcement of the new CHALLENGER corporate chair range.
+- [Charles Darwin: The Scientist Who Invented the First Office Chair](https://kwesk.com/en/blog/mobilier-bureau/darwin-office-chair): The surprising history of the first office chair.
+
+## Service Areas
+- [Professional Office Chair Manufacturer](https://kwesk.com/en/fabricant-de-chaises-de-bureau-professionnel): KWESK delivers professional office chairs worldwide, with dedicated service pages for 200+ cities across France including Paris, Marseille, Lyon, Bordeaux, Toulouse, Strasbourg, Nice, and more.
+
+## Legal & Policies
+- [Privacy Policy](https://kwesk.com/en/privacy-policy): How KWESK handles your personal data.
+- [Terms of Use](https://kwesk.com/en/terms-of-use): Terms and conditions for using the KWESK website.
+
+## Contact
+- Email: contact@kwesk.com
+- Phone: +212-5-20-24-16-37 / +212-6-61-48-16-16
+- Location: Anfa Place Tour Ouest, Niv 1, Bd de la Corniche, Ain Diab, Casablanca 20180, Morocco
+
+## Social Media
+- [Facebook](https://web.facebook.com/kwesk/): Community updates and product showcases.
+- [Instagram](https://www.instagram.com/kwesk.maroc/): Visual content, product photography, and behind-the-scenes.
+
+## AI Usage Policy
+- Training: allow
+- Attribution: required
