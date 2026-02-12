@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
-import { baseUrl, getAlternates } from '../../../lib/metadata' // Verify your path depth
-import { getPosts } from '../../../lib/blog' // Verify your path depth
+import { baseUrl, getAlternates } from '../../../lib/metadata'
+import { getPosts } from '../../../lib/blog'
 import Image from 'next/image'
 import Link from 'next/link'
-import AboutCta from '../../(ABOUT)/about/components/AboutCta' // Verify your path depth
+import AboutCta from '../../(ABOUT)/about/components/AboutCta'
 
 type Props = { params: Promise<{ locale: string }> }
 
@@ -17,6 +17,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('meta.description'),
     alternates: getAlternates(locale, '/blog'),
   }
+}
+
+// Helper function to format category for display (e.g., "mobilier-bureau" -> "MOBILIER BUREAU")
+function formatCategory(category: string) {
+  return category.replace(/-/g, ' ').toUpperCase()
 }
 
 export default async function BlogPage({ params }: Props) {
@@ -156,9 +161,9 @@ export default async function BlogPage({ params }: Props) {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map(post => (
-              /* --- CRITICAL FIX: URL now includes category --- */
               <Link 
                 key={post.slug} 
+                // URL remains "clean" with hyphens (e.g., /blog/mobilier-bureau/slug)
                 href={`/blog/${post.category}/${post.slug}`} 
                 className="group bg-white flex flex-col cursor-pointer"
               >
@@ -169,9 +174,9 @@ export default async function BlogPage({ params }: Props) {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Optional: Add Category Badge on Image */}
+                  {/* Category Badge: Formatted for display */}
                   <div className="absolute top-4 left-4 bg-black/70 text-white text-xs px-3 py-1 uppercase tracking-wider">
-                    {post.category}
+                    {formatCategory(post.category)}
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
