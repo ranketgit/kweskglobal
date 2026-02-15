@@ -13,6 +13,7 @@ type Props = {
   params: Promise<{ locale: string; category: string; slug: string }> 
 }
 
+// 1. GENERATE STATIC PATHS
 export async function generateStaticParams() {
   const locales = ['en', 'fr']
   const params: { locale: string; category: string; slug: string }[] = []
@@ -20,10 +21,9 @@ export async function generateStaticParams() {
   locales.forEach(locale => {
     const posts = getPosts(locale)
     posts.forEach(post => {
-      // 2. FORCE 'general' IF CATEGORY IS MISSING
       const categorySlug = post.category 
         ? post.category.toLowerCase().replace(/\s+/g, '-') 
-        : 'mobilier-bureau'
+        : 'general'
 
       params.push({ 
         locale, 
@@ -32,10 +32,10 @@ export async function generateStaticParams() {
       })
     })
   })
-  
   return params
 }
 
+// 2. DYNAMIC METADATA
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, category, slug } = await params
   const post = getPost(locale, slug)
@@ -63,98 +63,124 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogPostPage({ params }: Props) {
   const { locale, category, slug } = await params
   const post = getPost(locale, slug)
+  const t = await getTranslations({ locale, namespace: 'blog' })
 
   if (!post) notFound()
 
-  // 3. Fallback: If post found but category in URL doesn't match default 'general'
-  // (Optional: You can remove this check if you want flexible URLs)
-  const currentPostCategory = post.category 
+  // URL Logic
+  const currentPostCategorySlug = post.category 
     ? post.category.toLowerCase().replace(/\s+/g, '-') 
-    : 'mobilier-bureau'
+    : 'general'
 
-  if (category !== currentPostCategory) {
-     // This handles the edge case where a user types the wrong category
-     notFound() 
+  // Security check: if URL category doesn't match post data category
+  if (category !== currentPostCategorySlug) {
+      notFound() 
   }
 
   const htmlContent = await marked(post.content)
   const postUrl = `${baseUrl}/blog/${category}/${slug}`
 
-  // 4. Schema with correct Category
+  // 3. SCHEMAS (Article + Breadcrumbs)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     '@id': `${postUrl}#blogposting`,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': postUrl
-    },
-    headline: post.meta_title || post.title,
-    description: post.meta_description || post.description,
-    image: {
-      '@type': 'ImageObject',
-      url: `${baseUrl}${post.image}`
-    },
+    headline: post.title,
+    image: `${baseUrl}${post.image}`,
     datePublished: new Date(post.date).toISOString(),
-    articleSection: category, // Schema Category
-    author: {
-      '@type': 'Organization',
-      name: 'KWESK',
-      url: baseUrl
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'KWESK',
-      logo: {
-        '@type': 'ImageObject',
-        url: `${baseUrl}/kwesk-logo.png`
-      }
-    },
+    articleSection: post.category,
+    author: { '@type': 'Organization', name: 'KWESK', url: baseUrl },
     inLanguage: locale
   }
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': `${baseUrl}/${locale}` },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': `${baseUrl}/${locale}/blog` },
+      { '@type': 'ListItem', 'position': 3, 'name': post.category, 'item': `${baseUrl}/${locale}/blog/${category}` }
+    ]
+  }
+
   return (
-    <main className="pt-[100px]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+    <main className="pt-[100px] bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
-      <section className="relative h-[40vh] bg-stone-800">
-        <Image 
-          src={post.image} 
-          alt={post.title}
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white px-4">
-             <div className="flex items-center justify-center gap-2 text-sm text-white/70 mb-4 uppercase tracking-wider">
-               {/* Display the sanitized category */}
-               <span className="text-[#8b8b4b] font-bold">{currentPostCategory}</span>
-               <span>•</span>
-               <span>{post.date}</span>
-            </div>
-            <h1 className="text-3xl lg:text-5xl font-bold">{post.title}</h1>
-          </div>
+      {/* Breadcrumbs Navigation */}
+      <nav className="py-6 border-b border-stone-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <ol className="flex items-center space-x-3 text-[10px] uppercase tracking-[2px] font-bold text-stone-400">
+            <li>
+              <Link href="/" className="hover:text-[#8b8b4b] transition-colors">Home</Link>
+            </li>
+            <span>/</span>
+            <li>
+              <Link href="/blog" className="hover:text-[#8b8b4b] transition-colors">Blog</Link>
+            </li>
+            <span>/</span>
+            <li>
+              <Link href={`/blog/${category}`} className="hover:text-[#8b8b4b] transition-colors text-[#8b8b4b]">
+                {post.category}
+              </Link>
+            </li>
+          </ol>
         </div>
-      </section>
+      </nav>
 
-      <section className="py-16 bg-white">
+      {/* Article Header */}
+      <header className="py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div className="inline-block px-4 py-1 bg-stone-100 text-[#8b8b4b] text-[10px] font-bold uppercase tracking-widest mb-6">
+            {post.category}
+          </div>
+          <h1 className="text-4xl lg:text-6xl text-stone-900 font-medium leading-[1.1] mb-8">
+            {post.title}
+          </h1>
+          <p className="text-stone-400 text-sm uppercase tracking-widest">
+            Published on {post.date}
+          </p>
+        </div>
+      </header>
+
+      {/* Main Image */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-16 lg:mb-24">
+        <div className="relative aspect-[21/9] overflow-hidden bg-stone-100">
+          <Image 
+            src={post.image} 
+            alt={post.title}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Content */}
+      <section className="pb-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <article 
-            className="blog-content"
+            className="blog-content prose prose-stone max-w-none 
+              prose-headings:font-medium prose-headings:text-stone-900
+              prose-p:text-stone-600 prose-p:leading-relaxed prose-p:text-lg
+              prose-strong:text-stone-900 prose-a:text-[#8b8b4b]
+              prose-img:rounded-none"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
           />
-          <div className="mt-12 pt-8 border-t border-stone-200">
+          
+          <div className="mt-20 pt-10 border-t border-stone-200 flex justify-between items-center">
             <Link 
               href="/blog"
-              className="text-[#8b8b4b] hover:text-stone-900 transition-colors"
+              className="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-stone-900 hover:text-[#8b8b4b] transition-colors"
             >
-              ← Back to all posts
+              <span className="group-hover:-translate-x-2 transition-transform">←</span>
+              Back to Blog
             </Link>
+            
+            <div className="flex gap-4">
+               {/* Social Share Placeholder */}
+            </div>
           </div>
         </div>
       </section>

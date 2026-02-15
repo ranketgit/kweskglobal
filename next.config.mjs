@@ -53,7 +53,9 @@ export default withNextIntl({
       { "Source": "https://kwesk.com/fr/winner-c", "Target": "https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel" },
       { "Source": "https://kwesk.com/en/winner", "Target": "https://kwesk.com/en/office-chair-manufacturer/usa" },
       { "Source": "https://kwesk.com/en/winner-125", "Target": "https://kwesk.com/en/office-chair-manufacturer/usa" },
-      { "Source": "https://kwesk.com/en/winner-c", "Target": "https://kwesk.com/en/office-chair-manufacturer/usa" }
+      { "Source": "https://kwesk.com/fr/chairs/by-100", "Target": " https://kwesk.com/fr/chairs/by-1" },
+      { "Source": "https://kwesk.com/en/chairs/by-100", "Target": " https://kwesk.com/en/chairs/by-1" }
+   
     ]
 
     const formattedManualLinks = manualLinks.map((link) => ({
