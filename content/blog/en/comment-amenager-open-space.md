@@ -5,7 +5,7 @@ date: "2026-02-17"
 image: "/blog/amenagement-open-space-tendances-2026.webp"
 meta_title: "How to Design an Open Space Office: Trends and Best Practices 2026 | KWESK"
 meta_description: "Complete guide to open space office design in 2026. Trends, acoustic solutions, flex office, and ergonomic furniture for a productive collaborative workspace."
-category: "Amenagement Bureau"
+category: Amenagement-Bureau
 ---
 
 Over 3.2 million employees in France work in open space offices, accounting for 40% of all office workers. Yet 60% of them complain about noise disturbances and 34% report frequent physical pain (INRS). Open space office design can no longer be reduced to lining up desks across a large floor plate. In 2026, creating an open workspace demands an approach that balances collaboration, concentration, and well-being. This guide delivers the key trends and best practices to transform your open plan office into a truly high-performing environment.
