@@ -5,7 +5,7 @@ date: "2026-02-17"
 image: "/blog/amenagement-open-space-tendances-2026.webp"
 meta_title: "Comment Aménager un Open Space : Tendances et Best Practices 2026 | KWESK"
 meta_description: "Guide complet pour l'aménagement open space en 2026. Tendances, solutions acoustiques, flex office et mobilier ergonomique pour un espace collaboratif performant."
-category: "Amenagement-Bureau"
+category: Amenagement-Bureau
 ---
 
 En France, plus de 3,2 millions de salariés travaillent en open space, soit 40 % des employés de bureau. Pourtant, 60 % d'entre eux se plaignent des nuisances sonores et 34 % déclarent des douleurs physiques fréquentes (INRS). L'open space aménagement ne peut plus se résumer à aligner des bureaux dans un grand plateau. En 2026, concevoir un espace de travail ouvert exige une approche qui concilie collaboration, concentration et bien-être. Ce guide vous livre les tendances clés et les bonnes pratiques pour transformer votre bureau open space en un environnement réellement performant.
