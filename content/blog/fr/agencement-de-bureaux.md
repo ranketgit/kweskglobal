@@ -2,6 +2,7 @@
 title: "Agencement de Bureaux : 12 Idées pour Optimiser Productivité et Confort"
 description: "Découvrez 12 idées d'agencement de bureaux pour booster la productivité et le confort de vos équipes. Guide pratique avec conseils, statistiques et solutions concrètes."
 date: "2026-02-09"
+category: amenagement-de-bureau
 image: "/blog/agencement-bureaux-productivite-confort.webp"
 meta_title: "Agencement de Bureaux : 12 Idées Productivité et Confort | KWESK"
 meta_description: "12 idées d'agencement de bureaux pour optimiser productivité et confort. Conseils pratiques, statistiques clés et solutions ergonomiques pour vos espaces pro."
