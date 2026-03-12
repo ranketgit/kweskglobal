@@ -9,6 +9,9 @@ import Features from '../../(ABOUT)/about/components/Features'
 export const metadata: Metadata = {
   title: "Fabricant de Chaises de Bureau Professionnel en Belgique | KWESK",
   description: "KWESK est votre fabricant de chaises de bureau de référence en Belgique. Prix usine, certifications BIFMA & EN 1335, livraison Bruxelles et Wallonie.",
+  alternates: {
+    canonical: 'https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel/belgique',
+  },
 }
 
 export default function BelgiumPage() {
@@ -446,6 +449,91 @@ export default function BelgiumPage() {
               <p className="text-stone-600 text-sm leading-relaxed">
                 Nous desservons Arlon, Marche-en-Famenne, Bastogne, Virton, Neufchâteau et Libramont. La proximité avec le Grand-Duché de Luxembourg fait de cette province un carrefour stratégique pour les entreprises transfrontalières à la recherche d'un <strong className="text-[#1c1917]">fournisseur de sièges de bureau</strong> fiable.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CITY PAGES */}
+      <section className="py-24 bg-[#1c1917] text-white border-b border-[#44403c]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Nos Pages Dédiées par Ville en Belgique
+            </h2>
+            <p className="text-[#d6d3d1] text-lg leading-relaxed">
+              Découvrez nos pages dédiées pour chaque ville belge que nous desservons.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div>
+              <h3 className="text-xl font-bold text-[#8b8b4b] mb-4">
+                <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/bruxelles-capitale" className="hover:text-white transition-colors">Bruxelles-Capitale</Link>
+              </h3>
+              <ul className="space-y-2">
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/bruxelles-ville" className="text-[#d6d3d1] hover:text-white transition-colors">Bruxelles-Ville</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/schaerbeek" className="text-[#d6d3d1] hover:text-white transition-colors">Schaerbeek</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/anderlecht" className="text-[#d6d3d1] hover:text-white transition-colors">Anderlecht</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/molenbeek" className="text-[#d6d3d1] hover:text-white transition-colors">Molenbeek-Saint-Jean</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/ixelles" className="text-[#d6d3d1] hover:text-white transition-colors">Ixelles</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/uccle" className="text-[#d6d3d1] hover:text-white transition-colors">Uccle</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/woluwe-saint-lambert" className="text-[#d6d3d1] hover:text-white transition-colors">Woluwe-Saint-Lambert</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/forest" className="text-[#d6d3d1] hover:text-white transition-colors">Forest</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/jette" className="text-[#d6d3d1] hover:text-white transition-colors">Jette</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/saint-gilles" className="text-[#d6d3d1] hover:text-white transition-colors">Saint-Gilles</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/etterbeek" className="text-[#d6d3d1] hover:text-white transition-colors">Etterbeek</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/evere" className="text-[#d6d3d1] hover:text-white transition-colors">Evere</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-[#8b8b4b] mb-4">
+                <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/hainut" className="hover:text-white transition-colors">Hainaut</Link>
+              </h3>
+              <ul className="space-y-2">
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/charleroi" className="text-[#d6d3d1] hover:text-white transition-colors">Charleroi</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/mons" className="text-[#d6d3d1] hover:text-white transition-colors">Mons</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/la-louviere" className="text-[#d6d3d1] hover:text-white transition-colors">La Louvière</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/tournai" className="text-[#d6d3d1] hover:text-white transition-colors">Tournai</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/mouscron" className="text-[#d6d3d1] hover:text-white transition-colors">Mouscron</Link></li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-[#8b8b4b] mb-4 mt-10">
+                <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/liege" className="hover:text-white transition-colors">Liège</Link>
+              </h3>
+              <ul className="space-y-2">
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/liege-ville" className="text-[#d6d3d1] hover:text-white transition-colors">Liège</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/seraing" className="text-[#d6d3d1] hover:text-white transition-colors">Seraing</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/verviers" className="text-[#d6d3d1] hover:text-white transition-colors">Verviers</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/herstal" className="text-[#d6d3d1] hover:text-white transition-colors">Herstal</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-[#8b8b4b] mb-4">
+                <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/brabant-wallon" className="hover:text-white transition-colors">Brabant wallon</Link>
+              </h3>
+              <ul className="space-y-2">
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/braine-lalleud" className="text-[#d6d3d1] hover:text-white transition-colors">Braine-l&apos;Alleud</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/wavre" className="text-[#d6d3d1] hover:text-white transition-colors">Wavre</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/ottignies-louvain-la-neuve" className="text-[#d6d3d1] hover:text-white transition-colors">Ottignies-Louvain-la-Neuve</Link></li>
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/waterloo" className="text-[#d6d3d1] hover:text-white transition-colors">Waterloo</Link></li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-[#8b8b4b] mb-4 mt-10">
+                <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/namur" className="hover:text-white transition-colors">Namur</Link>
+              </h3>
+              <ul className="space-y-2">
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/namur-ville" className="text-[#d6d3d1] hover:text-white transition-colors">Namur</Link></li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-[#8b8b4b] mb-4 mt-10">
+                <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/luxembourg" className="hover:text-white transition-colors">Luxembourg (Belgique)</Link>
+              </h3>
+              <ul className="space-y-2">
+                <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/arlon" className="text-[#d6d3d1] hover:text-white transition-colors">Arlon</Link></li>
+              </ul>
             </div>
           </div>
         </div>

@@ -9,6 +9,9 @@ import Features from '../../../(ABOUT)/about/components/Features'
 export const metadata: Metadata = {
   title: "Fabricant de Chaises de Bureau au Brabant wallon | KWESK",
   description: "KWESK, fabricant de chaises de bureau depuis 2008, livre la Province du Brabant wallon à prix usine. Sièges certifiés BIFMA & EN 1335 pour professionnels.",
+  alternates: {
+    canonical: 'https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/brabant-wallon',
+  },
 }
 
 export default function BrabantWallonProvincePage() {
@@ -382,6 +385,23 @@ export default function BrabantWallonProvincePage() {
         </div>
       </section>
 
+      {/* VILLES DU BRABANT WALLON */}
+      <section className="py-24 bg-white border-b border-stone-200">
+        <div className="max-w-4xl mx-auto px-6 lg:px-16 text-center">
+          <h2 className="text-3xl font-bold text-[#1c1917] mb-6">
+            Chaises de Bureau au Brabant wallon ? Trouvez Votre Ville
+          </h2>
+          <p className="text-stone-600 text-lg mb-10">KWESK, fabricant de chaises de bureau, livre directement les professionnels du Brabant wallon. Prix usine, certifications BIFMA &amp; EN 1335, devis sous 24h.</p>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/braine-lalleud" className="px-5 py-3 bg-stone-50 border border-stone-200 text-[#1c1917] font-bold text-sm hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm">Braine-l&apos;Alleud</Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/wavre" className="px-5 py-3 bg-stone-50 border border-stone-200 text-[#1c1917] font-bold text-sm hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm">Wavre</Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/ottignies-louvain-la-neuve" className="px-5 py-3 bg-stone-50 border border-stone-200 text-[#1c1917] font-bold text-sm hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm">Ottignies-Louvain-la-Neuve</Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/waterloo" className="px-5 py-3 bg-stone-50 border border-stone-200 text-[#1c1917] font-bold text-sm hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm">Waterloo</Link>
+          </div>
+        </div>
+      </section>
+
       {/* AUTRES ZONES (Dark bg list) */}
       <section className="py-24 bg-[#1c1917] text-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-16 text-center">
@@ -389,16 +409,33 @@ export default function BrabantWallonProvincePage() {
             Découvrez Nos Autres Zones de Livraison en Belgique
           </h2>
           <p className="text-[#d6d3d1] text-lg mb-10">Nous livrons dans toute la Belgique francophone. Découvrez nos pages dédiées :</p>
-          
-          <ul className="flex flex-col items-center gap-4 text-[#8b8b4b] font-bold text-lg">
-            <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique" className="hover:text-white underline transition-colors">Fabricant de chaises de bureau en Belgique</Link> <span className="text-stone-500 font-normal ml-2">— Page nationale</span></li>
-            <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/bruxelles" className="hover:text-white underline transition-colors">Chaises de bureau à Bruxelles</Link></li>
-            <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/namur" className="hover:text-white underline transition-colors">Chaises de bureau à Namur</Link></li>
-            <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/liege" className="hover:text-white underline transition-colors">Chaises de bureau à Liège</Link></li>
-            <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/hainaut" className="hover:text-white underline transition-colors">Chaises de bureau dans le Hainaut</Link></li>
-            <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/luxembourg" className="hover:text-white underline transition-colors">Chaises de bureau au Luxembourg (Belgique)</Link></li>
-            <li><Link href="/fr/fabricant-de-chaises-de-bureau-professionnel" className="hover:text-white underline transition-colors">Fabricant de chaises de bureau en France</Link></li>
-          </ul>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-left">
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Belgique</span>
+              <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Page Nationale</span>
+            </Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/bruxelles-capitale" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
+              <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Bruxelles-Capitale</span>
+            </Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/hainut" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
+              <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Hainaut</span>
+            </Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/liege" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
+              <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Liège</span>
+            </Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/namur" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
+              <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Namur</span>
+            </Link>
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/luxembourg" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
+              <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Luxembourg (Belgique)</span>
+            </Link>
+          </div>
         </div>
       </section>
 
