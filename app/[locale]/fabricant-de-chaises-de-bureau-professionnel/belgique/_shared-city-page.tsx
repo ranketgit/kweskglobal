@@ -1,16 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import citiesData from '../../../../../data/cities-belgique.json'
-import ChairsSection from '../../../(HOMEPAGE)/components/ChairSection/ChairSection'
+import citiesData from '../../../../data/cities-belgique.json'
+import ChairsSection from '../../(HOMEPAGE)/components/ChairSection/ChairSection'
 import Customers from '@/app/shared/Customers'
-import AboutNormes from '../../../(ABOUT)/about/components/AboutNormes'
-import Features from '../../../(ABOUT)/about/components/Features'
+import AboutNormes from '../../(ABOUT)/about/components/AboutNormes'
+import Features from '../../(ABOUT)/about/components/Features'
 
-export const dynamic = 'force-static'
-export const dynamicParams = false
-
-type CityData = {
+export type CityData = {
   ville: string
   slug: string
   province: string
@@ -26,11 +23,11 @@ type CityData = {
   faqReponse: string
 }
 
-type Props = {
+export type CityPageProps = {
   params: Promise<{ city: string; locale: string }>
 }
 
-function getCityBySlug(slug: string): CityData | undefined {
+export function getCityBySlug(slug: string): CityData | undefined {
   return (citiesData as CityData[]).find((city) => city.slug === slug)
 }
 
@@ -40,41 +37,35 @@ function getOtherCitiesInProvince(currentSlug: string, provinceSlug: string): Ci
   )
 }
 
-function getCitiesByProvince(): Record<string, CityData[]> {
-  const grouped: Record<string, CityData[]> = {}
-  for (const city of citiesData as CityData[]) {
-    const key = city.provinceShort
-    if (!grouped[key]) grouped[key] = []
-    grouped[key].push(city)
+export function makeGenerateStaticParams(provinceSlug: string) {
+  return async function generateStaticParams() {
+    return (citiesData as CityData[])
+      .filter((c) => c.provinceSlug === provinceSlug)
+      .map((c) => ({ city: c.slug }))
   }
-  return grouped
 }
 
-export async function generateStaticParams() {
-  return (citiesData as CityData[]).map((city) => ({
-    city: city.slug,
-  }))
+export function makeGenerateMetadata(provinceSlug: string) {
+  return async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
+    const { city, locale } = await params
+    const cityData = getCityBySlug(city)
+    if (!cityData) return { title: 'Page not found' }
+
+    return {
+      title: `Fabricant de Chaises de Bureau à ${cityData.ville} | KWESK`,
+      description: `KWESK, fabricant de chaises de bureau depuis 2008, livre directement les professionnels de ${cityData.ville} (${cityData.provinceShort}). Prix usine, certifications BIFMA & EN 1335, livraison directe.`,
+      alternates: {
+        canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel/belgique/${provinceSlug}/${city}`,
+      },
+    }
+  }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export default async function BelgiqueCityPageContent({
+  params,
+  provinceSlug,
+}: CityPageProps & { provinceSlug: string }) {
   const { city, locale } = await params
-  const cityData = getCityBySlug(city)
-
-  if (!cityData) {
-    return { title: 'Page not found' }
-  }
-
-  return {
-    title: `Fabricant de Chaises de Bureau à ${cityData.ville} | KWESK`,
-    description: `KWESK, fabricant de chaises de bureau depuis 2008, livre directement les professionnels de ${cityData.ville} (${cityData.provinceShort}). Prix usine, certifications BIFMA & EN 1335, livraison directe.`,
-    alternates: {
-      canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel/belgique/${city}`,
-    },
-  }
-}
-
-export default async function BelgiqueCityPage({ params }: Props) {
-  const { city } = await params
   const cityData = getCityBySlug(city)
 
   if (!cityData) {
@@ -82,14 +73,13 @@ export default async function BelgiqueCityPage({ params }: Props) {
   }
 
   const siblingCities = getOtherCitiesInProvince(cityData.slug, cityData.provinceSlug)
-  const allByProvince = getCitiesByProvince()
 
   return (
     <main className="min-h-screen bg-white">
       <link
         rel="alternate"
         hrefLang="x-default"
-        href={`https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${city}`}
+        href={`https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${provinceSlug}/${city}`}
       />
 
       {/* HERO */}
@@ -139,36 +129,20 @@ export default async function BelgiqueCityPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">
-                2008
-              </span>
-              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">
-                Fabricant Depuis
-              </span>
+              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">2008</span>
+              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">Fabricant Depuis</span>
             </div>
             <div>
-              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">
-                BIFMA
-              </span>
-              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">
-                & EN 1335
-              </span>
+              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">BIFMA</span>
+              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">& EN 1335</span>
             </div>
             <div>
-              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">
-                5 Ans
-              </span>
-              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">
-                Garantie
-              </span>
+              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">5 Ans</span>
+              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">Garantie</span>
             </div>
             <div>
-              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">
-                {cityData.ville}
-              </span>
-              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">
-                Livraison Directe
-              </span>
+              <span className="block text-3xl lg:text-4xl font-bold text-[#8b8b4b] mb-2">{cityData.ville}</span>
+              <span className="text-xs text-stone-500 uppercase tracking-wider font-bold">Livraison Directe</span>
             </div>
           </div>
         </div>
@@ -230,7 +204,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
         </div>
       </section>
 
-      {/* NOTRE GAMME (Dark Section) */}
+      {/* NOTRE GAMME */}
       <section className="py-24 bg-[#1c1917] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -252,19 +226,13 @@ export default async function BelgiqueCityPage({ params }: Props) {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-[#292524] p-8 border border-[#44403c] rounded-sm hover:border-[#8b8b4b] transition-colors">
               <h3 className="text-xl font-bold mb-4">
-                <Link
-                  href="/fr/chairs/challenger"
-                  className="text-[#8b8b4b] hover:text-white transition-colors"
-                >
+                <Link href="/fr/chairs/challenger" className="text-[#8b8b4b] hover:text-white transition-colors">
                   Challenger — Direction & Conseil
                 </Link>
               </h3>
               <p className="text-[#d6d3d1] leading-relaxed text-sm">
                 Cuir premium, support lombaire avancé, capacité 175 kg. Le{' '}
-                <Link
-                  href="/fr/blog/mobilier-bureau/siege-de-direction-comment-choisir-fauteuil-parfait-cadres"
-                  className="text-white font-bold hover:text-[#8b8b4b] underline"
-                >
+                <Link href="/fr/blog/mobilier-bureau/siege-de-direction-comment-choisir-fauteuil-parfait-cadres" className="text-white font-bold hover:text-[#8b8b4b] underline">
                   siège de direction
                 </Link>{' '}
                 de référence pour les bureaux exécutifs et salles de conseil.
@@ -273,19 +241,13 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
             <div className="bg-[#292524] p-8 border border-[#44403c] rounded-sm hover:border-[#8b8b4b] transition-colors">
               <h3 className="text-xl font-bold mb-4">
-                <Link
-                  href="/fr/chairs/gamma"
-                  className="text-[#8b8b4b] hover:text-white transition-colors"
-                >
+                <Link href="/fr/chairs/gamma" className="text-[#8b8b4b] hover:text-white transition-colors">
                   Gamma — Open-Space & Call Centers
                 </Link>
               </h3>
               <p className="text-[#d6d3d1] leading-relaxed text-sm">
                 Dossier mesh respirant, accoudoirs réglables, design moderne. Le{' '}
-                <Link
-                  href="/fr/blog/mobilier-bureau/siege-ergonomique-bureau-comparatif"
-                  className="text-white font-bold hover:text-[#8b8b4b] underline"
-                >
+                <Link href="/fr/blog/mobilier-bureau/siege-ergonomique-bureau-comparatif" className="text-white font-bold hover:text-[#8b8b4b] underline">
                   siège ergonomique
                 </Link>{' '}
                 idéal pour les espaces de travail ouverts.
@@ -294,10 +256,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
             <div className="bg-[#292524] p-8 border border-[#44403c] rounded-sm hover:border-[#8b8b4b] transition-colors">
               <h3 className="text-xl font-bold mb-4">
-                <Link
-                  href="/fr/chairs/corpo-100"
-                  className="text-[#8b8b4b] hover:text-white transition-colors"
-                >
+                <Link href="/fr/chairs/corpo-100" className="text-[#8b8b4b] hover:text-white transition-colors">
                   Corpo 100 — Environnements Corporate
                 </Link>
               </h3>
@@ -309,19 +268,13 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
             <div className="bg-[#292524] p-8 border border-[#44403c] rounded-sm hover:border-[#8b8b4b] transition-colors">
               <h3 className="text-xl font-bold mb-4">
-                <Link
-                  href="/fr/chairs/exclusive"
-                  className="text-[#8b8b4b] hover:text-white transition-colors"
-                >
+                <Link href="/fr/chairs/exclusive" className="text-[#8b8b4b] hover:text-white transition-colors">
                   Exclusive — Executive & Hôtellerie Luxe
                 </Link>
               </h3>
               <p className="text-[#d6d3d1] leading-relaxed text-sm">
                 Matériaux premium, confort exceptionnel. Destiné aux{' '}
-                <Link
-                  href="/fr/blog/mobilier-bureau/fauteuil-de-bureau-cuir-guide-luxe-dirigeants"
-                  className="text-white font-bold hover:text-[#8b8b4b] underline"
-                >
+                <Link href="/fr/blog/mobilier-bureau/fauteuil-de-bureau-cuir-guide-luxe-dirigeants" className="text-white font-bold hover:text-[#8b8b4b] underline">
                   bureaux de luxe pour dirigeants
                 </Link>{' '}
                 et espaces hôteliers haut de gamme.
@@ -330,10 +283,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
             <div className="bg-[#292524] p-8 border border-[#44403c] rounded-sm hover:border-[#8b8b4b] transition-colors">
               <h3 className="text-xl font-bold mb-4">
-                <Link
-                  href="/fr/chairs/by-1"
-                  className="text-[#8b8b4b] hover:text-white transition-colors"
-                >
+                <Link href="/fr/chairs/by-1" className="text-[#8b8b4b] hover:text-white transition-colors">
                   BY 100 — Flex-Office & Coworking
                 </Link>
               </h3>
@@ -345,10 +295,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
             <div className="bg-[#292524] p-8 border border-[#44403c] rounded-sm hover:border-[#8b8b4b] transition-colors">
               <h3 className="text-xl font-bold mb-4">
-                <Link
-                  href="/fr/chairs/caddy"
-                  className="text-[#8b8b4b] hover:text-white transition-colors"
-                >
+                <Link href="/fr/chairs/caddy" className="text-[#8b8b4b] hover:text-white transition-colors">
                   Caddy — Formation & Conférence
                 </Link>
               </h3>
@@ -383,10 +330,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
             <div className="lg:col-span-7 space-y-6">
               {cityData.secteursLocaux.map((secteur, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-8 border-l-4 border-[#8b8b4b] shadow-sm"
-                >
+                <div key={index} className="bg-white p-8 border-l-4 border-[#8b8b4b] shadow-sm">
                   <div className="flex items-start gap-4">
                     <span className="flex-shrink-0 w-10 h-10 bg-stone-100 text-[#8b8b4b] flex items-center justify-center font-bold text-sm rounded-sm">
                       {String(index + 1).padStart(2, '0')}
@@ -412,9 +356,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
                 <h3 className="text-lg font-bold text-[#1c1917] mb-3">
                   Zones d&apos;Activités Desservies
                 </h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
-                  {cityData.zonesActivites}
-                </p>
+                <p className="text-stone-600 text-sm leading-relaxed">{cityData.zonesActivites}</p>
               </div>
             </div>
           </div>
@@ -507,25 +449,18 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div className="bg-[#292524] p-8 border border-[#44403c] relative shadow-lg">
-              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">
-                1
-              </span>
+              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">1</span>
               <h3 className="text-xl font-bold text-white mb-4 mt-2">Consultation</h3>
               <p className="text-[#d6d3d1] text-sm leading-relaxed">
                 Contactez notre équipe B2B et décrivez votre projet.{' '}
-                <Link
-                  href="/fr/blog/mobilier-bureau/comment-choisir-le-meilleur-fauteuil-de-bureau"
-                  className="text-[#8b8b4b] hover:text-white underline"
-                >
+                <Link href="/fr/blog/mobilier-bureau/comment-choisir-le-meilleur-fauteuil-de-bureau" className="text-[#8b8b4b] hover:text-white underline">
                   Comment choisir le meilleur fauteuil de bureau ?
                 </Link>
               </p>
             </div>
 
             <div className="bg-[#292524] p-8 border border-[#44403c] relative shadow-lg">
-              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">
-                2
-              </span>
+              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">2</span>
               <h3 className="text-xl font-bold text-white mb-4 mt-2">Sélection</h3>
               <p className="text-[#d6d3d1] text-sm leading-relaxed">
                 Choisissez parmi notre catalogue et personnalisez vos sièges : coloris, finitions,
@@ -534,9 +469,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
             </div>
 
             <div className="bg-[#292524] p-8 border border-[#44403c] relative shadow-lg">
-              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">
-                3
-              </span>
+              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">3</span>
               <h3 className="text-xl font-bold text-white mb-4 mt-2">Devis sous 24h</h3>
               <p className="text-[#d6d3d1] text-sm leading-relaxed">
                 Prix dégressifs, options de livraison vers {cityData.ville} et planning de production
@@ -545,9 +478,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
             </div>
 
             <div className="bg-[#292524] p-8 border border-[#44403c] relative shadow-lg">
-              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">
-                4
-              </span>
+              <span className="absolute -top-5 -left-5 w-12 h-12 bg-[#8b8b4b] text-white flex items-center justify-center font-bold text-xl rounded-sm">4</span>
               <h3 className="text-xl font-bold text-white mb-4 mt-2">
                 Livraison à {cityData.ville}
               </h3>
@@ -636,7 +567,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
               Nous Livrons dans Toute la Belgique
             </h2>
             <p className="text-[#d6d3d1] text-lg">
-              Découvrez nos pages dédiées par province et par ville.
+              Découvrez nos tarifs, zones couvertes et délais par province.
             </p>
           </div>
 
@@ -660,7 +591,7 @@ export default async function BelgiqueCityPage({ params }: Props) {
                 {siblingCities.map((c) => (
                   <Link
                     key={c.slug}
-                    href={`/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${c.slug}`}
+                    href={`/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${c.provinceSlug}/${c.slug}`}
                     className="px-4 py-2 bg-[#292524] border border-[#44403c] text-[#8b8b4b] font-bold text-sm hover:border-[#8b8b4b] hover:text-white transition-colors rounded-sm"
                   >
                     {c.ville}
@@ -672,56 +603,33 @@ export default async function BelgiqueCityPage({ params }: Props) {
 
           {/* All provinces */}
           <div className="border-t border-[#44403c] pt-12">
-            <h3 className="text-xl font-bold text-white mb-8 text-center">
-              Toutes Nos Provinces
-            </h3>
+            <h3 className="text-xl font-bold text-white mb-8 text-center">Toutes Nos Provinces</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              <Link
-                href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique"
-                className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left"
-              >
+              <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Belgique</span>
                 <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Page Nationale</span>
               </Link>
-              <Link
-                href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/bruxelles-capitale"
-                className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left"
-              >
+              <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/bruxelles-capitale" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
                 <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Bruxelles-Capitale</span>
               </Link>
-              <Link
-                href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/hainut"
-                className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left"
-              >
+              <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/hainut" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
                 <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Hainaut</span>
               </Link>
-              <Link
-                href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/liege"
-                className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left"
-              >
+              <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/liege" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
                 <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Liège</span>
               </Link>
-              <Link
-                href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/namur"
-                className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left"
-              >
+              <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/namur" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
                 <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Namur</span>
               </Link>
-              <Link
-                href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/brabant-wallon"
-                className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left"
-              >
+              <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/brabant-wallon" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
                 <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Brabant wallon</span>
               </Link>
-              <Link
-                href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/luxembourg"
-                className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left"
-              >
+              <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/luxembourg" className="bg-[#292524] p-5 border border-[#44403c] hover:border-[#8b8b4b] transition-all group rounded-sm text-left">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-stone-500 mb-2">Province</span>
                 <span className="block text-sm font-bold text-[#8b8b4b] group-hover:text-white transition-colors">Luxembourg (Belgique)</span>
               </Link>

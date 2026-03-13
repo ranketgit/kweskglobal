@@ -1,4 +1,34 @@
 import createNextIntlPlugin from 'next-intl/plugin'
+import { createRequire } from 'module'
+
+const require = createRequire(import.meta.url)
+const citiesBelgique = require('./data/cities-belgique.json')
+const citiesFr = require('./data/cities-fr.json')
+
+// Province map: English key → French slug
+const FR_PROVINCE_MAP = {
+  Alsace: 'alsace',
+  Aquitaine: 'aquitaine',
+  Brittany: 'bretagne',
+  Burgundy: 'bourgogne',
+  Champagne: 'champagne-ardenne',
+  Corsica: 'corse',
+  Languedoc: 'languedoc-roussillon',
+  Normandy: 'normandie',
+  Provence: 'provence',
+  'Île-de-France': 'ile-de-france',
+}
+
+function slugifyFr(city) {
+  return city
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/é/g, 'e').replace(/è/g, 'e').replace(/ê/g, 'e')
+    .replace(/à/g, 'a').replace(/â/g, 'a')
+    .replace(/ô/g, 'o').replace(/î/g, 'i').replace(/ï/g, 'i')
+    .replace(/ù/g, 'u').replace(/û/g, 'u')
+    .replace(/ç/g, 'c')
+}
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
@@ -64,13 +94,35 @@ export default withNextIntl({
       statusCode: 301,
     }));
 
+    // 301 redirects: Belgium old city URLs → new province/city structure
+    const belgiqueRedirects = citiesBelgique.map((city) => ({
+      source: `/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${city.slug}`,
+      destination: `/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${city.provinceSlug}/${city.slug}`,
+      permanent: true,
+    }))
+
+    // 301 redirects: France old city URLs → new province/city structure
+    const franceRedirects = citiesFr
+      .filter((city) => FR_PROVINCE_MAP[city.Provinces])
+      .map((city) => {
+        const provinceSlug = FR_PROVINCE_MAP[city.Provinces]
+        const citySlug = slugifyFr(city.City)
+        return {
+          source: `/fr/fabricant-de-chaises-de-bureau-professionnel/france/${citySlug}`,
+          destination: `/fr/fabricant-de-chaises-de-bureau-professionnel/france/${provinceSlug}/${citySlug}`,
+          permanent: true,
+        }
+      })
+
     return [
       ...formattedManualLinks,
       {
         source: '/fr/mobilier-de-bureau-professionnel-a-:city',
         destination: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/:city',
         statusCode: 301,
-      }
+      },
+      ...belgiqueRedirects,
+      ...franceRedirects,
     ]
   }
 })

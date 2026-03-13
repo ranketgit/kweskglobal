@@ -8,10 +8,26 @@ const baseUrl = 'https://kwesk.com'
 type CityData = {
   id: string
   City: string
+  Provinces: string
 }
 
 type BelgiqueCityData = {
   slug: string
+  provinceSlug: string
+}
+
+// English Provinces key → French slug
+const FR_PROVINCE_SLUGS: Record<string, string> = {
+  Alsace: 'alsace',
+  Aquitaine: 'aquitaine',
+  Brittany: 'bretagne',
+  Burgundy: 'bourgogne',
+  Champagne: 'champagne-ardenne',
+  Corsica: 'corse',
+  Languedoc: 'languedoc-roussillon',
+  Normandy: 'normandie',
+  Provence: 'provence',
+  'Île-de-France': 'ile-de-france',
 }
 
 function generateSlug(city: string): string {
@@ -129,17 +145,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // 8. France city pages — fr only
-  const cityUrls = (citiesData as CityData[]).map((city) => ({
-    url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/france/${generateSlug(city.City)}`,
+  // 8. France province pages — fr only (10 provinces)
+  const franceProvinceUrls = Object.values(FR_PROVINCE_SLUGS).map((slug) => ({
+    url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/france/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.8,
   }))
 
-  // 9. Belgium city pages — fr only
+  // 9. France city pages — fr only (new URL: /france/{province}/{city})
+  const cityUrls = (citiesData as CityData[])
+    .filter((city) => FR_PROVINCE_SLUGS[city.Provinces])
+    .map((city) => ({
+      url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/france/${FR_PROVINCE_SLUGS[city.Provinces]}/${generateSlug(city.City)}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
+
+  // 10. Belgium city pages — fr only (new URL: /belgique/{province}/{city})
   const belgiqueCityUrls = (citiesBelgique as BelgiqueCityData[]).map((city) => ({
-    url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${city.slug}`,
+    url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${city.provinceSlug}/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -154,6 +180,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...franceHubUrl,
     ...belgiqueHubUrl,
     ...belgiqueProvinces,
+    ...franceProvinceUrls,
     ...cityUrls,
     ...belgiqueCityUrls,
   ]

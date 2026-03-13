@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
-import citiesData from '../../../../../data/cities-fr.json'
-import ChairsSection from '../../../(HOMEPAGE)/components/ChairSection/ChairSection'
-import Customers from '@/app/shared/Customers'
-import AboutNormes from '../../../(ABOUT)/about/components/AboutNormes'
-import Features from '../../../(ABOUT)/about/components/Features'
-import Image from 'next/image'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import citiesData from '../../../../../../data/cities-fr.json'
+import ChairsSection from '../../../../(HOMEPAGE)/components/ChairSection/ChairSection'
+import Customers from '@/app/shared/Customers'
+import AboutNormes from '../../../../(ABOUT)/about/components/AboutNormes'
+import Features from '../../../../(ABOUT)/about/components/Features'
 
 export const dynamic = 'force-static'
 export const dynamicParams = false
@@ -18,13 +18,32 @@ type CityData = {
   meta_title: string
   meta_description: string
   Provinces: string
-  "Page Types": string
+  'Page Types': string
   City: string
 }
 
-type Props = { 
-  params: Promise<{ city: string, locale: string }> 
+type Props = {
+  params: Promise<{ province: string; city: string; locale: string }>
 }
+
+// English Provinces key → French slug
+const PROVINCE_MAP: Record<string, { name: string; slug: string }> = {
+  Alsace: { name: 'Alsace', slug: 'alsace' },
+  Aquitaine: { name: 'Aquitaine', slug: 'aquitaine' },
+  Brittany: { name: 'Bretagne', slug: 'bretagne' },
+  Burgundy: { name: 'Bourgogne', slug: 'bourgogne' },
+  Champagne: { name: 'Champagne-Ardenne', slug: 'champagne-ardenne' },
+  Corsica: { name: 'Corse', slug: 'corse' },
+  Languedoc: { name: 'Languedoc-Roussillon', slug: 'languedoc-roussillon' },
+  Normandy: { name: 'Normandie', slug: 'normandie' },
+  Provence: { name: 'Provence', slug: 'provence' },
+  'Île-de-France': { name: 'Île-de-France', slug: 'ile-de-france' },
+}
+
+// Reverse map: French slug → English key
+const SLUG_TO_KEY: Record<string, string> = Object.fromEntries(
+  Object.entries(PROVINCE_MAP).map(([key, val]) => [val.slug, key])
+)
 
 function generateSlug(city: string): string {
   return city
@@ -43,74 +62,83 @@ function generateSlug(city: string): string {
     .replace(/ç/g, 'c')
 }
 
-export async function generateStaticParams() {
-  return (citiesData as CityData[]).map((city) => ({
-    city: generateSlug(city.City)
-  }))
-}
-
 function getCityBySlug(slug: string): CityData | undefined {
   return (citiesData as CityData[]).find((city) => generateSlug(city.City) === slug)
 }
 
-// Parse HTML content into sections
-function parseContent(html: string): { intro: string, sections: { title: string, content: string }[] } {
-  const sections: { title: string, content: string }[] = []
+function parseContent(html: string): { intro: string; sections: { title: string; content: string }[] } {
+  const sections: { title: string; content: string }[] = []
   let intro = ''
-  
-  // Split by h2 tags
+
   const parts = html.split(/<h2[^>]*>/i)
-  
+
   if (parts.length > 0) {
-    // First part before any h2 is intro
     intro = parts[0].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
   }
-  
+
   for (let i = 1; i < parts.length; i++) {
     const part = parts[i]
     const h2EndIndex = part.indexOf('</h2>')
-    
     if (h2EndIndex !== -1) {
       const title = part.substring(0, h2EndIndex).replace(/<[^>]+>/g, '').trim()
       const content = part.substring(h2EndIndex + 5).trim()
       sections.push({ title, content })
     }
   }
-  
+
   return { intro, sections }
+}
+
+export async function generateStaticParams() {
+  return (citiesData as CityData[]).map((city) => {
+    const provinceEntry = PROVINCE_MAP[city.Provinces]
+    return {
+      province: provinceEntry ? provinceEntry.slug : generateSlug(city.Provinces),
+      city: generateSlug(city.City),
+    }
+  })
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city, locale } = await params
   const cityData = getCityBySlug(city)
-  
-  if (!cityData) {
-    return { title: 'Page not found' }
-  }
+
+  if (!cityData) return { title: 'Page not found' }
+
+  const provinceEntry = PROVINCE_MAP[cityData.Provinces]
+  const provinceSlug = provinceEntry ? provinceEntry.slug : generateSlug(cityData.Provinces)
 
   return {
     title: cityData.meta_title,
     description: cityData.meta_description,
     alternates: {
-      canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel/france/${city}`,
+      canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel/france/${provinceSlug}/${city}`,
     },
   }
 }
 
-export default async function CityPage({ params }: Props) {
-  const { city, locale } = await params
+export default async function FranceProvinceCityPage({ params }: Props) {
+  const { province, city, locale } = await params
   const cityData = getCityBySlug(city)
 
   if (!cityData) {
     return <div>City not found</div>
   }
 
+  const provinceEntry = PROVINCE_MAP[cityData.Provinces]
+  const provinceSlug = provinceEntry ? provinceEntry.slug : generateSlug(cityData.Provinces)
+  const provinceName = provinceEntry ? provinceEntry.name : cityData.Provinces
+
   const { intro, sections } = parseContent(cityData.Content)
 
   return (
     <main>
-      <link rel="alternate" hrefLang="x-default" href={`https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel/france/${city}`} />
-      
+      <link
+        rel="alternate"
+        hrefLang="x-default"
+        href={`https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel/france/${provinceSlug}/${city}`}
+      />
+
       {/* Hero */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-stone-900">
@@ -119,7 +147,7 @@ export default async function CityPage({ params }: Props) {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 w-full">
           <div className="max-w-3xl">
             <span className="inline-block text-xs uppercase tracking-[4px] text-[#8b8b4b] mb-6">
-              {cityData.Provinces} — France
+              {provinceName} — France
             </span>
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight mb-6">
               {cityData.h1}
@@ -128,13 +156,13 @@ export default async function CityPage({ params }: Props) {
               {intro.substring(0, 200)}...
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link 
+              <Link
                 href="/contact"
                 className="px-8 py-4 bg-[#8b8b4b] text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all"
               >
                 Demander un Devis
               </Link>
-              <a 
+              <a
                 href="#expertise"
                 className="px-8 py-4 bg-transparent border border-white/30 text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all"
               >
@@ -151,7 +179,7 @@ export default async function CityPage({ params }: Props) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <span className="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">15+</span>
-              <span className="text-xs text-stone-400 uppercase tracking-wider">Années d'Expérience</span>
+              <span className="text-xs text-stone-400 uppercase tracking-wider">Années d&apos;Expérience</span>
             </div>
             <div>
               <span className="block text-2xl lg:text-3xl font-bold text-[#8b8b4b] mb-2">100%</span>
@@ -182,20 +210,15 @@ export default async function CityPage({ params }: Props) {
               </h2>
             </div>
             <div>
-              <p className="text-stone-600 leading-relaxed text-lg">
-                {intro}
-              </p>
+              <p className="text-stone-600 leading-relaxed text-lg">{intro}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Content Sections - Alternating Layout */}
+      {/* Content Sections */}
       {sections.map((section, index) => (
-        <section 
-          key={index} 
-          className={`py-20 ${index % 2 === 0 ? 'bg-stone-50' : 'bg-white'}`}
-        >
+        <section key={index} className={`py-20 ${index % 2 === 0 ? 'bg-stone-50' : 'bg-white'}`}>
           <div className="max-w-7xl mx-auto px-6 lg:px-16">
             <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-start ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -206,7 +229,7 @@ export default async function CityPage({ params }: Props) {
                   {section.title}
                 </h2>
               </div>
-              <div 
+              <div
                 className={`text-stone-600 leading-relaxed prose prose-stone max-w-none
                   prose-h3:text-lg prose-h3:font-bold prose-h3:text-stone-800 prose-h3:mt-6 prose-h3:mb-3
                   prose-p:mb-4 prose-ul:my-4 prose-li:my-1
@@ -223,48 +246,48 @@ export default async function CityPage({ params }: Props) {
       <section className="py-20 bg-stone-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-16">
-            <span className="inline-block text-xs uppercase tracking-[3px] text-[#8b8b4b] mb-4">
-              AVANTAGES
-            </span>
+            <span className="inline-block text-xs uppercase tracking-[3px] text-[#8b8b4b] mb-4">AVANTAGES</span>
             <h2 className="text-3xl lg:text-4xl font-bold text-white">
               Pourquoi Choisir Kwesk à {cityData.City} ?
             </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-stone-800 p-8 hover:bg-stone-700 transition-all group">
               <div className="w-14 h-14 bg-[#8b8b4b] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Fabrication Française</h3>
               <p className="text-stone-400 leading-relaxed">
-                Notre mobilier de bureau est conçu et fabriqué en France selon les normes les plus strictes de qualité et d'ergonomie.
+                Notre mobilier de bureau est conçu et fabriqué en France selon les normes les plus
+                strictes de qualité et d&apos;ergonomie.
               </p>
             </div>
-            
+
             <div className="bg-stone-800 p-8 hover:bg-stone-700 transition-all group">
               <div className="w-14 h-14 bg-[#8b8b4b] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Livraison Rapide</h3>
               <p className="text-stone-400 leading-relaxed">
-                Livraison et installation professionnelle à {cityData.City} et dans toute la région {cityData.Provinces}.
+                Livraison et installation professionnelle à {cityData.City} et dans toute la région{' '}
+                {provinceName}.
               </p>
             </div>
-            
+
             <div className="bg-stone-800 p-8 hover:bg-stone-700 transition-all group">
               <div className="w-14 h-14 bg-[#8b8b4b] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Devis Gratuit</h3>
               <p className="text-stone-400 leading-relaxed">
-                Obtenez un devis personnalisé et gratuit pour votre projet d'aménagement de bureau.
+                Obtenez un devis personnalisé et gratuit pour votre projet d&apos;aménagement de bureau.
               </p>
             </div>
           </div>
@@ -276,34 +299,54 @@ export default async function CityPage({ params }: Props) {
       <AboutNormes />
       <Customers />
 
+      {/* Province breadcrumb + CTA */}
+      <section className="py-16 bg-stone-50 border-t border-stone-200">
+        <div className="max-w-4xl mx-auto px-6 lg:px-16 text-center">
+          <p className="text-stone-500 text-sm mb-6">
+            <Link
+              href={`/fr/fabricant-de-chaises-de-bureau-professionnel/france/${provinceSlug}`}
+              className="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors"
+            >
+              ← Toutes les villes en {provinceName}
+            </Link>
+            {' · '}
+            <Link
+              href="/fr/fabricant-de-chaises-de-bureau-professionnel/france"
+              className="text-[#8b8b4b] font-bold hover:text-[#1c1917] underline transition-colors"
+            >
+              Toutes les zones France
+            </Link>
+          </p>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 bg-[#8b8b4b]">
         <div className="max-w-4xl mx-auto px-6 lg:px-16 text-center">
-          <span className="inline-block text-xs uppercase tracking-[3px] text-white/70 mb-4">
-            CONTACTEZ-NOUS
-          </span>
+          <span className="inline-block text-xs uppercase tracking-[3px] text-white/70 mb-4">CONTACTEZ-NOUS</span>
           <h2 className="text-3xl lg:text-5xl text-white font-bold mb-6">
             Fabricant de Chaises de Bureau à {cityData.City}
           </h2>
           <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto">
-            Contactez nos experts pour un accompagnement personnalisé dans votre projet d'aménagement de bureau.
+            Contactez nos experts pour un accompagnement personnalisé dans votre projet d&apos;aménagement
+            de bureau.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <Link
               href="/contact"
               className="inline-flex items-center gap-3 px-10 py-5 bg-white text-stone-900 text-sm font-semibold uppercase tracking-wider hover:bg-stone-900 hover:text-white transition-all"
             >
               Demander un Devis
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <a 
+            <a
               href="tel:+212520241637"
               className="inline-flex items-center gap-3 px-10 py-5 bg-transparent border-2 border-white text-white text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-stone-900 transition-all"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               Nous Appeler
             </a>
