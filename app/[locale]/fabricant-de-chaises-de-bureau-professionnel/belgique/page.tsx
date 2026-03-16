@@ -459,10 +459,10 @@ export default function BelgiumPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Nos Pages Dédiées par Ville en Belgique
+              Fabricant de Chaises de Bureau pour Toute la Belgique
             </h2>
             <p className="text-[#d6d3d1] text-lg leading-relaxed">
-              Découvrez nos pages dédiées pour chaque ville belge que nous desservons.
+              KWESK livre et installe du mobilier de bureau professionnel dans toute la Belgique. En tant que Fabricant de Chaises de Bureau, nous accompagnons les entreprises, distributeurs et professionnels avec des solutions de sièges adaptées à leurs projets d’aménagement dans chaque ville du pays.
             </p>
           </div>
 
