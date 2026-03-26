@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import citiesData from '@/data/cities-fr.json'
 import citiesBelgique from '@/data/cities-belgique.json'
+import citiesCanadaEn from '@/data/cities-canada-en.json'
 import { getPosts } from '../app/lib/blog' // Make sure this path points to your lib file
 
 const baseUrl = 'https://kwesk.com'
@@ -14,6 +15,12 @@ type CityData = {
 type BelgiqueCityData = {
   slug: string
   provinceSlug: string
+}
+
+type CanadaCityData = {
+  city: string
+  province: string
+  slug: string
 }
 
 // English Provinces key → French slug
@@ -45,6 +52,10 @@ function generateSlug(city: string): string {
     .replace(/ù/g, 'u')
     .replace(/û/g, 'u')
     .replace(/ç/g, 'c')
+}
+
+function generateProvinceSlug(text: string): string {
+  return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -122,7 +133,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }]
 
-  // 6. Belgium hub page — fr only
+  // 6. Afrique hub page — fr only
+  const afriqueHubUrl = [{
+    url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/afrique`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }]
+
+  // 7. Belgium hub page — fr only
   const belgiqueHubUrl = [{
     url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/belgique`,
     lastModified: new Date(),
@@ -130,7 +149,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }]
 
-  // 7. Belgium province pages — fr only
+  // 8. Belgium province pages — fr only
   const belgiqueProvinces = [
     'bruxelles-capitale',
     'hainut',
@@ -145,7 +164,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // 8. France province pages — fr only (10 provinces)
+  // 9. France province pages — fr only (10 provinces)
   const franceProvinceUrls = Object.values(FR_PROVINCE_SLUGS).map((slug) => ({
     url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/france/${slug}`,
     lastModified: new Date(),
@@ -153,7 +172,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // 9. France city pages — fr only (new URL: /france/{province}/{city})
+  // 10. France city pages — fr only (new URL: /france/{province}/{city})
   const cityUrls = (citiesData as CityData[])
     .filter((city) => FR_PROVINCE_SLUGS[city.Provinces])
     .map((city) => ({
@@ -163,9 +182,59 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }))
 
-  // 10. Belgium city pages — fr only (new URL: /belgique/{province}/{city})
+  // 11. Belgium city pages — fr only (new URL: /belgique/{province}/{city})
   const belgiqueCityUrls = (citiesBelgique as BelgiqueCityData[]).map((city) => ({
     url: `${baseUrl}/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/${city.provinceSlug}/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  // 12. EN hub page
+  const enHubUrl = [{
+    url: `${baseUrl}/en/office-chair-manufacturer/`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }]
+
+  // 13. EN USA hub page
+  const enUsaHubUrl = [{
+    url: `${baseUrl}/en/office-chair-manufacturer/usa`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }]
+
+  // 14. EN Africa page
+  const enAfricaUrl = [{
+    url: `${baseUrl}/en/office-chair-manufacturer/africa`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }]
+
+  // 15. EN Canada hub page
+  const enCanadaHubUrl = [{
+    url: `${baseUrl}/en/office-chair-manufacturer/canada`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }]
+
+  // 16. EN Canada province pages
+  const enCanadaProvinceUrls = Array.from(
+    new Set((citiesCanadaEn as CanadaCityData[]).map((c) => generateProvinceSlug(c.province)))
+  ).map((slug) => ({
+    url: `${baseUrl}/en/office-chair-manufacturer/canada/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // 17. EN Canada city pages
+  const enCanadaCityUrls = (citiesCanadaEn as CanadaCityData[]).map((city) => ({
+    url: `${baseUrl}/en/office-chair-manufacturer/canada/${generateProvinceSlug(city.province)}/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -179,9 +248,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...hubUrl,
     ...franceHubUrl,
     ...belgiqueHubUrl,
+    ...afriqueHubUrl,
     ...belgiqueProvinces,
     ...franceProvinceUrls,
     ...cityUrls,
     ...belgiqueCityUrls,
+    ...enHubUrl,
+    ...enUsaHubUrl,
+    ...enAfricaUrl,
+    ...enCanadaHubUrl,
+    ...enCanadaProvinceUrls,
+    ...enCanadaCityUrls,
   ]
 }

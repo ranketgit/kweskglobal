@@ -10,10 +10,15 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: 'Fabricant de Chaises de Bureau Professionnel | France & Belgique | KWESK',
-    description: 'KWESK, fabricant de chaises de bureau professionnel depuis 2008, livre directement les entreprises de France et Belgique. Prix usine, certifications BIFMA & EN 1335, devis sous 24h.',
+    title: 'Fabricant de Chaises de Bureau Professionnel | France, Belgique & Afrique | KWESK',
+    description: "KWESK, fabricant de chaises de bureau professionnel depuis 2008, livre directement les entreprises de France, Belgique et d'Afrique francophone. Prix usine, certifications BIFMA & EN 1335, devis sous 24h.",
     alternates: {
       canonical: `https://kwesk.com/${locale}/fabricant-de-chaises-de-bureau-professionnel`,
+      languages: {
+        fr: 'https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel',
+        en: 'https://kwesk.com/en/office-chair-manufacturer/',
+        'x-default': 'https://kwesk.com/en/office-chair-manufacturer/',
+      },
     },
   }
 }
@@ -40,6 +45,7 @@ const countries = [
     ],
     href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france',
     cta: 'France — Tarifs & Zones de Livraison',
+    regionsLabel: 'Régions',
     accent: '#8b8b4b',
   },
   {
@@ -63,6 +69,31 @@ const countries = [
     ],
     href: '/fr/fabricant-de-chaises-de-bureau-professionnel/belgique',
     cta: 'Belgique — Tarifs & Zones de Livraison',
+    regionsLabel: 'Provinces',
+    accent: '#8b8b4b',
+  },
+  {
+    name: 'Afrique Francophone',
+    label: 'AFRIQUE',
+    slug: 'afrique',
+    image: '/hero-chairs.png',
+    description: "KWESK exporte directement ses chaises de bureau professionnelles vers les importateurs, distributeurs et grandes entreprises d'Afrique francophone. Certifications BIFMA & EN 1335, documentation douanière complète, expédition par conteneur ou fret aérien.",
+    stats: [
+      { value: '12+', label: 'Pays desservis' },
+      { value: '10', label: 'Villes clés' },
+      { value: '24h', label: 'Délai devis' },
+    ],
+    regions: [
+      { name: "Côte d'Ivoire", href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#cote-divoire' },
+      { name: 'Sénégal', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#senegal' },
+      { name: 'Cameroun', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#cameroun' },
+      { name: 'RD Congo', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#rdc' },
+      { name: 'Gabon', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#gabon' },
+      { name: 'Rwanda', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#rwanda' },
+    ],
+    href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique',
+    cta: 'Afrique — Tarifs Export B2B',
+    regionsLabel: 'Pays Couverts',
     accent: '#8b8b4b',
   },
 ]
@@ -79,7 +110,9 @@ const products = [
 export default function FabricantHubPage() {
   return (
     <main className="font-sans text-[#1c1917]">
-      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel" />
+      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/en/office-chair-manufacturer/" />
+      <link rel="alternate" hrefLang="fr" href="https://kwesk.com/fr/fabricant-de-chaises-de-bureau-professionnel" />
+      <link rel="alternate" hrefLang="en" href="https://kwesk.com/en/office-chair-manufacturer/" />
 
       {/* HERO */}
       <section className="relative min-h-[80vh] flex items-center bg-[#1c1917] overflow-hidden pt-[120px] pb-24">
@@ -91,7 +124,7 @@ export default function FabricantHubPage() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-16 text-center">
           <span className="inline-block text-[11px] tracking-[4px] text-[#8b8b4b] uppercase font-bold mb-6">
-            France &amp; Belgique
+            France, Belgique &amp; Afrique
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8 uppercase tracking-tight">
             Fabricant de Chaises de Bureau Professionnel
@@ -99,8 +132,10 @@ export default function FabricantHubPage() {
           <p className="text-lg text-[#d6d3d1] leading-relaxed max-w-3xl mx-auto mb-10">
             <strong className="text-white">KWESK</strong> est le fabricant de chaises de bureau professionnel de référence pour les entreprises, administrations et distributeurs de{' '}
             <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/france" className="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">France</Link>
-            {' '}et de{' '}
-            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique" className="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">Belgique</Link>.
+            {', '}de{' '}
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/belgique" className="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">Belgique</Link>
+            {' '}et d&apos;{' '}
+            <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/afrique" className="text-[#8b8b4b] font-bold hover:text-white underline transition-colors">Afrique francophone</Link>.
             {' '}Prix usine directs, certifications BIFMA &amp; EN 1335, livraison directe depuis 2008.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,14 +185,14 @@ export default function FabricantHubPage() {
           <div className="text-center mb-16">
             <span className="text-[11px] tracking-[3px] text-[#8b8b4b] uppercase font-bold block mb-4">Nos Marchés</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1c1917] uppercase tracking-tight mb-4">
-              France & Belgique — Couverture Directe
+              France, Belgique &amp; Afrique — Couverture Directe
             </h2>
             <p className="text-stone-600 text-lg max-w-2xl mx-auto">
-              KWESK livre directement en France et en Belgique. Consultez les tarifs, zones couvertes et délais par région ou province.
+              KWESK livre directement en France et en Belgique, et exporte vers l&apos;Afrique francophone. Consultez les tarifs, zones couvertes et délais par région, province ou pays.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {countries.map((country) => (
               <div key={country.slug} className="group border border-stone-200 hover:border-[#8b8b4b] transition-all duration-300 bg-white overflow-hidden">
                 {/* Image */}
@@ -189,7 +224,7 @@ export default function FabricantHubPage() {
 
                   {/* Region pills */}
                   <div className="mb-8">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-stone-400 block mb-3">Régions / Provinces</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-stone-400 block mb-3">{country.regionsLabel ?? 'Régions / Provinces'}</span>
                     <div className="flex flex-wrap gap-2">
                       {country.regions.map((region) => (
                         <Link
@@ -327,11 +362,11 @@ export default function FabricantHubPage() {
           <div className="text-center mb-16">
             <span className="text-[11px] tracking-[3px] text-[#8b8b4b] uppercase font-bold block mb-4">Couverture Géographique</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1c1917] uppercase tracking-tight">
-              Livraison dans Toute la France &amp; la Belgique
+              Livraison France &amp; Belgique — Export Afrique
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {/* France */}
             <div>
               <div className="flex items-center gap-3 mb-6 pb-4 border-b-2 border-[#8b8b4b]">
@@ -396,6 +431,39 @@ export default function FabricantHubPage() {
                 ))}
               </div>
               <p className="text-xs text-stone-400 mt-4">+ 17 autres villes belges disponibles</p>
+            </div>
+
+            {/* Afrique */}
+            <div>
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b-2 border-[#8b8b4b]">
+                <h3 className="text-xl font-bold text-[#1c1917] uppercase tracking-wide">Afrique Francophone</h3>
+                <Link href="/fr/fabricant-de-chaises-de-bureau-professionnel/afrique" className="text-xs text-[#8b8b4b] font-bold hover:underline ml-auto">
+                  Toutes les villes Afrique
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { name: 'Abidjan', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#abidjan' },
+                  { name: 'Dakar', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#dakar' },
+                  { name: 'Kinshasa', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#kinshasa' },
+                  { name: 'Douala', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#douala' },
+                  { name: 'Libreville', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#libreville' },
+                  { name: 'Yaoundé', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#yaounde' },
+                  { name: 'Kigali', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#kigali' },
+                  { name: 'Brazzaville', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#brazzaville' },
+                  { name: 'Lomé', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#lome' },
+                  { name: 'Cotonou', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#cotonou' },
+                ].map((city) => (
+                  <Link
+                    key={city.name}
+                    href={city.href}
+                    className="px-4 py-2.5 bg-stone-50 border border-stone-200 text-[#1c1917] text-sm font-bold hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm"
+                  >
+                    {city.name}
+                  </Link>
+                ))}
+              </div>
+              <p className="text-xs text-stone-400 mt-4">12+ pays d&apos;Afrique francophone desservis</p>
             </div>
           </div>
         </div>
@@ -469,21 +537,21 @@ export default function FabricantHubPage() {
       {/* INTERNAL LINKS - Provinces / Régions */}
       <section className="py-16 bg-stone-50 border-t border-stone-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             <div>
               <h3 className="text-sm font-bold uppercase tracking-widest text-[#1c1917] mb-6 pb-3 border-b border-stone-200">
                 Régions — France
               </h3>
               <div className="flex flex-wrap gap-2">
                 {[
-                  { name: 'Île-de-France', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/paris' },
-                  { name: 'Auvergne-Rhône-Alpes', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/lyon' },
-                  { name: 'PACA', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/marseille' },
-                  { name: 'Occitanie', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/toulouse' },
-                  { name: 'Nouvelle-Aquitaine', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/bordeaux' },
-                  { name: 'Hauts-de-France', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/lille' },
-                  { name: 'Grand Est', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/strasbourg' },
-                  { name: 'Bretagne', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/rennes' },
+                  { name: 'Île-de-France', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/ile-de-france' },
+                  { name: 'Provence', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/provence' },
+                  { name: 'Aquitaine', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/aquitaine' },
+                  { name: 'Normandie', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/normandie' },
+                  { name: 'Bretagne', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/bretagne' },
+                  { name: 'Grand Est', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/alsace' },
+                  { name: 'Languedoc-Roussillon', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/languedoc-roussillon' },
+                  { name: 'Bourgogne', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/france/bourgogne' },
                 ].map((r) => (
                   <Link key={r.name} href={r.href} className="px-3 py-1.5 text-xs font-bold text-stone-600 border border-stone-200 hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm bg-white">
                     {r.name}
@@ -503,6 +571,27 @@ export default function FabricantHubPage() {
                   { name: 'Namur', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/namur' },
                   { name: 'Brabant wallon', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/brabant-wallon' },
                   { name: 'Luxembourg', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/belgique/luxembourg' },
+                ].map((r) => (
+                  <Link key={r.name} href={r.href} className="px-3 py-1.5 text-xs font-bold text-stone-600 border border-stone-200 hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm bg-white">
+                    {r.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-[#1c1917] mb-6 pb-3 border-b border-stone-200">
+                Pays — Afrique Francophone
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { name: "Côte d'Ivoire", href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#cote-divoire' },
+                  { name: 'Sénégal', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#senegal' },
+                  { name: 'Cameroun', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#cameroun' },
+                  { name: 'RD Congo', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#rdc' },
+                  { name: 'Gabon', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#gabon' },
+                  { name: 'Rwanda', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#rwanda' },
+                  { name: 'Togo', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#togo' },
+                  { name: 'Bénin', href: '/fr/fabricant-de-chaises-de-bureau-professionnel/afrique#benin' },
                 ].map((r) => (
                   <Link key={r.name} href={r.href} className="px-3 py-1.5 text-xs font-bold text-stone-600 border border-stone-200 hover:border-[#8b8b4b] hover:text-[#8b8b4b] transition-colors rounded-sm bg-white">
                     {r.name}

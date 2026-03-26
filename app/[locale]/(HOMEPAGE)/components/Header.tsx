@@ -83,8 +83,8 @@ export default function Header() {
     let newPath = pathname;
 
     if (locale === 'fr' && pathname.includes('/fabricant-de-chaises-de-bureau-professionnel')) {
-      newPath = '/en/office-chair-manufacturer/usa';
-    } else if (locale === 'en' && pathname.includes('/office-chair-manufacturer/usa')) {
+      newPath = '/en/office-chair-manufacturer/';
+    } else if (locale === 'en' && pathname.includes('/office-chair-manufacturer')) {
       newPath = '/fr/fabricant-de-chaises-de-bureau-professionnel';
     } else {
       newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
@@ -123,7 +123,7 @@ export default function Header() {
           <div className="group">
             {/* Dynamic Link for Chairs/USA based on locale */}
             <Link 
-              href={locale === 'fr' ? '/fabricant-de-chaises-de-bureau-professionnel' : '/office-chair-manufacturer/usa'} 
+              href={locale === 'fr' ? '/fabricant-de-chaises-de-bureau-professionnel' : '/office-chair-manufacturer/'}
               className={`flex items-center gap-1.5 text-sm uppercase tracking-wide transition-colors ${isSolid ? 'text-stone-900' : 'text-white'}`}
             >
               {t('chairs')}
@@ -220,11 +220,11 @@ export default function Header() {
           
           <div className={`overflow-hidden transition-all duration-500 ${mobileChairsOpen ? 'max-h-[2000px]' : 'max-h-0'}`}>
             <Link 
-              href={locale === 'fr' ? '/fabricant-de-chaises-de-bureau-professionnel' : '/office-chair-manufacturer/usa'} 
-              onClick={() => setMobileOpen(false)} 
+              href={locale === 'fr' ? '/fabricant-de-chaises-de-bureau-professionnel' : '/office-chair-manufacturer/'}
+              onClick={() => setMobileOpen(false)}
               className="py-4 pl-4 text-base text-[#8b8b4b] font-bold block border-b border-stone-50"
             >
-              {locale === 'fr' ? 'VOIR TOUS LES MODÈLES' : 'USA LOCATIONS'}
+              {locale === 'fr' ? 'VOIR TOUS LES MODÈLES' : 'ALL LOCATIONS'}
             </Link>
 
             {chairs.map((chair) => (
