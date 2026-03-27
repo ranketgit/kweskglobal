@@ -5,7 +5,7 @@ date: "2026-03-27"
 image: "/blog/bureau-pas-cher-guide-qualite-2026.webp"
 meta_title: "Bureau Pas Cher : Guide Qualité 2026 | KWESK"
 meta_description: "Cherchez un bureau pas cher pour vos équipes ? Notre guide 2026 vous aide à trouver le meilleur rapport qualité-prix pour un usage professionnel intensif. Contactez KWESK."
-category: Budget & Prix
+category: Budget et Prix
 ---
 
 Trouver un **bureau pas cher** ne signifie pas forcément faire une croix sur la qualité. Pour un responsable achats ou un office manager, le vrai enjeu est ailleurs : éviter les faux économies qui se transforment en dépenses imprévues à 18 mois. Un plateau qui gondole, une structure instable ou un revêtement qui s'effrite coûtent bien plus cher que le différentiel de prix au moment de l'achat.
