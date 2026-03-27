@@ -5,7 +5,7 @@ date: "2026-03-27"
 image: "/blog/bureau-pas-cher-guide-qualite-2026.webp"
 meta_title: "Budget Office Desks: Quality Guide 2026 | KWESK"
 meta_description: "Looking for an affordable office desk for your team? Our 2026 guide helps you find the best value for money for intensive professional use. Contact KWESK."
-category: Budget & Prix
+category: Budget et Prix
 ---
 
 Finding an **affordable office desk** does not mean compromising on quality. For a purchasing manager or office manager, the real challenge is elsewhere: avoiding false savings that turn into unexpected expenses 18 months down the line. A warping surface, an unstable structure, or a peeling finish will cost far more than the price difference at the time of purchase.
