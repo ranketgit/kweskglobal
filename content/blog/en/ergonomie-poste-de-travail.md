@@ -3,8 +3,7 @@ title: "Office Ergonomics: Complete Guide to Setting Up Your Workstation"
 description: "Learn how to optimize your workstation ergonomics to reduce MSDs, boost productivity, and improve employee well-being at work."
 date: "2026-03-03"
 image: "/blog/ergonomie-poste-de-travail-bureau.webp"
-meta_title: "Workstation Ergonomics: Complete Setup Guide | KWESK"
-meta_description: "Practical guide to setting up an ergonomic workstation. Reduce MSDs by 65% and boost productivity. Standards, tips, and professional solutions."
+meta_title: "Set up your workstation ergonomically in 10 minutes. Monitor height, chair position, lighting — everything you need to reduce pain and boost productivity."
 category: Ergonomie
 ---
 
