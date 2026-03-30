@@ -3,8 +3,8 @@ title: "Ergonomie au Bureau : Guide Complet pour Aménager votre Poste de Travai
 description: "Découvrez comment optimiser l'ergonomie de votre poste de travail pour réduire les TMS, améliorer la productivité et le bien-être de vos collaborateurs."
 date: "2026-03-03"
 image: "/blog/ergonomie-poste-de-travail-bureau.webp"
-meta_title: "Ergonomie Poste de Travail : Guide Complet d'Aménagement | KWESK"
-meta_description: "Guide pratique pour aménager un poste de travail ergonomique au bureau. Réduisez les TMS de 65% et boostez la productivité. Normes, conseils et solutions."
+meta_title: "Ergonomie au poste de travail : guide complet d'aménagement — Kwesk"
+meta_description: "Aménagez un poste de travail ergonomique en quelques minutes. Hauteur d'écran, réglage de chaise, éclairage : le guide pratique pour travailler sans douleur."
 category: Ergonomie
 ---
 
