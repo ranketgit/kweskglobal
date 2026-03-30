@@ -3,8 +3,8 @@ title: "Bureau Assis Debout: Avantages et Guide d'Achat Complet"
 description: "Découvrez tous les avantages du bureau assis debout pour votre santé et productivité. Guide d'achat complet avec critères essentiels pour choisir le meilleur bureau réglable hauteur."
 date: "2026-02-24"
 image: "/blog/bureau-assis-debout-guide-achat.webp"
-meta_title: "Bureau Assis Debout : Avantages et Guide d'Achat | KWESK"
-meta_description: "Bureau assis debout : découvrez ses bienfaits santé, les critères d'achat essentiels et nos conseils pour choisir le meilleur bureau réglable en hauteur pour votre entreprise."
+meta_title: "Bureau assis-debout : guide complet et comparatif 2026 — Kwesk"
+meta_description: "Tout savoir sur le bureau assis-debout : bienfaits, critères de choix, modèles recommandés. Guide expert Kwesk pour bien choisir en 2026."
 category: Ergonomie
 ---
 
