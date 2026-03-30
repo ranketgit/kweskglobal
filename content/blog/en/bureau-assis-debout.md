@@ -3,8 +3,8 @@ title: "Sit-Stand Desk: Benefits and Complete Buying Guide"
 description: "Discover all the benefits of a sit-stand desk for your health and productivity. Complete buying guide with essential criteria for choosing the best height-adjustable desk."
 date: "2026-02-24"
 image: "/blog/bureau-assis-debout-guide-achat.webp"
-meta_title: "Sit-Stand Desk: Benefits and Buying Guide | KWESK"
-meta_description: "Sit-stand desk: discover its health benefits, essential buying criteria, and our tips for choosing the best height-adjustable desk for your business."
+meta_title: "Best Standing Desks for Home Office (2026) — Kwesk Expert Picks"
+meta_description: "Looking for the best standing desk? We tested the top sit-stand desks for home offices — with honest reviews, price comparisons, and which to avoid in 2026."
 category: Ergonomie
 ---
 
