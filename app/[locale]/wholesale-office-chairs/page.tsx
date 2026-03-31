@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     languages: {
       en: 'https://kwesk.com/en/wholesale-office-chairs',
       fr: 'https://kwesk.com/fr/chaises-de-bureau-en-gros',
-      'x-default': 'https://kwesk.com/en/wholesale-office-chairs',
+      'x-default': 'https://kwesk.com/fr/chaises-de-bureau-en-gros',
     },
   },
   openGraph: {
@@ -165,15 +165,24 @@ const orgSchema = {
   areaServed: 'Worldwide',
 }
 
+function safeJsonLd(data: object): string {
+  return JSON.stringify(data)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026')
+}
+
 export default function WholesaleOfficeChairsPage() {
   return (
-    <main className="font-sans text-[#1c1917]">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(orgSchema) }} />
 
-      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/en/wholesale-office-chairs" />
+      <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/chaises-de-bureau-en-gros" />
       <link rel="alternate" hrefLang="en" href="https://kwesk.com/en/wholesale-office-chairs" />
       <link rel="alternate" hrefLang="fr" href="https://kwesk.com/fr/chaises-de-bureau-en-gros" />
+
+      <main className="font-sans text-[#1c1917]">
 
       {/* ── HERO ───────────────────────────────────────────────── */}
       <section className="relative min-h-[85vh] flex items-center bg-[#1c1917] overflow-hidden pt-[120px] pb-24">
@@ -677,6 +686,7 @@ export default function WholesaleOfficeChairsPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   )
 }
