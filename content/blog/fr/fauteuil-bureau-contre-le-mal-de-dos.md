@@ -1,6 +1,6 @@
 ---
-title: "Fauteuil Bureau Mal de Dos : Top 5 Modèles Recommandés par les Experts"
-description: "Découvrez les 5 meilleurs fauteuils de bureau contre le mal de dos recommandés par les experts. Guide complet avec critères de sélection et conseils ergonomiques."
+title: "Meilleur fauteuil de bureau contre le mal de dos (2026)"
+description: "Mal de dos au bureau ? Nos experts comparent les meilleures chaises ergonomiques pour soulager les douleurs lombaires — guide d'achat + conseils de réglage."
 date: "2026-01-20"
 image: "/blog/fauteuil-bureau-mal-de-dos.webp"
 ---
