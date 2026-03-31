@@ -142,42 +142,9 @@ const personas = [
   { title: 'Acheteurs Professionnels', desc: 'Responsables achats approvisionnant des chaises ergonomiques en gros pour plusieurs sites clients simultanément.' },
 ]
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqItems.map((item) => ({
-    '@type': 'Question',
-    name: item.q,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.a,
-    },
-  })),
-}
-
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Kwesk',
-  url: 'https://kwesk.com',
-  description:
-    "Fabricant professionnel de chaises de bureau fournissant des commandes grossiste et en gros à l'échelle mondiale.",
-  areaServed: 'Worldwide',
-}
-
-function safeJsonLd(data: object): string {
-  return JSON.stringify(data)
-    .replace(/</g, '\\u003c')
-    .replace(/>/g, '\\u003e')
-    .replace(/&/g, '\\u0026')
-}
-
 export default function ChaisesDebureauEnGrosPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJsonLd(orgSchema) }} />
-
       <link rel="alternate" hrefLang="x-default" href="https://kwesk.com/fr/chaises-de-bureau-en-gros" />
       <link rel="alternate" hrefLang="en" href="https://kwesk.com/en/wholesale-office-chairs" />
       <link rel="alternate" hrefLang="fr" href="https://kwesk.com/fr/chaises-de-bureau-en-gros" />
