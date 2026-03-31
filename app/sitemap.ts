@@ -240,6 +240,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  // 18. Wholesale pages (EN + FR)
+  const wholesaleUrls = [
+    {
+      url: `${baseUrl}/en/wholesale-office-chairs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/fr/chaises-de-bureau-en-gros`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+  ]
+
   // Return everything merged together
   return [
     ...staticUrls,
@@ -259,5 +275,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...enCanadaHubUrl,
     ...enCanadaProvinceUrls,
     ...enCanadaCityUrls,
+    ...wholesaleUrls,
   ]
 }

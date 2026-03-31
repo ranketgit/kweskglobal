@@ -89,6 +89,10 @@ export default function Footer() {
     { label: t('company.about'), href: "/about" },
     { label: t('company.contact'), href: "/contact" },
     { label: t('company.news'), href: "/blog" },
+    {
+      label: locale === 'fr' ? 'Chaises en Gros' : 'Wholesale',
+      href: locale === 'fr' ? '/chaises-de-bureau-en-gros' : '/wholesale-office-chairs',
+    },
   ]
 
   return (

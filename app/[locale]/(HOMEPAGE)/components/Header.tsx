@@ -86,6 +86,10 @@ export default function Header() {
       newPath = '/en/office-chair-manufacturer/';
     } else if (locale === 'en' && pathname.includes('/office-chair-manufacturer')) {
       newPath = '/fr/fabricant-de-chaises-de-bureau-professionnel';
+    } else if (locale === 'fr' && pathname.includes('/chaises-de-bureau-en-gros')) {
+      newPath = '/en/wholesale-office-chairs';
+    } else if (locale === 'en' && pathname.includes('/wholesale-office-chairs')) {
+      newPath = '/fr/chaises-de-bureau-en-gros';
     } else {
       newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
     }

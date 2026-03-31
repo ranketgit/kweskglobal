@@ -156,6 +156,13 @@ export default function USAIndexPage() {
             <p className="text-sm text-[#57534e] italic border-l-2 border-[#8b8b4b] pl-4">
               Looking for a reliable <span className="font-bold">office chair factory for distributors</span>? <Link href="/about" className="text-[#1155cc] underline">Learn more about our company</Link> and discover why hundreds of B2B partners trust KWESK.
             </p>
+            <p className="text-sm text-[#57534e] mt-6">
+              Ready to order?{' '}
+              <Link href="/en/wholesale-office-chairs" className="text-[#8b8b4b] font-bold underline hover:text-[#1c1917] transition-colors">
+                wholesale office chairs
+              </Link>{' '}
+              are available from 10 units with factory-direct pricing and a dedicated account manager.
+            </p>
          </div>
       </section>
 
