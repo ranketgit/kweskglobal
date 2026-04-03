@@ -1,9 +1,9 @@
 ---
-title: "Office Ergonomics: Complete Guide to Setting Up Your Workstation"
-description: "Learn how to optimize your workstation ergonomics to reduce MSDs, boost productivity, and improve employee well-being at work."
+title: "Ergonomic Workstation Setup: The Complete Guide (2026)"
+description: "Monitor height, chair depth, desk distance — get your workstation ergonomics right the first time. Step-by-step setup checklist included."
 date: "2026-03-03"
 image: "/blog/ergonomie-poste-de-travail-bureau.webp"
-meta_title: "Set up your workstation ergonomically in 10 minutes. Monitor height, chair position, lighting — everything you need to reduce pain and boost productivity."
+meta_title: "Ergonomic Workstation Setup: The Complete Guide (2026)"
 category: Ergonomie
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "Best Office Chair for Back Pain Relief (2026)"
-description: "Suffering from back pain at work? Discover which ergonomic office chairs actually relieve lumbar pain — with expert picks, setup tips, and what to avoid."
+title: "Best Office Chair for Back Pain 2026 — 7 Picks That Actually Work"
+description: "Tired of back pain at your desk? We tested ergonomic chairs by lumbar support, seat depth and build quality. See which models are worth it in 2026."
 date: "2026-01-20"
 image: "/blog/fauteuil-bureau-mal-de-dos.webp"
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Wood Desk: Guide to Wood Species and Finishes for Professional Spaces"
-description: "Oak, beech, walnut, bamboo: which wood to choose for your professional desk? Complete guide to species, finishes, and specifications for B2B buyers."
+title: "Natural Wood Office Desks: Types, Finishes & What to Choose (2026)"
+description: "From solid oak to veneered ash, wood species define the feel and durability of your desk. This guide covers the best options for professional workspaces and home offices."
 date: "2026-03-19"
 image: "/blog/bureau-bois-naturel-essences-finitions-professionnel.webp"
-meta_title: "Natural Wood Desk: Species & Finishes Guide for Professionals | KWESK"
-meta_description: "Oak, beech, walnut or bamboo for your natural wood desk? Discover the complete guide to species, thicknesses, and finishes for professional offices."
+meta_title: "Natural Wood Office Desks: Types, Finishes & What to Choose (2026)"
+meta_description: "From solid oak to veneered ash, wood species define the feel and durability of your desk. This guide covers the best options for professional workspaces and home offices."
 category: Tendances Design
 ---
 

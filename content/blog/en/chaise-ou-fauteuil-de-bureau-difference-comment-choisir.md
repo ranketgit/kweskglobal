@@ -1,10 +1,10 @@
 ---
-title: "Office Chair vs Executive Chair: What's the Difference and How to Choose?"
-description: "Discover the difference between an office chair and an executive armchair. Ergonomic criteria, comfort and budget to make the right professional choice."
+title: "Task Chair vs Executive Chair: What's the Difference and Which to Choose?"
+description: "Not sure whether to buy a task chair or an executive chair? We break down the key differences in design, ergonomics, and price — so you pick the right one."
 date: "2026-03-10"
 image: "/blog/chaise-ou-fauteuil-de-bureau-difference.webp"
-meta_title: "Office Chair vs Executive Chair: Differences & Buying Guide | KWESK"
-meta_description: "Office chair or executive armchair? Discover the real differences, selection criteria and our tips to equip your professional workspaces."
+meta_title: "Task Chair vs Executive Chair: What's the Difference and Which to Choose?"
+meta_description: "Not sure whether to buy a task chair or an executive chair? We break down the key differences in design, ergonomics, and price — so you pick the right one."
 category: Ergonomie
 ---
 
