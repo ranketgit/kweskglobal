@@ -50,8 +50,8 @@ export default function Footer() {
     footerCities = (citiesFrData as any[]).map(city => ({
       id: city.id,
       label: city.City,
-      // Matches French Page: /fabricant.../france/[city]
-      href: `/fabricant-de-chaises-de-bureau-professionnel/france/${generateSlugFr(city.City)}`
+      // Matches French Page: /fr/fabricant.../france/[city]
+      href: `/fr/fabricant-de-chaises-de-bureau-professionnel/france/${generateSlugFr(city.City)}`
     }))
   } else {
     // --- ENGLISH LOGIC (Updated to match USAIndexPage) ---
@@ -63,8 +63,8 @@ export default function Footer() {
       return {
         id: citySlug, 
         label: city.city,
-        // Matches English Page: /office.../usa/[state]/[city]
-        href: `/office-chair-manufacturer/usa/${stateSlug}/${citySlug}`
+        // Matches English Page: /en/office.../usa/[state]/[city]
+        href: `/en/office-chair-manufacturer/usa/${stateSlug}/${citySlug}`
       }
     })
   }
