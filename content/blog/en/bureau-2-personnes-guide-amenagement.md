@@ -6,7 +6,6 @@ image: "/blog/bureau-2-personnes-amenagement.webp"
 meta_title: "2 Person Desk: Complete Setup Guide for Shared Workstations | KWESK"
 meta_description: "Set up an ergonomic and productive 2 person desk. Expert guidance on dimensions, standards, and best practices for creating the perfect double workstation."
 ---
-
 Working alongside a colleague in the same space demands careful organization and appropriate furniture. A well-designed **2 person desk** transforms daily collaboration into a smooth and productive experience. According to a Steelcase study, companies that optimize their work environment see an average 17% increase in productivity. This reality drives many organizations to rethink how they arrange their shared spaces.
 
 This guide walks you through creating a double workstation that meets current ergonomic standards while promoting comfort and efficiency for your team members.
@@ -31,7 +30,7 @@ According to a 2024 CBRE study, 70% of companies have adopted hybrid work arrang
 A **2 person desk** works particularly well in these situations:
 
 - Teams working on joint projects requiring frequent exchanges
-- Coworking spaces or open offices with rotating staff
+- Coworking spaces or [open offices](https://kwesk.com/en/blog/amenagement-bureau/comment-amenager-open-space) with rotating staff
 - Permanent pairs (assistant/manager, developers doing pair programming)
 - Startups and SMEs optimizing every available square meter
 
@@ -73,7 +72,7 @@ These dimensions ensure smooth circulation and prevent the claustrophobic feelin
 
 ## Configuring an Ergonomic Double Desk
 
-Ergonomics in a **shared workstation** extends beyond dimensions. Several factors contribute to user comfort and prevention of musculoskeletal disorders (MSDs), which account for 55% of workplace injury-related emergency room visits.
+Ergonomics in a **shared workstation** extends beyond dimensions. Several factors contribute to user comfort and prevention of [musculoskeletal disorders (MSDs)](https://kwesk.com/en/blog/ergonomie/chaise-ergonomique-prevention-tms-maux-de-dos), which account for 55% of workplace injury-related emergency room visits.
 
 ### Monitor Positioning
 
@@ -88,7 +87,7 @@ In a **double desk** arrangement, ensure one colleague's screen doesn't create v
 
 ### The Importance of Ergonomic Seating
 
-Office chair selection directly impacts health and productivity. An [ergonomic chair suited for intensive use](https://kwesk.com/en/blog/mobilier-bureau/siege-ergonomique-bureau-comparatif) reduces fatigue and back pain.
+Office chair selection directly impacts health and productivity. An [ergonomic chair suited for intensive use](https://kwesk.com/en/blog/mobilier-bureau/siege-ergonomique-bureau-comparatif) reduces fatigue and back pain. For a full comparison of models by use case and budget, our [best office chairs 2026 guide](https://kwesk.com/en/blog/budget-et-prix/meilleures-chaises-de-bureau-2026) is the most complete reference.
 
 For a **dual workstation**, prioritize chairs offering:
 
@@ -121,18 +120,20 @@ The bench desk represents the most common configuration for a **double desk**. T
 - **Partitioning options** with removable divider screens
 - **Integrated cable management** for an organized space
 
-Height-adjustable models have become standard in 2026, allowing users to alternate between sitting and standing throughout the day.
+[Sit-stand desks](https://kwesk.com/en/blog/ergonomie/bureau-assis-debout) have become standard in 2026, allowing users to alternate between sitting and standing throughout the day. This is particularly valuable in shared configurations where users have different postural preferences.
 
 ### Face-to-Face Configuration
 
 The alternative to the bench desk is face-to-face configuration, with two individual workstations opposite each other:
 
 **Advantages**:
+
 - Direct communication made easier
 - Sense of equity (identical workstations)
 - Option to reconfigure into individual stations
 
 **Disadvantages**:
+
 - Requires central divider for visual privacy
 - Increased risk of mutual distraction
 - Slightly larger space requirement
@@ -173,7 +174,7 @@ Each occupant of a **double desk** should be able to adjust their task lighting 
 
 ## Optimizing Collaboration at a 2 Person Desk
 
-Beyond furniture, work organization determines the success of a shared space.
+Beyond furniture, work organization determines the success of a shared space. For a broader view of how individual workstation ergonomics supports shared environments, our [complete ergonomic workstation guide](https://kwesk.com/en/blog/ergonomie/ergonomie-poste-de-travail) covers monitor height, chair setup, and accessories in detail.
 
 ### Establishing Cohabitation Rules
 
@@ -271,7 +272,7 @@ Side-by-side configuration limits visual distractions and offers more privacy. F
 
 ### Do I need identical chairs for a double desk?
 
-Not necessarily, but [equivalent quality ergonomic chairs](https://kwesk.com/en/blog/mobilier-bureau/fauteuil-ergonomique-de-bureau-guide-achat-professionnel) ensure equal comfort. Each user can still personalize settings according to their body type.
+Not necessarily, but [equivalent quality ergonomic chairs](https://kwesk.com/en/blog/mobilier-bureau/fauteuil-ergonomique-de-bureau-guide-achat-professionnel) ensure equal comfort. Each user can still personalize settings according to their body type. See our [best office chairs 2026 comparison](https://kwesk.com/en/blog/budget-et-prix/meilleures-chaises-de-bureau-2026) for a side-by-side breakdown of models at every price point.
 
 ### Is a sit-stand desk suitable for working in pairs?
 
@@ -283,6 +284,6 @@ Setting up an effective **2 person desk** requires thorough consideration of dim
 
 The trend toward hybrid work and flexible spaces reinforces the importance of these shared configurations. A well-designed **dual workstation** directly contributes to team performance and optimization of your office space.
 
-To equip your **double desk** with [ergonomic chairs designed for intensive use](https://kwesk.com/en/chairs/gamma), discover the KWESK ranges. Our chairs, backed by a 5-year warranty, support your colleagues in their daily work with the comfort and durability they deserve.
+To equip your **double desk** with [ergonomic chairs designed for intensive use](https://kwesk.com/en/chairs/gamma), discover the KWESK ranges — and explore our [best office chairs 2026 guide](https://kwesk.com/en/blog/budget-et-prix/meilleures-chaises-de-bureau-2026) to find the right model for every seat at your shared desk. Our chairs, backed by a 5-year warranty, support your colleagues in their daily work with the comfort and durability they deserve.
 
 [Contact our experts](https://kwesk.com/en/contact) for personalized guidance in setting up your shared workspaces.
