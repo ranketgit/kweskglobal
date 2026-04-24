@@ -5,7 +5,7 @@ date: "2026-04-24"
 image: "/blog/nettoyer-fauteuil-de-bureau-materiau.webp"
 meta_title: "Comment Nettoyer un Fauteuil de Bureau en Tissu, Cuir ou Mesh : Guide Complet"
 meta_description: "Guide complet pour nettoyer un fauteuil de bureau en tissu, cuir ou mesh. Produits, étapes et conseils pour prolonger la durée de vie de votre siège."
-Category: Entretien et Reparation
+category: Entretien et Reparation
 ---
 
 Un fauteuil propre, c'est un fauteuil qui dure. Pourtant, la plupart des professionnels ne savent pas comment **nettoyer un fauteuil de bureau** sans abîmer son revêtement, et se retrouvent avec des taches incrustées, un cuir craquelé ou un mesh grisâtre au bout de deux ans. La méthode change radicalement selon le matériau : ce qui sauve un tissu peut détruire un cuir, et ce qui convient au cuir peut boucher un mesh.
