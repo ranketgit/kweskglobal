@@ -5,7 +5,7 @@ date: "2026-04-24"
 image: "/blog/nettoyer-fauteuil-de-bureau-materiau.webp"
 meta_title: "How to Clean an Office Chair in Fabric, Leather or Mesh: Complete Guide"
 meta_description: "Complete guide to cleaning an office chair in fabric, leather or mesh. Products, steps and tips to extend the lifespan of your seat."
-Category: Entretien et Reparation
+category: Entretien et Reparation
 ---
 
 A clean chair is a chair that lasts. Yet most professionals don't know how to **clean an office chair** without damaging its upholstery, and end up with ingrained stains, cracked leather or grey-tinged mesh within just two years. The method changes radically depending on the material: what saves a fabric can destroy a leather, and what works on leather can clog a mesh.
