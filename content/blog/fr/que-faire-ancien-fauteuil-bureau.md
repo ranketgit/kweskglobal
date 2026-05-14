@@ -2,7 +2,7 @@
 title: "Que Faire d'un Ancien Fauteuil de Bureau ? Recyclage, Don et Reprise"
 description: "Comment recycler un fauteuil de bureau usagé ? Découvrez les filières de recyclage, options de don et services de reprise pour donner une seconde vie à votre mobilier."
 date: "2026-05-14"
-image: "/blog/recycler-fauteuil-de-bureau.webp"
+image: "/blog/recycler-fauteuil-de-bureau.png"
 meta_title: "Recycler Fauteuil de Bureau : Guide Complet Recyclage & Don | KWESK"
 meta_description: "Recycler un fauteuil de bureau : filières agréées, don aux associations, reprise professionnelle. Guide pratique pour entreprises éco-responsables."
 category: Eco-Responsabilite
