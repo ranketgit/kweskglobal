@@ -2,7 +2,7 @@
 title: "What to Do with an Old Office Chair? Recycling, Donation and Take-Back"
 description: "How to recycle an old office chair? Discover recycling channels, donation options and take-back services to give your furniture a second life."
 date: "2026-05-14"
-image: "/blog/recycler-fauteuil-de-bureau.webp"
+image: "/blog/recycler-fauteuil-de-bureau.png"
 meta_title: "Recycle Office Chair: Complete Guide to Recycling & Donation | KWESK"
 meta_description: "Recycling an office chair: certified channels, donations to charities, professional take-back. A practical guide for eco-responsible companies."
 category: Eco-Responsabilite
